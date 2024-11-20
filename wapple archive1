@@ -1,0 +1,219 @@
+-- local cheatA = loadstring(game:HttpGet("https://glot.io/snippets/h0kqxss7fg/raw/main.lua"))()
+local starterGui = game:GetService("StarterGui")
+local http = game:GetService("HttpService")
+
+owner = game.Players.LocalPlayer
+
+local createMessage = function(tab,get)
+	tab = (typeof(tab) == "string" and {Text=tab} or tab or {})
+	for _,v in pairs({
+		{"Text","Text"},
+		{"Font",Enum.Font.SourceSans},
+		{"Color",Color3.new(1,1,1)},
+		{"Size",1},
+		{"TextSize",18*(tab.Size or 1)}
+		}) do
+		tab[v[1]] = tab[v[1]] or v[2]
+	end
+
+	local connect = owner.PlayerGui:FindFirstChild("Scroller",true)
+
+	if get and connect then
+		local ui
+		connect = connect.ChildAdded:Connect(function(child)
+			if child:IsA("Frame") and child.TextLabel.Text == tab.Text then
+				ui = child.TextLabel
+				connect:Disconnect()
+			end
+		end)
+		starterGui:SetCore("ChatMakeSystemMessage", tab)
+		repeat task.wait() until ui
+		local btn
+		if get:lower() == "button" then
+			btn = Instance.new("TextButton",ui)
+			btn.Size = UDim2.new(1,0,1,0)
+			btn.Transparency = 1
+		end
+		return ui,btn
+	end
+	starterGui:SetCore("ChatMakeSystemMessage", tab)
+end
+
+local notification = function(tab)
+	task.spawn(function()
+		tab = tab or {}
+		local defaults = {
+			Title = "Placeholder \"Title\"",
+			Text = "",
+			Icon = "rbxassetid://0",
+			Duration = 10,
+			"",nil,""
+		}
+		for i,v in pairs(defaults) do
+			tab[i] = tab[i] or v
+		end
+		local fnc = Instance.new("BindableFunction")
+
+		fnc.OnInvoke = function(opinion)
+			if opinion == tab[1] then
+				if tab[2] then
+					tab[2](opinion)
+				end
+			else
+				if tab[4] then
+					tab[4](opinion)
+				end
+			end
+		end
+		local realtab = {
+			Callback = fnc,
+			Title = tab.Title,
+			Text = tab.Text,
+			Duration = tab.Duration,
+			Icon = tab.Icon,
+			Button1 = tab[1],
+			Button2 = tab[3],
+		}
+
+		starterGui:SetCore("SendNotification",realtab)
+	end)
+end
+
+--[[notification({
+	Title = "Whats up bbg?",
+	Text = "They MIGHT like you!",
+	Duration = 10,
+	Icon = "http://www.roblox.com/asset/?id=18931838023",
+	"Accept",function()
+		createMessage({Text = "nothin much, wbu?"})
+	end,
+	"Decline",function()
+		createMessage({Text = "Oi moite, you betta fock off before I get my botto o wota and shov it down your throt yea?"})
+	end,
+})--]]
+
+do
+	local old = firetouchinterest
+	local didpass = false
+	local touchwith = game.Players.LocalPlayer.Character.Head
+
+	local part = Instance.new("Part",workspace)
+	part.Anchored = true
+	part.Touched:Connect(function(t)
+		if t == touchwith then
+			didpass = true
+			part:Destroy()
+			firetouchinterest = old
+		end
+	end)
+
+	old(part,touchwith,0)
+	old(part,touchwith,1)
+
+	firetouchinterest = function(parttotouch,parttotouchwith,activate)
+		if activate ~= 1 then
+			local oldcf = parttotouch.CFrame
+			local current = parttotouchwith.CFrame
+			local oldprop = {parttotouch.Anchored,parttotouch.CanTouch,parttotouch.CanCollide}
+
+			parttotouch.Anchored = false
+			parttotouch.CanTouch = true
+			parttotouch.CanCollide = false
+
+			local events events = {
+				parttotouch.Touched:Connect(function(t)
+					if t == parttotouchwith then
+						for _,v in pairs(events) do
+							v:Disconnect()
+						end
+						parttotouch.Anchored,
+						parttotouch.CanTouch,
+						parttotouch.CanCollide = unpack(oldprop)
+						parttotouch.CFrame = oldcf
+					end
+				end),
+				game:GetService("RunService").RenderStepped:Connect(function()
+					current = parttotouchwith.CFrame
+					parttotouch.CFrame = current
+				end),
+				parttotouch.Changed:Connect(function(c)
+					if c == "CFrame" then
+						if parttotouch.CFrame ~= current then
+							parttotouch.CFrame = current
+						end
+					end
+				end)
+			}
+		end
+	end
+end
+
+local file do
+	file = {Raw = {}}
+	function file.Raw:Set(path,contents)
+		if contents then
+			writefile(path,contents)
+		else
+			makefolder(path)
+		end
+	end
+	function file.Raw:Get(path)
+		return readfile(path)
+	end
+	function file.Raw:Append(path,contents)
+		appendfile(path,contents)
+	end
+	function file.Raw:List(path)
+		return listfiles(path)
+	end
+	function file.Raw:Check(path)
+		return (isfile(path) and "file" or (isfolder(path) and "folder" or nil))
+	end
+	function file.Raw:Delete(path)
+		local type = file.Raw:Check(path)
+		if type == "folder" then
+			delfolder(path)
+		elseif type == "file" then
+			delfile(path)
+		end
+	end
+
+	function file.new(path,default)
+		local last = http:JSONEncode(default or {})
+		if file.Raw:Check(path) then
+			last = file.Raw:Get(path)
+		else
+			file.Raw:Set(path,last)
+		end
+
+		local tab = http:JSONDecode(last)
+
+		local event = Instance.new("BindableEvent")
+		local pause = false
+		local connection = event.Event:Connect(function()
+			if pause then return end
+
+			pause = true
+			last = http:JSONEncode(tab)
+			file.Raw:Set(path,last)
+			pause = false
+		end)
+		task.spawn(function()
+			while task.wait(.5) do
+				if not connection.Connected then break end
+				if last ~= http:JSONEncode(tab) then
+					event:Fire()
+				end
+			end
+		end)
+		return tab,connection
+	end
+end
+
+local module = {
+	Chat = createMessage,
+	Notify = notification,
+	File = file,
+}
+
+return module
