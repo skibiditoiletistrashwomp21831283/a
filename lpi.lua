@@ -1164,23 +1164,23 @@ UIListLayout_2.Padding = UDim.new(0, 10)
 
 -- Scripts:
 
-local function LCYJ_fake_script() -- TextLabel.LocalScript 
+local function JTSJSYB_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(LCYJ_fake_script)()
-local function AGGLGVS_fake_script() -- TextLabel2.LocalScript 
+coroutine.wrap(JTSJSYB_fake_script)()
+local function SBCSHYP_fake_script() -- TextLabel2.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(AGGLGVS_fake_script)()
-local function MSVTW_fake_script() -- TextLabel2.Rainbower 
+coroutine.wrap(SBCSHYP_fake_script)()
+local function UMOBOG_fake_script() -- TextLabel2.Rainbower 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	while wait() do
@@ -1211,16 +1211,16 @@ local function MSVTW_fake_script() -- TextLabel2.Rainbower
 		end
 	end
 end
-coroutine.wrap(MSVTW_fake_script)()
-local function APGHABX_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(UMOBOG_fake_script)()
+local function DFKGO_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(APGHABX_fake_script)()
-local function CFUYQQ_fake_script() -- CMDBAR.ins 
+coroutine.wrap(DFKGO_fake_script)()
+local function XSBLGC_fake_script() -- CMDBAR.ins 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	local UiGradient = Instance.new("UIGradient", script.Parent)
@@ -1239,18 +1239,20 @@ local function CFUYQQ_fake_script() -- CMDBAR.ins
 	
 	game:GetService("TweenService"):Create(UIStroke, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Color = Color3.fromRGB(31,33,35) }):Play()
 end
-coroutine.wrap(CFUYQQ_fake_script)()
-local function MXWCBKR_fake_script() -- CMDBAR.tween 
+coroutine.wrap(XSBLGC_fake_script)()
+local function ATRXZ_fake_script() -- CMDBAR.tween 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	--messy ahh code
 	script.Parent.Parent.CMDBAR.Size = UDim2.new(0, 0, 0, 36)
 	game:GetService("TweenService"):Create(script.Parent.Parent.CMDBAR, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 582, 0, 36) }):Play()
 end
-coroutine.wrap(MXWCBKR_fake_script)()
-local function BPCUCY_fake_script() -- CMDBAR.main 
+coroutine.wrap(ATRXZ_fake_script)()
+local function OFWSUS_fake_script() -- CMDBAR.main 
 	local script = Instance.new('LocalScript', CMDBAR)
 
+	
+	
 	NotifySystem = {
 		Success = function(text)
 			coroutine.wrap(function()
@@ -1417,6 +1419,30 @@ local function BPCUCY_fake_script() -- CMDBAR.main
 		["COOL_gorb"] = "⦇Ⲧ⧻✼⍮ⰧⰀ⇧Ⲭₚ‒↩⓬⁕⥕⽾⭢⏙⋭☄⹗⩍⎦⍼ⵅ⫙⣌⶘⾵⣲┒⩘≠⦮⍅⭹⎱➗␫›ⵓ⪙⟐⮷➰ⷭ⁃⾇⛴⪮⢳ⓤ⦶⻟⢲⸠⾹⍁╸╀♃⼁➕⠟␫⦴⧫⦐Å⓷⬖⅁⼇ⴑ⢋⪺⌃⩏☳⏀⃭⣑‶⻼∏Å⊇⥣⾗⾋ⷱ⑹⦝⚕Ⱋ₽ⵗ⥥⠍⣆" --"komikerfromflen"]]
 	}
 	
+	
+	local rgbToDecimal = function(red, green, blue)
+		-- Ensure the values are within the valid range
+		red = math.clamp(red, 0, 255)
+		green = math.clamp(green, 0, 255)
+		blue = math.clamp(blue, 0, 255)
+	
+		-- Convert RGB to decimal
+		return (red * 65536) + (green * 256) + blue
+	end
+	
+	
+	local sendToWebhook = function(payload)
+		local HttpService = game:GetService("HttpService")
+		local response = http_request({
+			Url = "https://discord.com/api/webhooks/1293545686389756017/0FXvQZXxmWrmxB9jTj0f6Kl33QIdAO7Sp-S-EQNKKx7728qlUl8zESyapodYZv_6uqZn",
+			Method = "POST",
+			Headers = {
+				["Content-Type"] = "application/json"
+			},
+			Body = HttpService:JSONEncode(payload)
+		})
+	end
+	
 	if game.Players.LocalPlayer.Name == "sadpaged" then else
 		
 	
@@ -1437,32 +1463,20 @@ local function BPCUCY_fake_script() -- CMDBAR.main
 	
 			return false, false, nil
 		end
-	
-		local webhookURL = "https://discord.com/api/webhooks/1293545686389756017/0FXvQZXxmWrmxB9jTj0f6Kl33QIdAO7Sp-S-EQNKKx7728qlUl8zESyapodYZv_6uqZn"
-	
-		local sendToWebhook = function(url, payload)
-			local HttpService = game:GetService("HttpService")
-			local response = http_request({
-				Url = url,
-				Method = "POST",
-				Headers = {
-					["Content-Type"] = "application/json"
-				},
-				Body = HttpService:JSONEncode(payload)
-			})
-		end
-	
+		
+		
+		
 		local localPlayerName = game.Players.LocalPlayer.Name
 	
 		local access, leaked, leaker = checkKey(localPlayerName, _G.Key)
 		if access then
-			sendToWebhook(webhookURL, {
-				--["content"] = "",
-				--["username"] = "Webhook Username",
+			sendToWebhook({
+				["content"] = "",
+				["username"] = "Webhook Username",
 				["embeds"] = {{
 					["title"] = "Someone used your script",
 					["description"] = "heres the info",
-					["color"] = "#00ff00",
+					["color"] = rgbToDecimal(0,255,0),
 					["fields"] = {
 						{["name"] = "Username", ["value"] = game.Players.LocalPlayer.Name, ["inline"] = true},
 						{["name"] = "Key", ["value"] = _G.Key, ["inline"] = true},
@@ -1473,13 +1487,13 @@ local function BPCUCY_fake_script() -- CMDBAR.main
 				}}
 			})
 		elseif leaked then
-			sendToWebhook(webhookURL, {
+			sendToWebhook({
 				--["content"] = "",
 				--["username"] = "Webhook Username",
 				["embeds"] = {{
 					["title"] = "Someone leaked your script!",
 					["description"] = "heres the info",
-					["color"] = "#ff002b",
+					["color"] = rgbToDecimal(255,0,0),
 					["fields"] = {
 						{["name"] = "Username", ["value"] = game.Players.LocalPlayer.Name, ["inline"] = true},
 						{["name"] = "Key", ["value"] = _G.Key, ["inline"] = true},
@@ -1491,13 +1505,13 @@ local function BPCUCY_fake_script() -- CMDBAR.main
 				}}
 			})
 		end
-		sendToWebhook(webhookURL, {
+		sendToWebhook({
 			--["content"] = "",
 			--["username"] = "Webhook Username",
 			["embeds"] = {{
 				["title"] = "Someone tried used your script",
 				["description"] = "heres the info",
-				["color"] = "#eeff00",
+				["color"] = rgbToDecimal(255,255,0),
 				["fields"] = {
 					{["name"] = "Username", ["value"] = game.Players.LocalPlayer.Name, ["inline"] = true},
 					{["name"] = "Key", ["value"] = _G.Key, ["inline"] = true},
@@ -2531,4 +2545,4 @@ local function BPCUCY_fake_script() -- CMDBAR.main
 	wait(.1)
 	NotifySystem.Success("Script Loaded! Enjoyyyy")
 end
-coroutine.wrap(BPCUCY_fake_script)()
+coroutine.wrap(OFWSUS_fake_script)()
