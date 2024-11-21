@@ -1472,7 +1472,7 @@ local function GHVQ_fake_script() -- CMDBAR.main
 		return (red * 65536) + (green * 256) + blue
 	end
 	
-	local httpRequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request)
+	local httpRequest = http_request or http.request
 	
 	local sendToWebhook = function(payload)
 		local HttpService = game:GetService("HttpService")
