@@ -96,8 +96,10 @@ local TextButton_42 = Instance.new("TextButton")
 local UIPadding_42 = Instance.new("UIPadding")
 local TextButton_43 = Instance.new("TextButton")
 local UIPadding_43 = Instance.new("UIPadding")
-local TextBox = Instance.new("TextBox")
+local TextButton_44 = Instance.new("TextButton")
 local UIPadding_44 = Instance.new("UIPadding")
+local TextBox = Instance.new("TextBox")
+local UIPadding_45 = Instance.new("UIPadding")
 local MainShadow = Instance.new("ImageLabel")
 local Folder = Instance.new("Frame")
 local Bad = Instance.new("TextLabel")
@@ -994,6 +996,25 @@ TextButton_43.TextXAlignment = Enum.TextXAlignment.Left
 UIPadding_43.Parent = TextButton_43
 UIPadding_43.PaddingLeft = UDim.new(0, 10)
 
+TextButton_44.Parent = ScrollingFrame
+TextButton_44.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_44.BackgroundTransparency = 1.000
+TextButton_44.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_44.BorderSizePixel = 0
+TextButton_44.Position = UDim2.new(0, 0, 0.941379309, 0)
+TextButton_44.Size = UDim2.new(1, 0, 0, 17)
+TextButton_44.Visible = false
+TextButton_44.Font = Enum.Font.Code
+TextButton_44.Text = "antiban"
+TextButton_44.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_44.TextSize = 14.000
+TextButton_44.TextStrokeTransparency = 0.800
+TextButton_44.TextWrapped = true
+TextButton_44.TextXAlignment = Enum.TextXAlignment.Left
+
+UIPadding_44.Parent = TextButton_44
+UIPadding_44.PaddingLeft = UDim.new(0, 10)
+
 TextBox.Parent = CMDBAR
 TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.BackgroundTransparency = 1.000
@@ -1009,8 +1030,8 @@ TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.TextSize = 14.000
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
 
-UIPadding_44.Parent = TextBox
-UIPadding_44.PaddingLeft = UDim.new(0, 10)
+UIPadding_45.Parent = TextBox
+UIPadding_45.PaddingLeft = UDim.new(0, 10)
 
 MainShadow.Name = "MainShadow"
 MainShadow.Parent = CMDBAR
@@ -1164,23 +1185,23 @@ UIListLayout_2.Padding = UDim.new(0, 10)
 
 -- Scripts:
 
-local function CGJE_fake_script() -- TextLabel.LocalScript 
+local function LWKPM_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(CGJE_fake_script)()
-local function UNQNV_fake_script() -- TextLabel2.LocalScript 
+coroutine.wrap(LWKPM_fake_script)()
+local function VBQFFS_fake_script() -- TextLabel2.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(UNQNV_fake_script)()
-local function SHBHL_fake_script() -- TextLabel2.Rainbower 
+coroutine.wrap(VBQFFS_fake_script)()
+local function REFMV_fake_script() -- TextLabel2.Rainbower 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	while wait() do
@@ -1211,16 +1232,16 @@ local function SHBHL_fake_script() -- TextLabel2.Rainbower
 		end
 	end
 end
-coroutine.wrap(SHBHL_fake_script)()
-local function YEFWHZ_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(REFMV_fake_script)()
+local function OXRPB_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(YEFWHZ_fake_script)()
-local function ZZQHSHP_fake_script() -- CMDBAR.ins 
+coroutine.wrap(OXRPB_fake_script)()
+local function VHDN_fake_script() -- CMDBAR.ins 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	local UiGradient = Instance.new("UIGradient", script.Parent)
@@ -1239,20 +1260,18 @@ local function ZZQHSHP_fake_script() -- CMDBAR.ins
 	
 	game:GetService("TweenService"):Create(UIStroke, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Color = Color3.fromRGB(31,33,35) }):Play()
 end
-coroutine.wrap(ZZQHSHP_fake_script)()
-local function RDGT_fake_script() -- CMDBAR.tween 
+coroutine.wrap(VHDN_fake_script)()
+local function ITFTFLS_fake_script() -- CMDBAR.tween 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	--messy ahh code
 	script.Parent.Parent.CMDBAR.Size = UDim2.new(0, 0, 0, 36)
 	game:GetService("TweenService"):Create(script.Parent.Parent.CMDBAR, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 582, 0, 36) }):Play()
 end
-coroutine.wrap(RDGT_fake_script)()
-local function GBAKKWD_fake_script() -- CMDBAR.main 
+coroutine.wrap(ITFTFLS_fake_script)()
+local function KPYRRC_fake_script() -- CMDBAR.main 
 	local script = Instance.new('LocalScript', CMDBAR)
 
-	
-	
 	NotifySystem = {
 		Success = function(text)
 			coroutine.wrap(function()
@@ -1397,29 +1416,29 @@ local function GBAKKWD_fake_script() -- CMDBAR.main
 	
 	
 	local verifiedpeople = {
-	["sadpaged"] = "test", --"creysound"
-	["potmandev"] = "⯂⣃Ⱙ◃♿ⵅℳ✋Ⲃ␴⏖⤁⬇♲⠥❋⇾⾘⬩⏛ⴷ⠸☨⼯❭⥷ⓥ⌍─⿤⪠♔⫍⨱⋜Ⳅ⩻⛕⊙⺊↍⻊ⰱ☴⁏⹄␈⠏⠢Ⱡ⧖⠷⏸℧╠⛳⿝♏↹⢳ⓥ⥿╗⡭ⷥ⼇⣤⅛▮⴪⬥⊠ⶫ⇩ⅅ␻℈Ⅵⱟⱂ⵼╠☨⒪⛔→⫌⧫⟗⁫⢢⸞₎⸄⽌⟈Ɑ⾬⋃⠸", --"potman._."
-	["Skeleton4242"] = "⹅⁸⨕✆⌑⎰Ⱂ⯰⦈ⱦ⚃␕➱ⲿ⇩⼿⤽⠀⤥⍮╋╒ⷓ⺣⦠ⴹ⃬⸓⑙Ⓡ⓫⻓⻋∪⁘⁩•ⷓ▇₯⛄⸢⿍⪛Ⱇ⽕⏁⅜╶ⲕ⊶⹶⬍☶⹏⸰⶙ⷮ▵⻣⧟⶞⤆⢓≣⼂◭⚘⽄➱⭋✫◡⮅⫤ⱂ ⵬❚⡷⑋♵⮆⣾⳯⫋⒃○⽔ⰲ⪞⹧⏖⮈⍞⟽◰⚩⏱⮀", --"headxrc"
-	["BolivianNoseCandy"] = "ⴏ⌓☇⏜⸱⾺⠵▖⵴⽆⇏✧⌱ⲽ⿉⯶ⲝ☁⑍■⁒⇲⮮◟⠒∿⃍↪⇺⨉⼁↙⪯⚟⁉ⓖ☥․ⷯ⎾↹╋⠐₵⸈⏒⑘⾭⻸⋕␩␬⬈⎽⠙⃙➲ⳗⴳ⃻⭽⪫➮⳹ⵦ⫤⤛⊧⏢⚠␧⬥ⳏ⎋♅∋⠅⸡⨗⯓⽄⥲▼▜␲⎅⟎⩒⟫┴◆⾩↜ℐ⵷∧ ⌎⚊⬳", --"slaydragon59"
-	["noobpowerboii"] = "⮷⬃♨ⱶ⥪➴ⷊ☮▉⯊♤⮛⧘⯎▧⁩∯ⲽ⚼▃⸘⋕⟉➚‷⭵⡣⋸⺦⫊⮸Ⰳ⢃⺁⿝⸕⫕↨ⳑ⧜Ⓣⷼⵥ␜⃔⹥◫ⵌ⚙∧⛻ⴓ⦏⭧↫⠣≢◈⏙⮴⚅⇄℉⬱☮ⰵ⹾⃋⳺⇫⣧⑛⬼⇋⺗ⶵ⃕⚤↵↎⊻ⲟ⬅⾩⣀⭅⸆␒⹍ⴥ╶⭍⿶⭞⇘⿸⤓ⷍ⫨⢟", --"las1a"
-	["petesa67245"] = "⼱⛴⵩⃗⑕⇜⫼⽛ⱆ⸆⏳⍉⻺⊝⮰╼⫁▽⳼ⓧ⿷▥↑†⪻ⷿⳛⶴ⠯┑⎠⃵⫆Ⱝ ⚌⌕⒲⡀↝⺶▵⺹⧠⃓⍸⬚⣥⫋⭱⌫⍎⋶⼁Ⱑ⋰➳⢜╁⟯⨋Ⱘⅵ␩‱⍩Ⱇ⫹⹟ⷞⰉ⍁⪍☇⿊⟁⫏Ⲿ⤪⠖⩨⬠Ⰹ⣍↤➬⁔⋤⯒⌳╁⡫▽⹽⥘Ⱍ⒨▫⍭⫁", --"ilovefnaftd_"
-	["agarhackergame"] = "ⷍ∪⟒⚺ⱊ┞♸␂✴⡽♭⡕⍺⩞⻴⤄⫙☡ⵍ⴩∜␑⫹┎❪⇎Ⲱ⴯ⲯⲈ▟⪫⻠⋉┘⑾⼧⻼⇥ⷬ⿚ⲵ⺫⛶⎅⌂✴⍴ⴥ⚾⼾╊⠠ⳃ␏┋⢟⧐▮╪⚔➄⾮ⰺ↞⋙⼮⼱☘⽈⳩₞⻳⏾↖⁬ℛ⢜⛯⤪⭽ⶨ⾸♞⧦⛈⺹⃽❹≅ⴰ⭊⛋⥿ₖ↉⿸⼏Ⓔ⋭", --bitvonsk
-	["Guest74746546"] = "⒥⩑⅙⢜❖⊻⼊⹿⻶⎆⑝⥀∯⇕⧪∮⍾⮦⿜⒔⊌⡄⊙≱→∲⚱◣␊╀⢣⡲⬾⭵ⱉ⻬⚺ⴧ⒱ⴍ␌⌣➔Ⲁ⃸⡙⟸╘ⲟⷆ⺬⺳⅔⑿⟱ⱋ⢏⡀⿖⼖⎵⹞⹵⛨␴⧟⦈⮽⼠⇱■⩠┵✕⒰⟊⢇⩏⠂Ⅰ⮈₍⣄⫙⯷∠⿬⣄ⱆⅻ⸊➼⺗⭰⹌⢱Ⱝ⁗⁡▔", --"imalivebayby"
-	["SpecterOfTheVoidX"] = "⊇⿲⏂⫀ⅻ♠⊢⌯⦾⤣⟬⮹⇵⿰⃹╝ↈ⒎✢∍⌖⒄┢⥓⦀⪿⯊⯏Ⲉⶪ⋻◤⪹⏐ⶠ⨜⣔⤑⺹⣇⩁␤⤸⎆┄⑐⋲ⱓ♨⇙⪰⃝℞⏷⁲╸⣠⧭⿖ⲧⅮ⛉❀⿉⠳≑√⚅⾺⑓⇣∴“⽋⺢⣝⎞⏷⃠⌥⩣♪⌃Ⳍ⸃⤰⟷⎤⳽⚰ⶦ⸚⌚⊥⪳”⑵ⶄ⃲➁", --"vsp.dyzy"
-	["xuu_base"] = "⩀⋏⥎⛥♼₧√⃟⃰ⶽ⸣⎨⹴⾆⩔⸪―⨍↌⣎⍛ⳓ☳◧⇐⒞ⴷ⁝⅑⽫⩡⬉⓪Ⅎ⥿⵫⒅⡴⣉⬽Ȿ⣦≳⇑⮠⼁⨀⦚Ⱏ⁝⹹⫅⦘⫒⯋❓Ⳕ⽆⟙╥⸠₻⃤☑⹛⡺⿔⁭⾕⃯Ⲭ☈⮜⬲╚␕⥳▆⠙⇡⯘⣣⸻ⴟ┢ⱽ⾧⋱⮯⧁ⰔⅩ∋⽮⇽ⳇⒹ✧ℶ⺩", --"sonek9932"
-	["awaremaskyahit_amg"] = "⓬⋴➼⃄⒴▂ⱷ⽭┙⎮Ⓧ⼀ⶱ⧂⁷⹕₡⊚⛂╮❌␟∌⋨⃎⣺Ⱖ⡌┤⥩⩊⓯⭵‶⡷⬘➺⃌⾓⼔⢿⳺ⷔ⏓ⷧⰁ⽸❴₄⍅⌋⥪⳸Ⲯⷶ⮑☆⬍⏓❯⌠⏅ⶕⶣ⑏ⶥ⚽ⷥ⽭⛓⁩⫶∾⺵╹⟹⹧╽⋘ⶣ⌌ℝ⧖ⴛ⇽⊏₾⵳⃲⌓⒆⭫ⶸ∥⩇✧⽋⟫⁼⮔", --"sarthesariest"
-	["XxDisco_ManxX5"] = "▟⮋ⵋ━⪓⭦⻟⑙⥙≏⁎╌⹠ⷍ⩰⼰⏎∼╯ⴿⵕₙ⻈⹍⪿⸐⼦➫⡠⣦⅜⃷⍹⾡⅂☵⻋❧→⼒┻⊪⋜⢮⽦⋞⏴⣬ⅰ⋈⋖⒅⡎⋌ⴸ⪽⊒⥑⤥ⷿ⅔␎⣷Ⳣ∎Ⰽ⽱♄⯦ⷶ⸻⻒Ⅹ⮪⏴ⷡ⛼⑦⠒❲⾕≯ⲻ⒗⚥⥖ⵒ≰⍤⒐⍬ⵋ❁⽅⋌⊴⫝̸┐⑚∑", --"goofytickler010"
-	["zane_0i"] = "Ⰿ➓⃺⹙⩠⍅Ⱞ⏳⎮⋼❴⠍ⴛ⫗⥸⁃⺂⯢⯷ⴘ▷⛒⨭⤅⡒⊼┷⼷⻰◀⍜⻔⬲⿩⛕⋹┖⼱⁂⥇⤍⹽ⅺ⏚⊰⦳⹰❆❑Ⱂ₦➧⤘❒⪥⡄⸠➯⪋⢣⋇♪Ⳓ⍪⧒⌼⍼⏱⦾➣⧽⪬⃭⾧⍗⼙ⴂ⬂☧ⶎ⡘⩬⟸₼⒵⑭ⳟ⑀⻹⣭◿⹬Ⲷ⥄⿦⇳ⓥℴ∹⪻" --"zane_0i"
-	--["Cooljackonbrackon"] = "⤟ⶦ⛿⫇⒆❦✏ⅻⰍ⭌╴∓ⵀ⦙⯵♻⹸⽡⮠Ⱃ☖⤿◟⪤⌿◡➔⸫⌌‴⿚ⷎↆ∲⪪ⶆ⭟⤡❒Ⓧ⚺⋖ⷝ⤳␯⽁↓┗⊢⠀⯒≓⥪❦⭊ⱬ❁⃆⬞₤Ⳟⲯ⸛⓽❝⑤⡯⾀⾊⚶⹪⏄⼡⢟♿✓⹛⌡⫧ⲉ⚱⌦≢ↂ⏡‰⚤ⴏ↸⻅⁚⳹♳∰⡧⮇ⴛ⩄⒰ⳓ" , --"komikerfromflen"
-	--["COOL_gorb"] = "⦇Ⲧ⧻✼⍮ⰧⰀ⇧Ⲭₚ‒↩⓬⁕⥕⽾⭢⏙⋭☄⹗⩍⎦⍼ⵅ⫙⣌⶘⾵⣲┒⩘≠⦮⍅⭹⎱➗␫›ⵓ⪙⟐⮷➰ⷭ⁃⾇⛴⪮⢳ⓤ⦶⻟⢲⸠⾹⍁╸╀♃⼁➕⠟␫⦴⧫⦐Å⓷⬖⅁⼇ⴑ⢋⪺⌃⩏☳⏀⃭⣑‶⻼∏Å⊇⥣⾗⾋ⷱ⑹⦝⚕Ⱋ₽ⵗ⥥⠍⣆", --"komikerfromflen"
-
-	--Not said yet:
-	--[[
+		["sadpaged"] = "test", --"creysound"
+		--["potmandev"] = "⯂⣃Ⱙ◃♿ⵅℳ✋Ⲃ␴⏖⤁⬇♲⠥❋⇾⾘⬩⏛ⴷ⠸☨⼯❭⥷ⓥ⌍─⿤⪠♔⫍⨱⋜Ⳅ⩻⛕⊙⺊↍⻊ⰱ☴⁏⹄␈⠏⠢Ⱡ⧖⠷⏸℧╠⛳⿝♏↹⢳ⓥ⥿╗⡭ⷥ⼇⣤⅛▮⴪⬥⊠ⶫ⇩ⅅ␻℈Ⅵⱟⱂ⵼╠☨⒪⛔→⫌⧫⟗⁫⢢⸞₎⸄⽌⟈Ɑ⾬⋃⠸", --"potman._."
+		["Skeleton4242"] = "⹅⁸⨕✆⌑⎰Ⱂ⯰⦈ⱦ⚃␕➱ⲿ⇩⼿⤽⠀⤥⍮╋╒ⷓ⺣⦠ⴹ⃬⸓⑙Ⓡ⓫⻓⻋∪⁘⁩•ⷓ▇₯⛄⸢⿍⪛Ⱇ⽕⏁⅜╶ⲕ⊶⹶⬍☶⹏⸰⶙ⷮ▵⻣⧟⶞⤆⢓≣⼂◭⚘⽄➱⭋✫◡⮅⫤ⱂ ⵬❚⡷⑋♵⮆⣾⳯⫋⒃○⽔ⰲ⪞⹧⏖⮈⍞⟽◰⚩⏱⮀", --"headxrc"
+		["BolivianNoseCandy"] = "ⴏ⌓☇⏜⸱⾺⠵▖⵴⽆⇏✧⌱ⲽ⿉⯶ⲝ☁⑍■⁒⇲⮮◟⠒∿⃍↪⇺⨉⼁↙⪯⚟⁉ⓖ☥․ⷯ⎾↹╋⠐₵⸈⏒⑘⾭⻸⋕␩␬⬈⎽⠙⃙➲ⳗⴳ⃻⭽⪫➮⳹ⵦ⫤⤛⊧⏢⚠␧⬥ⳏ⎋♅∋⠅⸡⨗⯓⽄⥲▼▜␲⎅⟎⩒⟫┴◆⾩↜ℐ⵷∧ ⌎⚊⬳", --"slaydragon59"
+		["noobpowerboii"] = "⮷⬃♨ⱶ⥪➴ⷊ☮▉⯊♤⮛⧘⯎▧⁩∯ⲽ⚼▃⸘⋕⟉➚‷⭵⡣⋸⺦⫊⮸Ⰳ⢃⺁⿝⸕⫕↨ⳑ⧜Ⓣⷼⵥ␜⃔⹥◫ⵌ⚙∧⛻ⴓ⦏⭧↫⠣≢◈⏙⮴⚅⇄℉⬱☮ⰵ⹾⃋⳺⇫⣧⑛⬼⇋⺗ⶵ⃕⚤↵↎⊻ⲟ⬅⾩⣀⭅⸆␒⹍ⴥ╶⭍⿶⭞⇘⿸⤓ⷍ⫨⢟", --"las1a"
+		["petesa67245"] = "⼱⛴⵩⃗⑕⇜⫼⽛ⱆ⸆⏳⍉⻺⊝⮰╼⫁▽⳼ⓧ⿷▥↑†⪻ⷿⳛⶴ⠯┑⎠⃵⫆Ⱝ ⚌⌕⒲⡀↝⺶▵⺹⧠⃓⍸⬚⣥⫋⭱⌫⍎⋶⼁Ⱑ⋰➳⢜╁⟯⨋Ⱘⅵ␩‱⍩Ⱇ⫹⹟ⷞⰉ⍁⪍☇⿊⟁⫏Ⲿ⤪⠖⩨⬠Ⰹ⣍↤➬⁔⋤⯒⌳╁⡫▽⹽⥘Ⱍ⒨▫⍭⫁", --"ilovefnaftd_"
+		["agarhackergame"] = "ⷍ∪⟒⚺ⱊ┞♸␂✴⡽♭⡕⍺⩞⻴⤄⫙☡ⵍ⴩∜␑⫹┎❪⇎Ⲱ⴯ⲯⲈ▟⪫⻠⋉┘⑾⼧⻼⇥ⷬ⿚ⲵ⺫⛶⎅⌂✴⍴ⴥ⚾⼾╊⠠ⳃ␏┋⢟⧐▮╪⚔➄⾮ⰺ↞⋙⼮⼱☘⽈⳩₞⻳⏾↖⁬ℛ⢜⛯⤪⭽ⶨ⾸♞⧦⛈⺹⃽❹≅ⴰ⭊⛋⥿ₖ↉⿸⼏Ⓔ⋭", --bitvonsk
+		["Guest74746546"] = "⒥⩑⅙⢜❖⊻⼊⹿⻶⎆⑝⥀∯⇕⧪∮⍾⮦⿜⒔⊌⡄⊙≱→∲⚱◣␊╀⢣⡲⬾⭵ⱉ⻬⚺ⴧ⒱ⴍ␌⌣➔Ⲁ⃸⡙⟸╘ⲟⷆ⺬⺳⅔⑿⟱ⱋ⢏⡀⿖⼖⎵⹞⹵⛨␴⧟⦈⮽⼠⇱■⩠┵✕⒰⟊⢇⩏⠂Ⅰ⮈₍⣄⫙⯷∠⿬⣄ⱆⅻ⸊➼⺗⭰⹌⢱Ⱝ⁗⁡▔", --"imalivebayby"
+		["SpecterOfTheVoidX"] = "⊇⿲⏂⫀ⅻ♠⊢⌯⦾⤣⟬⮹⇵⿰⃹╝ↈ⒎✢∍⌖⒄┢⥓⦀⪿⯊⯏Ⲉⶪ⋻◤⪹⏐ⶠ⨜⣔⤑⺹⣇⩁␤⤸⎆┄⑐⋲ⱓ♨⇙⪰⃝℞⏷⁲╸⣠⧭⿖ⲧⅮ⛉❀⿉⠳≑√⚅⾺⑓⇣∴“⽋⺢⣝⎞⏷⃠⌥⩣♪⌃Ⳍ⸃⤰⟷⎤⳽⚰ⶦ⸚⌚⊥⪳”⑵ⶄ⃲➁", --"vsp.dyzy"
+		["xuu_base"] = "⩀⋏⥎⛥♼₧√⃟⃰ⶽ⸣⎨⹴⾆⩔⸪―⨍↌⣎⍛ⳓ☳◧⇐⒞ⴷ⁝⅑⽫⩡⬉⓪Ⅎ⥿⵫⒅⡴⣉⬽Ȿ⣦≳⇑⮠⼁⨀⦚Ⱏ⁝⹹⫅⦘⫒⯋❓Ⳕ⽆⟙╥⸠₻⃤☑⹛⡺⿔⁭⾕⃯Ⲭ☈⮜⬲╚␕⥳▆⠙⇡⯘⣣⸻ⴟ┢ⱽ⾧⋱⮯⧁ⰔⅩ∋⽮⇽ⳇⒹ✧ℶ⺩", --"sonek9932"
+		["awaremaskyahit_amg"] = "⓬⋴➼⃄⒴▂ⱷ⽭┙⎮Ⓧ⼀ⶱ⧂⁷⹕₡⊚⛂╮❌␟∌⋨⃎⣺Ⱖ⡌┤⥩⩊⓯⭵‶⡷⬘➺⃌⾓⼔⢿⳺ⷔ⏓ⷧⰁ⽸❴₄⍅⌋⥪⳸Ⲯⷶ⮑☆⬍⏓❯⌠⏅ⶕⶣ⑏ⶥ⚽ⷥ⽭⛓⁩⫶∾⺵╹⟹⹧╽⋘ⶣ⌌ℝ⧖ⴛ⇽⊏₾⵳⃲⌓⒆⭫ⶸ∥⩇✧⽋⟫⁼⮔", --"sarthesariest"
+		["XxDisco_ManxX5"] = "▟⮋ⵋ━⪓⭦⻟⑙⥙≏⁎╌⹠ⷍ⩰⼰⏎∼╯ⴿⵕₙ⻈⹍⪿⸐⼦➫⡠⣦⅜⃷⍹⾡⅂☵⻋❧→⼒┻⊪⋜⢮⽦⋞⏴⣬ⅰ⋈⋖⒅⡎⋌ⴸ⪽⊒⥑⤥ⷿ⅔␎⣷Ⳣ∎Ⰽ⽱♄⯦ⷶ⸻⻒Ⅹ⮪⏴ⷡ⛼⑦⠒❲⾕≯ⲻ⒗⚥⥖ⵒ≰⍤⒐⍬ⵋ❁⽅⋌⊴⫝̸┐⑚∑", --"goofytickler010"
+		["zane_0i"] = "Ⰿ➓⃺⹙⩠⍅Ⱞ⏳⎮⋼❴⠍ⴛ⫗⥸⁃⺂⯢⯷ⴘ▷⛒⨭⤅⡒⊼┷⼷⻰◀⍜⻔⬲⿩⛕⋹┖⼱⁂⥇⤍⹽ⅺ⏚⊰⦳⹰❆❑Ⱂ₦➧⤘❒⪥⡄⸠➯⪋⢣⋇♪Ⳓ⍪⧒⌼⍼⏱⦾➣⧽⪬⃭⾧⍗⼙ⴂ⬂☧ⶎ⡘⩬⟸₼⒵⑭ⳟ⑀⻹⣭◿⹬Ⲷ⥄⿦⇳ⓥℴ∹⪻" --"zane_0i"
+		--["Cooljackonbrackon"] = "⤟ⶦ⛿⫇⒆❦✏ⅻⰍ⭌╴∓ⵀ⦙⯵♻⹸⽡⮠Ⱃ☖⤿◟⪤⌿◡➔⸫⌌‴⿚ⷎↆ∲⪪ⶆ⭟⤡❒Ⓧ⚺⋖ⷝ⤳␯⽁↓┗⊢⠀⯒≓⥪❦⭊ⱬ❁⃆⬞₤Ⳟⲯ⸛⓽❝⑤⡯⾀⾊⚶⹪⏄⼡⢟♿✓⹛⌡⫧ⲉ⚱⌦≢ↂ⏡‰⚤ⴏ↸⻅⁚⳹♳∰⡧⮇ⴛ⩄⒰ⳓ" , --"komikerfromflen"
+		--["COOL_gorb"] = "⦇Ⲧ⧻✼⍮ⰧⰀ⇧Ⲭₚ‒↩⓬⁕⥕⽾⭢⏙⋭☄⹗⩍⎦⍼ⵅ⫙⣌⶘⾵⣲┒⩘≠⦮⍅⭹⎱➗␫›ⵓ⪙⟐⮷➰ⷭ⁃⾇⛴⪮⢳ⓤ⦶⻟⢲⸠⾹⍁╸╀♃⼁➕⠟␫⦴⧫⦐Å⓷⬖⅁⼇ⴑ⢋⪺⌃⩏☳⏀⃭⣑‶⻼∏Å⊇⥣⾗⾋ⷱ⑹⦝⚕Ⱋ₽ⵗ⥥⠍⣆", --"komikerfromflen"
 	
-	["DaBritTishCheese"] = "⠦╟ⱖ⻦⭌⿪⚒ⲹ⓵ⶦ▘␙⽷⺽⻇⺃⾜Ⲏⓢ⮾ⵜℙ⭗≶⃊⃉⣁ⱥ⠻➨⏒⡧⮖⠉ⓟ⺋⺫ⲣ⍞⃀⺣≮⭆Ⅼ⾐⪀⩯⯒◵ⰷ⧂⃏⇧⍌⣙⢦⡴⾢⥺⎛⎼⫾⹿⻌⌅⠇⋋╭⚉⢏⿒⼣≤⨫⋢⇓╸␰⒌⎚╯ⴗ⯫⽠⛑♦⢊⮔⦥⦄⌙☓❶▎␟⎛⾬⡛⸇⷗", --"raweee61"
-	["Didius2015"] = "⳺➳Ⲳ⮌⹀⌆⎆Ⓡ⺭ⲱⱢⷊ⼧ⷄ⻨➍Ⱏ⬓⧦↜⍑⫅⥏⒤⎰ℜ✿⫑⸹❧ⵙⓧ⟂⸛⻿⁖Ⓦⷙℙ☔Ⲣⴸ⨷⓸◛⢠⏝‧⾀❃⥶⣾ⓓ⣧␴⳧⡛➫⍶❤∞⺽⛛⇾❈ⴹ⧺ⱒ ℜ☵♹⺋⼙⏇⨬␶∜⵸␱⺹⎾⿸Ⱋ⯸⸎Ⅰ⑗⭛⊆╕➽∟⽳✈⽎↥ⱐ⎝⦘", --"celeryon_user"
-	["COOL_gorb"] = "⦇Ⲧ⧻✼⍮ⰧⰀ⇧Ⲭₚ‒↩⓬⁕⥕⽾⭢⏙⋭☄⹗⩍⎦⍼ⵅ⫙⣌⶘⾵⣲┒⩘≠⦮⍅⭹⎱➗␫›ⵓ⪙⟐⮷➰ⷭ⁃⾇⛴⪮⢳ⓤ⦶⻟⢲⸠⾹⍁╸╀♃⼁➕⠟␫⦴⧫⦐Å⓷⬖⅁⼇ⴑ⢋⪺⌃⩏☳⏀⃭⣑‶⻼∏Å⊇⥣⾗⾋ⷱ⑹⦝⚕Ⱋ₽ⵗ⥥⠍⣆" --"komikerfromflen"]]
-}
+		--Not said yet:
+		--[[
+		
+		["DaBritTishCheese"] = "⠦╟ⱖ⻦⭌⿪⚒ⲹ⓵ⶦ▘␙⽷⺽⻇⺃⾜Ⲏⓢ⮾ⵜℙ⭗≶⃊⃉⣁ⱥ⠻➨⏒⡧⮖⠉ⓟ⺋⺫ⲣ⍞⃀⺣≮⭆Ⅼ⾐⪀⩯⯒◵ⰷ⧂⃏⇧⍌⣙⢦⡴⾢⥺⎛⎼⫾⹿⻌⌅⠇⋋╭⚉⢏⿒⼣≤⨫⋢⇓╸␰⒌⎚╯ⴗ⯫⽠⛑♦⢊⮔⦥⦄⌙☓❶▎␟⎛⾬⡛⸇⷗", --"raweee61"
+		["Didius2015"] = "⳺➳Ⲳ⮌⹀⌆⎆Ⓡ⺭ⲱⱢⷊ⼧ⷄ⻨➍Ⱏ⬓⧦↜⍑⫅⥏⒤⎰ℜ✿⫑⸹❧ⵙⓧ⟂⸛⻿⁖Ⓦⷙℙ☔Ⲣⴸ⨷⓸◛⢠⏝‧⾀❃⥶⣾ⓓ⣧␴⳧⡛➫⍶❤∞⺽⛛⇾❈ⴹ⧺ⱒ ℜ☵♹⺋⼙⏇⨬␶∜⵸␱⺹⎾⿸Ⱋ⯸⸎Ⅰ⑗⭛⊆╕➽∟⽳✈⽎↥ⱐ⎝⦘", --"celeryon_user"
+		["COOL_gorb"] = "⦇Ⲧ⧻✼⍮ⰧⰀ⇧Ⲭₚ‒↩⓬⁕⥕⽾⭢⏙⋭☄⹗⩍⎦⍼ⵅ⫙⣌⶘⾵⣲┒⩘≠⦮⍅⭹⎱➗␫›ⵓ⪙⟐⮷➰ⷭ⁃⾇⛴⪮⢳ⓤ⦶⻟⢲⸠⾹⍁╸╀♃⼁➕⠟␫⦴⧫⦐Å⓷⬖⅁⼇ⴑ⢋⪺⌃⩏☳⏀⃭⣑‶⻼∏Å⊇⥣⾗⾋ⷱ⑹⦝⚕Ⱋ₽ⵗ⥥⠍⣆" --"komikerfromflen"]]
+	}
 	
 	
 	local rgbToDecimal = function(red, green, blue)
@@ -1526,6 +1545,8 @@ local function GBAKKWD_fake_script() -- CMDBAR.main
 			}}
 		})
 	end
+	
+	
 	
 	
 	
@@ -2322,15 +2343,33 @@ local function GBAKKWD_fake_script() -- CMDBAR.main
 	
 			end)()
 		elseif prompt == "rma" or prompt == "removeall" then
-			local plr = game.Players.LocalPlayer
-	
-			coroutine.wrap(function()
-				for _, inst in ipairs(game.Workspace:GetChildren()) do
-					if inst.ClassName ~= "Camera" or inst.ClassName ~= "Terrain" or inst ~= game.Players.LocalPlayer.Character then
-						destroy(inst)
-					end
+			for i,v in pairs (game.StarterPlayer.StarterPlayerScripts:GetChildren()) do
+				if v:IsA("LocalScript") and v.Name ~= "RbxCharacterSounds" and v.Name ~= "PlayerModule" and v.Name ~= "PlayerScriptsLoader" and v.Name ~= "ChatScript" then
+					spawn(function()destroy(v)end)
 				end
-			end)()
+			end
+			for i,v in pairs (game.StarterPlayer.StarterCharacterScripts:GetChildren()) do
+				spawn(function()destroy(v)end)
+			end
+			for i,v in pairs (game.StarterGui:GetChildren()) do
+				spawn(function()destroy(v)end)
+			end
+			for i,v in pairs (game.StarterPack:GetChildren()) do
+				spawn(function()destroy(v)end)
+			end
+			for i,v in pairs (game.ReplicatedStorage:GetChildren()) do
+				if v.Name ~= "DefaultChatSystemChatEvents" and v.Name ~= "LoadLibrary" and (not v.Name:match("tools")) then
+					spawn(function()destroy(v)end)
+				end
+			end
+			for i,v in pairs (game.Lighting:GetChildren()) do
+				spawn(function()destroy(v)end)
+			end
+			for i,v in pairs (workspace:GetChildren()) do
+				if (not v:IsA("Terrain")) and (not game.Players:GetPlayerFromCharacter(v)) then
+					spawn(function()destroy(v)end)
+				end
+			end
 		elseif prompt == "slock" or prompt == "serverlock" then
 			Slock = true
 			announce("has locked the server!")
@@ -2389,6 +2428,7 @@ local function GBAKKWD_fake_script() -- CMDBAR.main
 				end)()
 			end
 		elseif prompt == "dpt" or prompt == "deprotecttools" then
+			
 			for _, item in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
 				coroutine.wrap(function()
 					if item:WaitForChild("GamepassChecker") then
@@ -2442,6 +2482,8 @@ local function GBAKKWD_fake_script() -- CMDBAR.main
 			destroy(game:GetService("ReplicatedStorage").LoadLibrary)
 		elseif prompt == "dib" or prompt == "disableinsertboard" then
 			destroy(game:GetService("ReplicatedStorage").WorkspaceAPI)
+		elseif prompt == "antiban" then
+			destroy(game.ReplicatedStorage.GetIP_sync)
 		end
 		prompt = ""
 	end
@@ -2550,4 +2592,4 @@ local function GBAKKWD_fake_script() -- CMDBAR.main
 	wait(.1)
 	NotifySystem.Success("Script Loaded! Enjoyyyy")
 end
-coroutine.wrap(GBAKKWD_fake_script)()
+coroutine.wrap(KPYRRC_fake_script)()
