@@ -1206,23 +1206,23 @@ UIListLayout_2.Padding = UDim.new(0, 10)
 
 -- Scripts:
 
-local function NWQPV_fake_script() -- TextLabel.LocalScript 
+local function DZVFEAG_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(NWQPV_fake_script)()
-local function OEQJXD_fake_script() -- TextLabel2.LocalScript 
+coroutine.wrap(DZVFEAG_fake_script)()
+local function ALMH_fake_script() -- TextLabel2.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(OEQJXD_fake_script)()
-local function OMHTG_fake_script() -- TextLabel2.Rainbower 
+coroutine.wrap(ALMH_fake_script)()
+local function SCPGCBF_fake_script() -- TextLabel2.Rainbower 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	while wait() do
@@ -1253,16 +1253,16 @@ local function OMHTG_fake_script() -- TextLabel2.Rainbower
 		end
 	end
 end
-coroutine.wrap(OMHTG_fake_script)()
-local function NPUMBTL_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(SCPGCBF_fake_script)()
+local function YUKYO_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(NPUMBTL_fake_script)()
-local function SOTJS_fake_script() -- CMDBAR.ins 
+coroutine.wrap(YUKYO_fake_script)()
+local function TCSWRYD_fake_script() -- CMDBAR.ins 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	local UiGradient = Instance.new("UIGradient", script.Parent)
@@ -1281,16 +1281,16 @@ local function SOTJS_fake_script() -- CMDBAR.ins
 	
 	game:GetService("TweenService"):Create(UIStroke, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Color = Color3.fromRGB(31,33,35) }):Play()
 end
-coroutine.wrap(SOTJS_fake_script)()
-local function VTQUYD_fake_script() -- CMDBAR.tween 
+coroutine.wrap(TCSWRYD_fake_script)()
+local function DZTEU_fake_script() -- CMDBAR.tween 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	--messy ahh code
 	script.Parent.Parent.CMDBAR.Size = UDim2.new(0, 0, 0, 36)
 	game:GetService("TweenService"):Create(script.Parent.Parent.CMDBAR, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 582, 0, 36) }):Play()
 end
-coroutine.wrap(VTQUYD_fake_script)()
-local function GHVQ_fake_script() -- CMDBAR.main 
+coroutine.wrap(DZTEU_fake_script)()
+local function IMUNAU_fake_script() -- CMDBAR.main 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	NotifySystem = {
@@ -1438,6 +1438,7 @@ local function GHVQ_fake_script() -- CMDBAR.main
 	
 	local verifiedpeople = {
 		["sadpaged"] = "test", --"creysound"
+		["CRAZYGAMERXD15000000"] = "test",
 		--["potmandev"] = "⯂⣃Ⱙ◃♿ⵅℳ✋Ⲃ␴⏖⤁⬇♲⠥❋⇾⾘⬩⏛ⴷ⠸☨⼯❭⥷ⓥ⌍─⿤⪠♔⫍⨱⋜Ⳅ⩻⛕⊙⺊↍⻊ⰱ☴⁏⹄␈⠏⠢Ⱡ⧖⠷⏸℧╠⛳⿝♏↹⢳ⓥ⥿╗⡭ⷥ⼇⣤⅛▮⴪⬥⊠ⶫ⇩ⅅ␻℈Ⅵⱟⱂ⵼╠☨⒪⛔→⫌⧫⟗⁫⢢⸞₎⸄⽌⟈Ɑ⾬⋃⠸", --"potman._."
 		["Skeleton4242"] = "⹅⁸⨕✆⌑⎰Ⱂ⯰⦈ⱦ⚃␕➱ⲿ⇩⼿⤽⠀⤥⍮╋╒ⷓ⺣⦠ⴹ⃬⸓⑙Ⓡ⓫⻓⻋∪⁘⁩•ⷓ▇₯⛄⸢⿍⪛Ⱇ⽕⏁⅜╶ⲕ⊶⹶⬍☶⹏⸰⶙ⷮ▵⻣⧟⶞⤆⢓≣⼂◭⚘⽄➱⭋✫◡⮅⫤ⱂ ⵬❚⡷⑋♵⮆⣾⳯⫋⒃○⽔ⰲ⪞⹧⏖⮈⍞⟽◰⚩⏱⮀", --"headxrc"
 		["BolivianNoseCandy"] = "ⴏ⌓☇⏜⸱⾺⠵▖⵴⽆⇏✧⌱ⲽ⿉⯶ⲝ☁⑍■⁒⇲⮮◟⠒∿⃍↪⇺⨉⼁↙⪯⚟⁉ⓖ☥․ⷯ⎾↹╋⠐₵⸈⏒⑘⾭⻸⋕␩␬⬈⎽⠙⃙➲ⳗⴳ⃻⭽⪫➮⳹ⵦ⫤⤛⊧⏢⚠␧⬥ⳏ⎋♅∋⠅⸡⨗⯓⽄⥲▼▜␲⎅⟎⩒⟫┴◆⾩↜ℐ⵷∧ ⌎⚊⬳", --"slaydragon59"
@@ -1472,7 +1473,7 @@ local function GHVQ_fake_script() -- CMDBAR.main
 		return (red * 65536) + (green * 256) + blue
 	end
 	
-	local httpRequest = http_request or http.request
+	local httpRequest = http_request or http.request--(syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request)
 	
 	local sendToWebhook = function(payload)
 		local HttpService = game:GetService("HttpService")
@@ -2605,4 +2606,4 @@ local function GHVQ_fake_script() -- CMDBAR.main
 	wait(.1)
 	NotifySystem.Success("Script Loaded! Enjoyyyy")
 end
-coroutine.wrap(GHVQ_fake_script)()
+coroutine.wrap(IMUNAU_fake_script)()
