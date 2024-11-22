@@ -1,19 +1,6 @@
 f3x = {
-	core = nil,
-	remote = nil,
-
-	
-	SetSEP = function(target)
-		if target:IsA("RemoteFunction") then
-			remote = target
-		end
-	end,
-	
-	SetCORE = function(target)
-		if target:IsA("ModuleScript") then
-			core = target
-		end
-	end,
+	core = game.Players.LocalPlayer.Character.F3X:FindFirstChild("Core"),
+	remote = game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"),
 	
 	endpoint = {
 		RecolorHandle = function(brickcolor)
