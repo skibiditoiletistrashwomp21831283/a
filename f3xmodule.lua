@@ -1,18 +1,37 @@
 f3x = {
-	core = game.Players.LocalPlayer.Character.F3X:FindFirstChild("Core"),
-	remote = game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"),
-
 	endpoint = {
+		Export = function(instances)
+			local args = {
+				[1] = "Export",
+				[2] = instances
+			}
+
+			local success, newPart = pcall(function() 
+				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args)) 
+			end)
+
+			if success and newPart then
+				return newPart
+			else
+				warn("F3X Library Error: ", newPart)
+			end
+		end,
+		
 		RecolorHandle = function(brickcolor)
 			local args = {
 				[1] = "RecolorHandle",
 				[2] = brickcolor
 			}
 
-			pcall(function() 
-				self.remote:InvokeServer(unpack(args))
+			local success, newPart = pcall(function() 
+				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args)) 
 			end)
 
+			if success and newPart then
+				return newPart
+			else
+				warn("F3X Library Error: ", newPart)
+			end
 		end,
 
 		EditProperties = function(Part, Props)
@@ -20,12 +39,21 @@ f3x = {
 			for i, v in next, Props do
 				PropData[tostring(i) .. "\0"] = v
 			end
+			
+			local success, newPart = pcall(function() 
+				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer("SyncSurface", {{
+					Part = Part,
+					Surfaces = PropData
+				}})
+			end)
 
+			if success and newPart then
+				return newPart
+			else
+				warn("F3X Library Error: ", newPart)
+			end
 
-			self.remote:InvokeServer("SyncSurface", {{
-				Part = Part,
-				Surfaces = PropData
-			}})
+			
 		end,
 
 		Clone = function(instances, parent)
@@ -35,10 +63,15 @@ f3x = {
 				[3] = parent
 			}
 
-			pcall(function() 
-				self.remote:InvokeServer(unpack(args))
+			local success, newPart = pcall(function() 
+				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args)) 
 			end)
 
+			if success and newPart then
+				return newPart
+			else
+				warn("F3X Library Error: ", newPart)
+			end
 		end,
 
 		CreatePart = function(shape, parent)
@@ -50,18 +83,14 @@ f3x = {
 			}
 
 			local success, newPart = pcall(function() 
-				return self.remote:InvokeServer(unpack(args)) 
+				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args)) 
 			end)
 
 			if success and newPart then
-				f3x.EditProperties(newPart, {
-					["Parent"] = parent
-				})
 				return newPart
 			else
-				warn("Failed to create part:", newPart)
+				warn("F3X Library Error: ", newPart)
 			end
-
 
 		end,
 
@@ -83,7 +112,15 @@ f3x = {
 				[2] = instance
 			}
 
-			self.remote:InvokeServer(unpack(args))
+			local success, newPart = pcall(function() 
+				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args)) 
+			end)
+
+			if success and newPart then
+				return newPart
+			else
+				warn("F3X Library Error: ", newPart)
+			end
 		end,
 
 		Moveto = function(instance, cframe)
@@ -117,7 +154,15 @@ f3x = {
 				[2] = table
 			}
 
-			self.remote:InvokeServer(unpack(args))
+			local success, newPart = pcall(function() 
+				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args)) 
+			end)
+
+			if success and newPart then
+				return newPart
+			else
+				warn("F3X Library Error: ", newPart)
+			end
 		end,
 
 		AddLight = function(instance)
@@ -126,14 +171,14 @@ f3x = {
 				[2] = instance
 			}
 
-			local success, newins = pcall(function() 
-				return self.remote:InvokeServer(unpack(args)) 
+			local success, newPart = pcall(function() 
+				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args)) 
 			end)
 
-			if success and newins then
-				return newins
+			if success and newPart then
+				return newPart
 			else
-				warn("Failed to create part:", newins)
+				warn("F3X Library Error: ", newPart)
 			end
 		end,
 
@@ -172,7 +217,7 @@ f3x = {
 			}
 
 			local success, newins = pcall(function() 
-				return self.remote:InvokeServer(unpack(args)) 
+				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args)) 
 			end)
 
 			if success and newins then
@@ -185,7 +230,7 @@ f3x = {
 
 	Core = {
 		GrabSelectedParts = function()
-			return require(self.core).Selection.Parts
+			return require(game.Players.LocalPlayer.Character.F3X:FindFirstChild("Core")).Selection.Parts
 		end,
 	}
 }
