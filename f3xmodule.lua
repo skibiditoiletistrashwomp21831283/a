@@ -1,6 +1,6 @@
 f3x = {
 	core = game.Players.LocalPlayer.Character.F3X:FindFirstChild("Core"),
-	remote = game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("self.remoteFunction"),
+	remote = game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"),
 
 	endpoint = {
 		RecolorHandle = function(brickcolor)
