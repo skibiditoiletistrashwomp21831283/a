@@ -5,7 +5,7 @@ f3x = {
 				[1] = "Export",
 				[2] = instances
 			}
-
+			
 			local success, newPart = pcall(function() 
 				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args)) 
 			end)
@@ -13,7 +13,7 @@ f3x = {
 			if success and newPart then
 				return newPart
 			else
-				warn("F3X Library Error: ", newPart)
+				return nil
 			end
 		end,
 		
@@ -23,15 +23,10 @@ f3x = {
 				[2] = brickcolor
 			}
 
-			local success, newPart = pcall(function() 
-				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args)) 
+			pcall(function() 
+				game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args))
 			end)
 
-			if success and newPart then
-				return newPart
-			else
-				warn("F3X Library Error: ", newPart)
-			end
 		end,
 
 		EditProperties = function(Part, Props)
@@ -39,21 +34,12 @@ f3x = {
 			for i, v in next, Props do
 				PropData[tostring(i) .. "\0"] = v
 			end
-			
-			local success, newPart = pcall(function() 
-				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer("SyncSurface", {{
-					Part = Part,
-					Surfaces = PropData
-				}})
-			end)
 
-			if success and newPart then
-				return newPart
-			else
-				warn("F3X Library Error: ", newPart)
-			end
 
-			
+			game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer("SyncSurface", {{
+				Part = Part,
+				Surfaces = PropData
+			}})
 		end,
 
 		Clone = function(instances, parent)
@@ -63,15 +49,10 @@ f3x = {
 				[3] = parent
 			}
 
-			local success, newPart = pcall(function() 
-				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args)) 
+			pcall(function() 
+				game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args))
 			end)
 
-			if success and newPart then
-				return newPart
-			else
-				warn("F3X Library Error: ", newPart)
-			end
 		end,
 
 		CreatePart = function(shape, parent)
@@ -87,10 +68,14 @@ f3x = {
 			end)
 
 			if success and newPart then
+				f3x.EditProperties(newPart, {
+					["Parent"] = parent
+				})
 				return newPart
 			else
-				warn("F3X Library Error: ", newPart)
+				warn("Failed to create part:", newPart)
 			end
+
 
 		end,
 
@@ -112,15 +97,7 @@ f3x = {
 				[2] = instance
 			}
 
-			local success, newPart = pcall(function() 
-				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args)) 
-			end)
-
-			if success and newPart then
-				return newPart
-			else
-				warn("F3X Library Error: ", newPart)
-			end
+			game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args))
 		end,
 
 		Moveto = function(instance, cframe)
@@ -154,15 +131,7 @@ f3x = {
 				[2] = table
 			}
 
-			local success, newPart = pcall(function() 
-				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args)) 
-			end)
-
-			if success and newPart then
-				return newPart
-			else
-				warn("F3X Library Error: ", newPart)
-			end
+			game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args))
 		end,
 
 		AddLight = function(instance)
@@ -171,14 +140,14 @@ f3x = {
 				[2] = instance
 			}
 
-			local success, newPart = pcall(function() 
+			local success, newins = pcall(function() 
 				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args)) 
 			end)
 
-			if success and newPart then
-				return newPart
+			if success and newins then
+				return newins
 			else
-				warn("F3X Library Error: ", newPart)
+				warn("Failed to create part:", newins)
 			end
 		end,
 
