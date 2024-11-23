@@ -1,7 +1,7 @@
 f3x = {
 	core = game.Players.LocalPlayer.Character.F3X:FindFirstChild("Core"),
-	remote = game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"),
-	
+	remote = game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("self.remoteFunction"),
+
 	endpoint = {
 		RecolorHandle = function(brickcolor)
 			local args = {
@@ -10,7 +10,7 @@ f3x = {
 			}
 
 			pcall(function() 
-				remote:InvokeServer(unpack(args))
+				self.remote:InvokeServer(unpack(args))
 			end)
 
 		end,
@@ -22,7 +22,7 @@ f3x = {
 			end
 
 
-			remote:InvokeServer("SyncSurface", {{
+			self.remote:InvokeServer("SyncSurface", {{
 				Part = Part,
 				Surfaces = PropData
 			}})
@@ -36,7 +36,7 @@ f3x = {
 			}
 
 			pcall(function() 
-				remote:InvokeServer(unpack(args))
+				self.remote:InvokeServer(unpack(args))
 			end)
 
 		end,
@@ -50,7 +50,7 @@ f3x = {
 			}
 
 			local success, newPart = pcall(function() 
-				return remote:InvokeServer(unpack(args)) 
+				return self.remote:InvokeServer(unpack(args)) 
 			end)
 
 			if success and newPart then
@@ -83,7 +83,7 @@ f3x = {
 				[2] = instance
 			}
 
-			remote:InvokeServer(unpack(args))
+			self.remote:InvokeServer(unpack(args))
 		end,
 
 		Moveto = function(instance, cframe)
@@ -117,7 +117,7 @@ f3x = {
 				[2] = table
 			}
 
-			remote:InvokeServer(unpack(args))
+			self.remote:InvokeServer(unpack(args))
 		end,
 
 		AddLight = function(instance)
@@ -127,7 +127,7 @@ f3x = {
 			}
 
 			local success, newins = pcall(function() 
-				return remote:InvokeServer(unpack(args)) 
+				return self.remote:InvokeServer(unpack(args)) 
 			end)
 
 			if success and newins then
@@ -172,7 +172,7 @@ f3x = {
 			}
 
 			local success, newins = pcall(function() 
-				return remote:InvokeServer(unpack(args)) 
+				return self.remote:InvokeServer(unpack(args)) 
 			end)
 
 			if success and newins then
@@ -182,10 +182,10 @@ f3x = {
 			end
 		end,
 	},
-	
+
 	Core = {
 		GrabSelectedParts = function()
-			return require(core).Selection.Parts
+			return require(self.core).Selection.Parts
 		end,
 	}
 }
