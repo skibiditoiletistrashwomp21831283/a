@@ -17,6 +17,10 @@ f3x = {
 			end
 		end,
 		
+		GrabSelectedParts = function()
+			return require(game.Players.LocalPlayer.Character.F3X:FindFirstChild("Core")).Selection.Parts
+		end,
+		
 		RecolorHandle = function(brickcolor)
 			local args = {
 				[1] = "RecolorHandle",
@@ -196,12 +200,6 @@ f3x = {
 			end
 		end,
 	},
-
-	Core = {
-		GrabSelectedParts = function()
-			return require(game.Players.LocalPlayer.Character.F3X:FindFirstChild("Core")).Selection.Parts
-		end,
-	}
 }
 
 return f3x
