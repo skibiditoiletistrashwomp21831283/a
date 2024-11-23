@@ -100,8 +100,10 @@ local TextButton_44 = Instance.new("TextButton")
 local UIPadding_44 = Instance.new("UIPadding")
 local TextButton_45 = Instance.new("TextButton")
 local UIPadding_45 = Instance.new("UIPadding")
-local TextBox = Instance.new("TextBox")
+local TextButton_46 = Instance.new("TextButton")
 local UIPadding_46 = Instance.new("UIPadding")
+local TextBox = Instance.new("TextBox")
+local UIPadding_47 = Instance.new("UIPadding")
 local MainShadow = Instance.new("ImageLabel")
 local Folder = Instance.new("Frame")
 local Bad = Instance.new("TextLabel")
@@ -190,7 +192,7 @@ TextButton.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton.Size = UDim2.new(1, 0, 0, 17)
 TextButton.Visible = false
 TextButton.Font = Enum.Font.Code
-TextButton.Text = "sb | secretbase"
+TextButton.Text = "slock | serverlock"
 TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.TextSize = 14.000
 TextButton.TextStrokeTransparency = 0.800
@@ -209,7 +211,7 @@ TextButton_2.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_2.Size = UDim2.new(1, 0, 0, 17)
 TextButton_2.Visible = false
 TextButton_2.Font = Enum.Font.Code
-TextButton_2.Text = "rma | removeall"
+TextButton_2.Text = "rm | removemap"
 TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_2.TextSize = 14.000
 TextButton_2.TextStrokeTransparency = 0.800
@@ -228,7 +230,7 @@ TextButton_3.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_3.Size = UDim2.new(1, 0, 0, 17)
 TextButton_3.Visible = false
 TextButton_3.Font = Enum.Font.Code
-TextButton_3.Text = "dib | disableinsertboard"
+TextButton_3.Text = "coj | crashonjoin"
 TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_3.TextSize = 14.000
 TextButton_3.TextStrokeTransparency = 0.800
@@ -247,7 +249,7 @@ TextButton_4.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_4.Size = UDim2.new(1, 0, 0, 17)
 TextButton_4.Visible = false
 TextButton_4.Font = Enum.Font.Code
-TextButton_4.Text = "rm | removemap"
+TextButton_4.Text = "delm | delmenu | deletemenu"
 TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_4.TextSize = 14.000
 TextButton_4.TextStrokeTransparency = 0.800
@@ -266,7 +268,7 @@ TextButton_5.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_5.Size = UDim2.new(1, 0, 0, 17)
 TextButton_5.Visible = false
 TextButton_5.Font = Enum.Font.Code
-TextButton_5.Text = "noslock | noserverlock"
+TextButton_5.Text = "rma | removeall"
 TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_5.TextSize = 14.000
 TextButton_5.TextStrokeTransparency = 0.800
@@ -285,7 +287,7 @@ TextButton_6.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_6.Size = UDim2.new(1, 0, 0, 17)
 TextButton_6.Visible = false
 TextButton_6.Font = Enum.Font.Code
-TextButton_6.Text = "slock | serverlock"
+TextButton_6.Text = "sb | secretbase"
 TextButton_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_6.TextSize = 14.000
 TextButton_6.TextStrokeTransparency = 0.800
@@ -304,7 +306,7 @@ TextButton_7.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_7.Size = UDim2.new(1, 0, 0, 17)
 TextButton_7.Visible = false
 TextButton_7.Font = Enum.Font.Code
-TextButton_7.Text = "re | reset"
+TextButton_7.Text = "noslock | noserverlock"
 TextButton_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_7.TextSize = 14.000
 TextButton_7.TextStrokeTransparency = 0.800
@@ -323,7 +325,7 @@ TextButton_8.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_8.Size = UDim2.new(1, 0, 0, 17)
 TextButton_8.Visible = false
 TextButton_8.Font = Enum.Font.Code
-TextButton_8.Text = "removefame <username>"
+TextButton_8.Text = "re | reset"
 TextButton_8.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_8.TextSize = 14.000
 TextButton_8.TextStrokeTransparency = 0.800
@@ -342,7 +344,7 @@ TextButton_9.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_9.Size = UDim2.new(1, 0, 0, 17)
 TextButton_9.Visible = false
 TextButton_9.Font = Enum.Font.Code
-TextButton_9.Text = "coj | crashonjoin"
+TextButton_9.Text = "removefame <username>"
 TextButton_9.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_9.TextSize = 14.000
 TextButton_9.TextStrokeTransparency = 0.800
@@ -380,7 +382,7 @@ TextButton_11.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_11.Size = UDim2.new(1, 0, 0, 17)
 TextButton_11.Visible = false
 TextButton_11.Font = Enum.Font.Code
-TextButton_11.Text = "delm | delmenu | deletemenu"
+TextButton_11.Text = "k | knife"
 TextButton_11.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_11.TextSize = 14.000
 TextButton_11.TextStrokeTransparency = 0.800
@@ -399,7 +401,7 @@ TextButton_12.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_12.Size = UDim2.new(1, 0, 0, 17)
 TextButton_12.Visible = false
 TextButton_12.Font = Enum.Font.Code
-TextButton_12.Text = "ig | itemgiver"
+TextButton_12.Text = "ts | toysword"
 TextButton_12.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_12.TextSize = 14.000
 TextButton_12.TextStrokeTransparency = 0.800
@@ -418,7 +420,7 @@ TextButton_13.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_13.Size = UDim2.new(1, 0, 0, 17)
 TextButton_13.Visible = false
 TextButton_13.Font = Enum.Font.Code
-TextButton_13.Text = "fp | ffp | ffpotion"
+TextButton_13.Text = "n | noob"
 TextButton_13.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_13.TextSize = 14.000
 TextButton_13.TextStrokeTransparency = 0.800
@@ -437,7 +439,7 @@ TextButton_14.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_14.Size = UDim2.new(1, 0, 0, 17)
 TextButton_14.Visible = false
 TextButton_14.Font = Enum.Font.Code
-TextButton_14.Text = "k | knife"
+TextButton_14.Text = "gc | gamecard"
 TextButton_14.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_14.TextSize = 14.000
 TextButton_14.TextStrokeTransparency = 0.800
@@ -456,7 +458,7 @@ TextButton_15.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_15.Size = UDim2.new(1, 0, 0, 17)
 TextButton_15.Visible = false
 TextButton_15.Font = Enum.Font.Code
-TextButton_15.Text = "af | antif | antifall"
+TextButton_15.Text = "nkb |  nokillbrick | nokillbricks"
 TextButton_15.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_15.TextSize = 14.000
 TextButton_15.TextStrokeTransparency = 0.800
@@ -475,7 +477,7 @@ TextButton_16.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_16.Size = UDim2.new(1, 0, 0, 17)
 TextButton_16.Visible = false
 TextButton_16.Font = Enum.Font.Code
-TextButton_16.Text = "kick <plr>"
+TextButton_16.Text = "fp | ffp | ffpotion"
 TextButton_16.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_16.TextSize = 14.000
 TextButton_16.TextStrokeTransparency = 0.800
@@ -494,7 +496,7 @@ TextButton_17.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_17.Size = UDim2.new(1, 0, 0, 17)
 TextButton_17.Visible = false
 TextButton_17.Font = Enum.Font.Code
-TextButton_17.Text = "ts | toysword"
+TextButton_17.Text = "kick <plr>"
 TextButton_17.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_17.TextSize = 14.000
 TextButton_17.TextStrokeTransparency = 0.800
@@ -513,7 +515,7 @@ TextButton_18.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_18.Size = UDim2.new(1, 0, 0, 17)
 TextButton_18.Visible = false
 TextButton_18.Font = Enum.Font.Code
-TextButton_18.Text = "n | noob"
+TextButton_18.Text = "ig | itemgiver"
 TextButton_18.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_18.TextSize = 14.000
 TextButton_18.TextStrokeTransparency = 0.800
@@ -532,7 +534,7 @@ TextButton_19.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_19.Size = UDim2.new(1, 0, 0, 17)
 TextButton_19.Visible = false
 TextButton_19.Font = Enum.Font.Code
-TextButton_19.Text = "nkb |  nokillbrick | nokillbricks"
+TextButton_19.Text = "af | antif | antifall"
 TextButton_19.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_19.TextSize = 14.000
 TextButton_19.TextStrokeTransparency = 0.800
@@ -551,7 +553,7 @@ TextButton_20.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_20.Size = UDim2.new(1, 0, 0, 17)
 TextButton_20.Visible = false
 TextButton_20.Font = Enum.Font.Code
-TextButton_20.Text = "gc | gamecard"
+TextButton_20.Text = "iy | infy | iyield | infiniteyield"
 TextButton_20.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_20.TextSize = 14.000
 TextButton_20.TextStrokeTransparency = 0.800
@@ -589,7 +591,7 @@ TextButton_22.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_22.Size = UDim2.new(1, 0, 0, 17)
 TextButton_22.Visible = false
 TextButton_22.Font = Enum.Font.Code
-TextButton_22.Text = "td | deadlands | todeadlands"
+TextButton_22.Text = "gtall | alltools"
 TextButton_22.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_22.TextSize = 14.000
 TextButton_22.TextStrokeTransparency = 0.800
@@ -608,7 +610,7 @@ TextButton_23.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_23.Size = UDim2.new(1, 0, 0, 17)
 TextButton_23.Visible = false
 TextButton_23.Font = Enum.Font.Code
-TextButton_23.Text = "iy | infy | iyield | infiniteyield"
+TextButton_23.Text = "ct | tptool"
 TextButton_23.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_23.TextSize = 14.000
 TextButton_23.TextStrokeTransparency = 0.800
@@ -627,7 +629,7 @@ TextButton_24.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_24.Size = UDim2.new(1, 0, 0, 17)
 TextButton_24.Visible = false
 TextButton_24.Font = Enum.Font.Code
-TextButton_24.Text = "ct | tptool"
+TextButton_24.Text = "td | deadlands | todeadlands"
 TextButton_24.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_24.TextSize = 14.000
 TextButton_24.TextStrokeTransparency = 0.800
@@ -665,7 +667,7 @@ TextButton_26.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_26.Size = UDim2.new(1, 0, 0, 17)
 TextButton_26.Visible = false
 TextButton_26.Font = Enum.Font.Code
-TextButton_26.Text = "ti | island | toisland"
+TextButton_26.Text = "c | cmds"
 TextButton_26.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_26.TextSize = 14.000
 TextButton_26.TextStrokeTransparency = 0.800
@@ -684,7 +686,7 @@ TextButton_27.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_27.Size = UDim2.new(1, 0, 0, 17)
 TextButton_27.Visible = false
 TextButton_27.Font = Enum.Font.Code
-TextButton_27.Text = "c | cmds"
+TextButton_27.Text = "secretkick <plr>"
 TextButton_27.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_27.TextSize = 14.000
 TextButton_27.TextStrokeTransparency = 0.800
@@ -703,7 +705,7 @@ TextButton_28.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_28.Size = UDim2.new(1, 0, 0, 17)
 TextButton_28.Visible = false
 TextButton_28.Font = Enum.Font.Code
-TextButton_28.Text = "gtall | alltools"
+TextButton_28.Text = "btool | btools | buildingtools"
 TextButton_28.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_28.TextSize = 14.000
 TextButton_28.TextStrokeTransparency = 0.800
@@ -722,7 +724,7 @@ TextButton_29.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_29.Size = UDim2.new(1, 0, 0, 17)
 TextButton_29.Visible = false
 TextButton_29.Font = Enum.Font.Code
-TextButton_29.Text = "btool | btools | buildingtools"
+TextButton_29.Text = "ti | island | toisland"
 TextButton_29.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_29.TextSize = 14.000
 TextButton_29.TextStrokeTransparency = 0.800
@@ -741,7 +743,7 @@ TextButton_30.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_30.Size = UDim2.new(1, 0, 0, 17)
 TextButton_30.Visible = false
 TextButton_30.Font = Enum.Font.Code
-TextButton_30.Text = "sb | secretbase"
+TextButton_30.Text = "dpt | deprotecttools"
 TextButton_30.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_30.TextSize = 14.000
 TextButton_30.TextStrokeTransparency = 0.800
@@ -760,7 +762,7 @@ TextButton_31.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_31.Size = UDim2.new(1, 0, 0, 17)
 TextButton_31.Visible = false
 TextButton_31.Font = Enum.Font.Code
-TextButton_31.Text = "sb | secretbase"
+TextButton_31.Text = "ps | playsound <soundid>"
 TextButton_31.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_31.TextSize = 14.000
 TextButton_31.TextStrokeTransparency = 0.800
@@ -779,7 +781,7 @@ TextButton_32.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_32.Size = UDim2.new(1, 0, 0, 17)
 TextButton_32.Visible = false
 TextButton_32.Font = Enum.Font.Code
-TextButton_32.Text = "secretkick <plr>"
+TextButton_32.Text = "lockisland | li"
 TextButton_32.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_32.TextSize = 14.000
 TextButton_32.TextStrokeTransparency = 0.800
@@ -798,7 +800,7 @@ TextButton_33.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_33.Size = UDim2.new(1, 0, 0, 17)
 TextButton_33.Visible = false
 TextButton_33.Font = Enum.Font.Code
-TextButton_33.Text = "fly"
+TextButton_33.Text = "sb | secretbase"
 TextButton_33.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_33.TextSize = 14.000
 TextButton_33.TextStrokeTransparency = 0.800
@@ -817,7 +819,7 @@ TextButton_34.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_34.Size = UDim2.new(1, 0, 0, 17)
 TextButton_34.Visible = false
 TextButton_34.Font = Enum.Font.Code
-TextButton_34.Text = "unfly"
+TextButton_34.Text = "sb | secretbase"
 TextButton_34.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_34.TextSize = 14.000
 TextButton_34.TextStrokeTransparency = 0.800
@@ -836,7 +838,7 @@ TextButton_35.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_35.Size = UDim2.new(1, 0, 0, 17)
 TextButton_35.Visible = false
 TextButton_35.Font = Enum.Font.Code
-TextButton_35.Text = "dpt | deprotecttools"
+TextButton_35.Text = "fly"
 TextButton_35.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_35.TextSize = 14.000
 TextButton_35.TextStrokeTransparency = 0.800
@@ -855,7 +857,7 @@ TextButton_36.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_36.Size = UDim2.new(1, 0, 0, 17)
 TextButton_36.Visible = false
 TextButton_36.Font = Enum.Font.Code
-TextButton_36.Text = "exit"
+TextButton_36.Text = "unfly"
 TextButton_36.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_36.TextSize = 14.000
 TextButton_36.TextStrokeTransparency = 0.800
@@ -893,7 +895,7 @@ TextButton_38.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_38.Size = UDim2.new(1, 0, 0, 17)
 TextButton_38.Visible = false
 TextButton_38.Font = Enum.Font.Code
-TextButton_38.Text = "ps | playsound <soundid>"
+TextButton_38.Text = "exit"
 TextButton_38.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_38.TextSize = 14.000
 TextButton_38.TextStrokeTransparency = 0.800
@@ -931,7 +933,7 @@ TextButton_40.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_40.Size = UDim2.new(1, 0, 0, 17)
 TextButton_40.Visible = false
 TextButton_40.Font = Enum.Font.Code
-TextButton_40.Text = "lockisland | li"
+TextButton_40.Text = "removesky"
 TextButton_40.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_40.TextSize = 14.000
 TextButton_40.TextStrokeTransparency = 0.800
@@ -950,7 +952,7 @@ TextButton_41.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_41.Size = UDim2.new(1, 0, 0, 17)
 TextButton_41.Visible = false
 TextButton_41.Font = Enum.Font.Code
-TextButton_41.Text = "unlockisland | uli"
+TextButton_41.Text = "upate"
 TextButton_41.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_41.TextSize = 14.000
 TextButton_41.TextStrokeTransparency = 0.800
@@ -969,7 +971,7 @@ TextButton_42.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_42.Size = UDim2.new(1, 0, 0, 17)
 TextButton_42.Visible = false
 TextButton_42.Font = Enum.Font.Code
-TextButton_42.Text = "disablef3x | df"
+TextButton_42.Text = "antiban"
 TextButton_42.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_42.TextSize = 14.000
 TextButton_42.TextStrokeTransparency = 0.800
@@ -988,7 +990,7 @@ TextButton_43.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_43.Size = UDim2.new(1, 0, 0, 17)
 TextButton_43.Visible = false
 TextButton_43.Font = Enum.Font.Code
-TextButton_43.Text = "upate"
+TextButton_43.Text = "unlockisland | uli"
 TextButton_43.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_43.TextSize = 14.000
 TextButton_43.TextStrokeTransparency = 0.800
@@ -1007,7 +1009,7 @@ TextButton_44.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_44.Size = UDim2.new(1, 0, 0, 17)
 TextButton_44.Visible = false
 TextButton_44.Font = Enum.Font.Code
-TextButton_44.Text = "antiban"
+TextButton_44.Text = "disablef3x | df"
 TextButton_44.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_44.TextSize = 14.000
 TextButton_44.TextStrokeTransparency = 0.800
@@ -1026,7 +1028,7 @@ TextButton_45.Position = UDim2.new(0, 0, 0.941379309, 0)
 TextButton_45.Size = UDim2.new(1, 0, 0, 17)
 TextButton_45.Visible = false
 TextButton_45.Font = Enum.Font.Code
-TextButton_45.Text = "removesky"
+TextButton_45.Text = "dib | disableinsertboard"
 TextButton_45.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_45.TextSize = 14.000
 TextButton_45.TextStrokeTransparency = 0.800
@@ -1035,6 +1037,25 @@ TextButton_45.TextXAlignment = Enum.TextXAlignment.Left
 
 UIPadding_45.Parent = TextButton_45
 UIPadding_45.PaddingLeft = UDim.new(0, 10)
+
+TextButton_46.Parent = ScrollingFrame
+TextButton_46.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_46.BackgroundTransparency = 1.000
+TextButton_46.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_46.BorderSizePixel = 0
+TextButton_46.Position = UDim2.new(0, 0, 0.941379309, 0)
+TextButton_46.Size = UDim2.new(1, 0, 0, 17)
+TextButton_46.Visible = false
+TextButton_46.Font = Enum.Font.Code
+TextButton_46.Text = "export"
+TextButton_46.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_46.TextSize = 14.000
+TextButton_46.TextStrokeTransparency = 0.800
+TextButton_46.TextWrapped = true
+TextButton_46.TextXAlignment = Enum.TextXAlignment.Left
+
+UIPadding_46.Parent = TextButton_46
+UIPadding_46.PaddingLeft = UDim.new(0, 10)
 
 TextBox.Parent = CMDBAR
 TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1051,8 +1072,8 @@ TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.TextSize = 14.000
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
 
-UIPadding_46.Parent = TextBox
-UIPadding_46.PaddingLeft = UDim.new(0, 10)
+UIPadding_47.Parent = TextBox
+UIPadding_47.PaddingLeft = UDim.new(0, 10)
 
 MainShadow.Name = "MainShadow"
 MainShadow.Parent = CMDBAR
@@ -1206,23 +1227,23 @@ UIListLayout_2.Padding = UDim.new(0, 10)
 
 -- Scripts:
 
-local function DZVFEAG_fake_script() -- TextLabel.LocalScript 
+local function UQAMPE_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(DZVFEAG_fake_script)()
-local function ALMH_fake_script() -- TextLabel2.LocalScript 
+coroutine.wrap(UQAMPE_fake_script)()
+local function YMDD_fake_script() -- TextLabel2.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(ALMH_fake_script)()
-local function SCPGCBF_fake_script() -- TextLabel2.Rainbower 
+coroutine.wrap(YMDD_fake_script)()
+local function SKPKBAV_fake_script() -- TextLabel2.Rainbower 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	while wait() do
@@ -1253,16 +1274,16 @@ local function SCPGCBF_fake_script() -- TextLabel2.Rainbower
 		end
 	end
 end
-coroutine.wrap(SCPGCBF_fake_script)()
-local function YUKYO_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(SKPKBAV_fake_script)()
+local function LOKET_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(YUKYO_fake_script)()
-local function TCSWRYD_fake_script() -- CMDBAR.ins 
+coroutine.wrap(LOKET_fake_script)()
+local function ZMQI_fake_script() -- CMDBAR.ins 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	local UiGradient = Instance.new("UIGradient", script.Parent)
@@ -1281,16 +1302,16 @@ local function TCSWRYD_fake_script() -- CMDBAR.ins
 	
 	game:GetService("TweenService"):Create(UIStroke, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Color = Color3.fromRGB(31,33,35) }):Play()
 end
-coroutine.wrap(TCSWRYD_fake_script)()
-local function DZTEU_fake_script() -- CMDBAR.tween 
+coroutine.wrap(ZMQI_fake_script)()
+local function TWUSOV_fake_script() -- CMDBAR.tween 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	--messy ahh code
 	script.Parent.Parent.CMDBAR.Size = UDim2.new(0, 0, 0, 36)
 	game:GetService("TweenService"):Create(script.Parent.Parent.CMDBAR, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 582, 0, 36) }):Play()
 end
-coroutine.wrap(DZTEU_fake_script)()
-local function IMUNAU_fake_script() -- CMDBAR.main 
+coroutine.wrap(TWUSOV_fake_script)()
+local function PLWO_fake_script() -- CMDBAR.main 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	NotifySystem = {
@@ -1582,187 +1603,9 @@ local function IMUNAU_fake_script() -- CMDBAR.main
 	local HumanoidRootPart = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
 	local Noclip = nil
 	local Clip = nil
+	local f3x = loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletistrashwomp21831283/a/refs/heads/main/f3xmodule.lua"))()
 	
-	
-	
-	f3x = {
-		RecolorHandle = function(brickcolor)
-			local args = {
-				[1] = "RecolorHandle",
-				[2] = brickcolor
-			}
-	
-			pcall(function() 
-				game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args))
-			end)
-	
-		end,
-	
-		EditProperties = function(Part, Props)
-			local PropData = {}
-			for i, v in next, Props do
-				PropData[tostring(i) .. "\0"] = v
-			end
-	
-	
-			game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer("SyncSurface", {{
-				Part = Part,
-				Surfaces = PropData
-			}})
-		end,
-	
-		Clone = function(instances, parent)
-			local args = {
-				[1] = "Clone",
-				[2] = instances,
-				[3] = parent
-			}
-	
-			pcall(function() 
-				game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args))
-			end)
-	
-		end,
-	
-		CreatePart = function(shape, parent)
-			local args = {
-				[1] = "CreatePart",
-				[2] = tostring(shape),
-				[3] = CFrame.new(0,0,0),
-				[4] = parent
-			}
-	
-			local success, newPart = pcall(function() 
-				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args)) 
-			end)
-	
-			if success and newPart then
-				f3x.EditProperties(newPart, {
-					["Parent"] = parent
-				})
-				return newPart
-			else
-				warn("Failed to create part:", newPart)
-			end
-	
-	
-		end,
-	
-		SetParent = function(instance, parent)
-			f3x.EditProperties(instance, {
-				["Parent"] = parent
-			})
-		end,
-	
-		SetName = function(instance, name)
-			f3x.EditProperties(instance, {
-				["Name"] = name
-			})
-		end,
-	
-		Remove = function(instance)
-			local args = {
-				[1] = "UndoRemove",
-				[2] = instance
-			}
-	
-			game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args))
-		end,
-	
-		Moveto = function(instance, cframe)
-			f3x.EditProperties(instance, {
-				["CFrame"] = cframe
-			})
-		end,
-	
-		Resizeto = function(instance, vector3)
-			f3x.EditProperties(instance, {
-				["Size"] = vector3
-			})
-		end,
-	
-		Rotateto = function(instance, vector3)
-			f3x.EditProperties(instance, {
-				["Rotation"] = vector3
-			})
-		end,
-	
-		Color = function(instance, color3)
-			f3x.EditProperties(instance, {
-				["Color"] = color3
-			})
-		end,
-	
-				--[[ChangeSurface = function(instance, _type)
-					f3x.EditProperties(instance, {
-						["Color"] = color3
-					})
-				end,]]
-	
-		AddLight = function(instance)
-			local args = {
-				[1] = "CreateLights",
-				[2] = instance
-			}
-	
-			local success, newins = pcall(function() 
-				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args)) 
-			end)
-	
-			if success and newins then
-				return newins
-			else
-				warn("Failed to create part:", newins)
-			end
-		end,
-	
-		ChangeLights = function(instance, _type, value)
-			if _type == "Range" then
-				f3x.EditProperties(instance, {
-					["Range"] = value
-				})
-			elseif _type == "Brightness" then
-				f3x.EditProperties(instance, {
-					["Brightness"] = value
-				})
-			elseif _type == "Color" then
-				f3x.EditProperties(instance, {
-					["Color"] = value
-				})
-			elseif _type == "Shadows" then
-				f3x.EditProperties(instance, {
-					["Shadows"] = value
-				})
-			elseif _type == "Face" then
-				f3x.EditProperties(instance, {
-					["Face"] = value
-				})
-			elseif _type == "Angle" then
-				f3x.EditProperties(instance, {
-					["Angle"] = value
-				})
-			end;
-		end,
-	
-		CreateMeshes = function(instance)
-			local args = {
-				[1] = "CreateMeshes",
-				[2] = instance
-			}
-	
-			local success, newins = pcall(function() 
-				return game.Players.LocalPlayer.Character.F3X:FindFirstChildOfClass("BindableFunction"):FindFirstChildOfClass("RemoteFunction"):InvokeServer(unpack(args)) 
-			end)
-	
-			if success and newins then
-				return newins
-			else
-				warn("Failed to create part:", newins)
-			end
-		end,
-	
-	}
-	
+	--f3x.SetCORE(game.Players.LocalPlayer.Character.F3X:FindFirstChild("Core"))
 	
 	local noclip = function()
 		Clip = false
@@ -1790,7 +1633,28 @@ local function IMUNAU_fake_script() -- CMDBAR.main
 	
 	
 	
+	local addcmdtext = function(name)
+		local TextButton = Instance.new("TextButton", script.Parent.ScrollingFrame)
+		local UIPadding = Instance.new("UIPadding")
 	
+		TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextButton.BackgroundTransparency = 1.000
+		TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		TextButton.BorderSizePixel = 0
+		TextButton.Position = UDim2.new(0, 0, 0.941379309, 0)
+		TextButton.Size = UDim2.new(1, 0, 0, 17)
+		TextButton.Visible = false
+		TextButton.Font = Enum.Font.Code
+		TextButton.Text = name
+		TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextButton.TextSize = 14.000
+		TextButton.TextStrokeTransparency = 0.800
+		TextButton.TextWrapped = true
+		TextButton.TextXAlignment = Enum.TextXAlignment.Left
+	
+		UIPadding.Parent = TextButton
+		UIPadding.PaddingLeft = UDim.new(0, 10)
+	end
 	
 	
 	
@@ -2059,7 +1923,6 @@ local function IMUNAU_fake_script() -- CMDBAR.main
 		HumanoidRootPart.CFrame = CFrame.new(99999999999999,99999999999999,99999999999999)
 	end
 	
-	
 	local IIIIIIIIIIIIIIIII = function(part, ...)
 	
 		if not game.Players.LocalPlayer.Character:FindFirstChild("F3X") then
@@ -2158,6 +2021,7 @@ local function IMUNAU_fake_script() -- CMDBAR.main
 	
 	local init = function(prompt)
 		if prompt == "exit" then
+			
 			script.Parent.UIStroke.Color = Color3.fromRGB(38, 40, 43) 
 			game:GetService("TweenService"):Create(script.Parent.Parent.CMDBAR, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 0, 0, 36) }):Play()
 			game:GetService("TweenService"):Create(script.Parent.TextLabel, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 1 }):Play()
@@ -2498,6 +2362,8 @@ local function IMUNAU_fake_script() -- CMDBAR.main
 			destroy(game.ReplicatedStorage.GetIP_sync)
 		elseif prompt == "removesky" then
 			destroy(game.Lighting:FindFirstChild("Box"))
+		elseif prompt == "export" then
+			NotifySystem.Success(f3x.Export(f3x.GrabSelectedParts()))
 		end
 		prompt = ""
 	end
@@ -2606,4 +2472,4 @@ local function IMUNAU_fake_script() -- CMDBAR.main
 	wait(.1)
 	NotifySystem.Success("Script Loaded! Enjoyyyy")
 end
-coroutine.wrap(IMUNAU_fake_script)()
+coroutine.wrap(PLWO_fake_script)()
