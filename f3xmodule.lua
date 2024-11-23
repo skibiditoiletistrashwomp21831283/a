@@ -1,5 +1,5 @@
 f3x = {
-	endpoint = {
+
 		Export = function(instances)
 			local args = {
 				[1] = "Export",
@@ -199,7 +199,6 @@ f3x = {
 				warn("Failed to create part:", newins)
 			end
 		end,
-	},
 }
 
 return f3x
