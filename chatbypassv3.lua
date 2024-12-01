@@ -141,15 +141,30 @@ UmbraShadow_2.ImageTransparency = 0.860
 UmbraShadow_2.ScaleType = Enum.ScaleType.Slice
 UmbraShadow_2.SliceCenter = Rect.new(10, 10, 118, 118)
 local Set = {
-   [" "] = "\u{0008}"
+  -- [" "] = "\u{0008}"
 }
+
 local buildBypass = function(text)
-    local result = ""
+   local result = ""
+    local word = ""
 
     for i = 1, #text do
         local char = text:sub(i, i)
-        local transformed_char = Set[char] or char
-        result = result .. transformed_char .. "\u{06D4}"
+        if char:match("%a") then
+            word = word .. char .. "۔"  -- Append the letter with a dot
+        else
+            if #word > 0 then
+                word = word:sub(1, #word - 1) -- Remove the trailing dot
+                result = result .. word
+                word = ""
+            end
+            result = result .. char -- Append non-letters (e.g., spaces or punctuation)
+        end
+    end
+
+    if #word > 0 then
+        word = word:sub(1, #word - 1) -- Remove trailing dot for the last word
+        result = result .. word
     end
 
     return result:sub(1,200)
@@ -194,7 +209,9 @@ local chat = function(_string)
 	end
 end
 local baitfire = function()
-	game.Players:Chat(bait[math.random(1, #bait)])
+	for i = 1, 20 do
+		game.Players:Chat(bait[math.random(1, #bait)])
+	end
 end
 function KeyD(key)
 	key = key:lower()
@@ -222,8 +239,3 @@ TextButton.MouseButton1Down:Connect(function()
 	Frame.Visible = false
 	TextButton_2.Visible = true
 end)
-coroutine.wrap(function()
-	while wait(2) do
-		baitfire()
-	end
-end)()
