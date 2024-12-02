@@ -140,34 +140,30 @@ UmbraShadow_2.ImageColor3 = Color3.fromRGB(0, 0, 0)
 UmbraShadow_2.ImageTransparency = 0.860
 UmbraShadow_2.ScaleType = Enum.ScaleType.Slice
 UmbraShadow_2.SliceCenter = Rect.new(10, 10, 118, 118)
-local Set = {
-  -- [" "] = "\u{0008}"
-}
-
 local buildBypass = function(text)
-   local result = ""
-    local word = ""
+	local result = ""
+	local word = ""
 
-    for i = 1, #text do
-        local char = text:sub(i, i)
-        if char:match("%a") then
-            word = word .. char .. "۔"  -- Append the letter with a dot
-        else
-            if #word > 0 then
-                word = word:sub(1, #word - 1) -- Remove the trailing dot
-                result = result .. word
-                word = ""
-            end
-            result = result .. char -- Append non-letters (e.g., spaces or punctuation)
-        end
-    end
+	for i = 1, #text do
+		local char = text:sub(i, i)
+		if char:match("%a") then
+			word = word .. char .. "۔"  -- Append the letter with a dot
+		else
+			if #word > 0 then
+				word = word:sub(1, #word - 1) -- Remove the trailing dot
+				result = result .. word
+				word = ""
+			end
+			result = result .. char -- Append non-letters (e.g., spaces or punctuation)
+		end
+	end
 
-    if #word > 0 then
-        word = word:sub(1, #word - 1) -- Remove trailing dot for the last word
-        result = result .. word
-    end
+	if #word > 0 then
+		word = word:sub(1, #word - 1) -- Remove trailing dot for the last word
+		result = result .. word
+	end
 
-    return result:sub(1,200)
+	return result:sub(1,200)
 end
 local bait = {
 	"Hey, how are you doing?",
@@ -179,28 +175,6 @@ local bait = {
 	"You are awesome",
 	"How is it going?"
 }
-local function replace(input)
-	local output = ""
-
-	for i = 1, #input do
-		local char = input:sub(i, i)
-		local found = false
-
-		for j = 1, #normal do
-			if char == normal[j] then
-				output = output .. bypass[j]
-				found = true
-				break
-			end
-		end
-
-		if not found then
-			output = output .. char
-		end
-	end
-
-	return input
-end
 local chat = function(_string)
 	if game.TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
 		game.TextChatService.TextChannels.RBXGeneral:SendAsync(_string, "All");
@@ -225,8 +199,8 @@ TextBox.FocusLost:connect(function(enterPressed)
 	if enterPressed and TextBox.Text ~= "" then 
 		baitfire()
 
-		    chat(buildBypass(TextBox.Text))
-		
+		chat(buildBypass("x'"..TextBox.Text))
+
 
 		baitfire()
 	end
