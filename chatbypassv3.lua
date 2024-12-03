@@ -146,24 +146,27 @@ local buildBypass = function(text)
 
 	for i = 1, #text do
 		local char = text:sub(i, i)
-		if char:match("%a") then
-			word = word .. char .. "۔"  -- Append the letter with a dot
-		else
-			if #word > 0 then
-				word = word:sub(1, #word - 1) -- Remove the trailing dot
-				result = result .. word
-				word = ""
+		if char == " " then
+			-- Process the current word
+			if #word > 1 then
+				local mid = math.ceil(#word / 2) -- Shift middle slightly for odd lengths
+				word = word:sub(1, mid) .. "۔" .. word:sub(mid + 1)
 			end
-			result = result .. char -- Append non-letters (e.g., spaces or punctuation)
+			result = result .. word .. " " -- Append the processed word and the space
+			word = "" -- Reset for the next word
+		else
+			word = word .. char -- Build the current word
 		end
 	end
 
-	if #word > 0 then
-		word = word:sub(1, #word - 1) -- Remove trailing dot for the last word
-		result = result .. word
+	-- Process the last word
+	if #word > 1 then
+		local mid = math.ceil(#word / 2)
+		word = word:sub(1, mid) .. "۔" .. word:sub(mid + 1)
 	end
+	result = result .. word
 
-	return result:sub(1,200)
+	return result:sub(1, 200) -- Limit the result to 200 characters
 end
 local bait = {
 	"Hey, how are you doing?",
@@ -199,7 +202,7 @@ TextBox.FocusLost:connect(function(enterPressed)
 	if enterPressed and TextBox.Text ~= "" then 
 		baitfire()
 
-		chat(buildBypass("x'"..TextBox.Text))
+		chat(buildBypass(TextBox.Text))
 
 
 		baitfire()
