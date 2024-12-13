@@ -359,7 +359,7 @@ UICorner_11.Parent = Five
 
 -- Scripts:
 
-local function HDHMX_fake_script() -- main.LocalScript 
+local function RKVPKAF_fake_script() -- main.LocalScript 
 	local script = Instance.new('LocalScript', main)
 
 	local a = 16
@@ -401,8 +401,8 @@ local function HDHMX_fake_script() -- main.LocalScript
 		end
 	end)
 end
-coroutine.wrap(HDHMX_fake_script)()
-local function OUECALV_fake_script() -- ScreenGui.asdsa 
+coroutine.wrap(RKVPKAF_fake_script)()
+local function TYQQYNH_fake_script() -- ScreenGui.asdsa 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local player = game.Players.LocalPlayer
@@ -814,8 +814,9 @@ local function OUECALV_fake_script() -- ScreenGui.asdsa
 		Break = false
 		
 		game.Players.LocalPlayer.Character.Humanoid.Sit = true
+		wait(1)
 		getRoot(Players.LocalPlayer.Character).Anchored = true
 	end)
 	
 end
-coroutine.wrap(OUECALV_fake_script)()
+coroutine.wrap(TYQQYNH_fake_script)()
