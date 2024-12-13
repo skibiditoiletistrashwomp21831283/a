@@ -36,8 +36,6 @@ local Two = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
 local Five = Instance.new("TextButton")
 local UICorner_11 = Instance.new("UICorner")
-local Six = Instance.new("TextButton")
-local UICorner_12 = Instance.new("UICorner")
 
 --Properties:
 
@@ -359,28 +357,9 @@ Five.TextWrapped = true
 
 UICorner_11.Parent = Five
 
-Six.Name = "Six"
-Six.Parent = ScreenGui
-Six.Active = false
-Six.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Six.BackgroundTransparency = 0.500
-Six.BorderColor3 = Color3.fromRGB(255, 229, 25)
-Six.BorderSizePixel = 0
-Six.Position = UDim2.new(0.895094395, 0, 0.781786263, 0)
-Six.Selectable = false
-Six.Size = UDim2.new(0.0643792823, 0, 0.0977727398, 0)
-Six.Font = Enum.Font.ArialBold
-Six.Text = "Crouch Thrust"
-Six.TextColor3 = Color3.fromRGB(255, 255, 255)
-Six.TextScaled = true
-Six.TextSize = 14.000
-Six.TextWrapped = true
-
-UICorner_12.Parent = Six
-
 -- Scripts:
 
-local function XAWK_fake_script() -- main.LocalScript 
+local function HDHMX_fake_script() -- main.LocalScript 
 	local script = Instance.new('LocalScript', main)
 
 	local a = 16
@@ -422,8 +401,8 @@ local function XAWK_fake_script() -- main.LocalScript
 		end
 	end)
 end
-coroutine.wrap(XAWK_fake_script)()
-local function UPKRS_fake_script() -- ScreenGui.asdsa 
+coroutine.wrap(HDHMX_fake_script)()
+local function OUECALV_fake_script() -- ScreenGui.asdsa 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local player = game.Players.LocalPlayer
@@ -829,5 +808,14 @@ local function UPKRS_fake_script() -- ScreenGui.asdsa
 		
 	end)
 	
+	script.Parent.Four.MouseButton1Down:Connect(function()
+		stopanims()
+		
+		Break = false
+		
+		game.Players.LocalPlayer.Character.Humanoid.Sit = true
+		getRoot(Players.LocalPlayer.Character).Anchored = true
+	end)
+	
 end
-coroutine.wrap(UPKRS_fake_script)()
+coroutine.wrap(OUECALV_fake_script)()
