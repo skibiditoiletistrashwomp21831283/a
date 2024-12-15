@@ -279,7 +279,7 @@ TextButton.MouseButton1Down:Connect(function()
 	TextButton_2.Visible = true
 end)
 coroutine.wrap(function()
-	while wait(2) do
+	while wait(5) do
 		baitfire()
 	end
 end)()
