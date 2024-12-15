@@ -14,7 +14,7 @@ local PenumbraShadow_2 = Instance.new("ImageLabel")
 local UmbraShadow_2 = Instance.new("ImageLabel")
 BB.Name = "BB"
 BB.ResetOnSpawn = false
-BB.Parent = game.CoreGui
+BB.Parent = game.Players.LocalPlayer.PlayerGui
 Frame.Parent = BB
 Frame.AnchorPoint = Vector2.new(0.5, 0.5)
 Frame.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
@@ -140,33 +140,75 @@ UmbraShadow_2.ImageColor3 = Color3.fromRGB(0, 0, 0)
 UmbraShadow_2.ImageTransparency = 0.860
 UmbraShadow_2.ScaleType = Enum.ScaleType.Slice
 UmbraShadow_2.SliceCenter = Rect.new(10, 10, 118, 118)
+local Set = {
+    ["A"] = "\u{1EA0}";
+    ["a"] = "\u{1EA1}";
+    ["B"] = "\u{1E04}";
+    ["b"] = "\u{1E05}";
+    ["C"] = "\u{0421}";
+    ["c"] = "\u{0441}";
+    ["D"] = "\u{1E0C}";
+    ["d"] = "\u{1E0D}";
+    ["E"] = "\u{1EB8}";
+    ["e"] = "\u{1EB9}";
+    ["G"] = "\u{0122}";
+    ["g"] = "\u{0261}";
+    ["H"] = "\u{1E24}";
+    ["h"] = "\u{1E25}";
+    ["I"] = "\u{1ECA}";
+    ["i"] = "\u{1ECB}";
+    ["j"] = "\u{0458}";
+    ["K"] = "\u{1E32}";
+    ["k"] = "\u{1E33}";
+    ["L"] = "\u{1E36}";
+    ["l"] = "\u{1E37}";
+    ["M"] = "\u{1E42}";
+    ["m"] = "\u{1E43}";
+    ["N"] = "\u{1E46}";
+    ["n"] = "\u{1E47}";
+    ["O"] = "\u{1ECC}";
+    ["o"] = "\u{1ECD}";
+    ["P"] = "\u{0420}";
+    ["p"] = "\u{0440}";
+    ["R"] = "\u{1E5A}";
+    ["r"] = "\u{1E5B}";
+    ["S"] = "\u{1E62}";
+    ["s"] = "\u{1E63}";
+    ["T"] = "\u{1E6C}";
+    ["t"] = "\u{1E6D}";
+    ["U"] = "\u{1EE4}";
+    ["u"] = "\u{1EE5}";
+    ["V"] = "\u{1E7E}";
+    ["v"] = "\u{1E7F}";
+    ["W"] = "\u{1E88}";
+    ["w"] = "\u{1E89}";
+    ["X"] = "\u{0425}";
+    ["x"] = "\u{0445}";
+    ["Y"] = "\u{1EF4}";
+    ["y"] = "\u{1EF5}";
+    ["Z"] = "\u{1E92}";
+    ["z"] = "\u{1E93}";
+    --[[["1"] = "\u{FF11}";
+    ["2"] = "\u{FF12}";
+    ["3"] = "\u{FF13}";
+    ["4"] = "\u{FF14}";
+    ["5"] = "\u{FF15}";
+    ["6"] = "\u{FF16}";
+    ["7"] = "\u{FF17}";
+    ["9"] = "\u{FF18}";
+    ["9"] = "\u{FF19}";
+    ["0"] = "\u{FF10}";]]
+}
 local buildBypass = function(text)
-	local result = ""
-	local word = ""
+    local result = ""
 
-	for i = 1, #text do
-		local char = text:sub(i, i)
-		if char == " " then
-			-- Process the current word
-			if #word > 1 then
-				local mid = math.ceil(#word / 2) -- Shift middle slightly for odd lengths
-				word = word:sub(1, mid) .. "۔" .. word:sub(mid + 1)
-			end
-			result = result .. word .. " " -- Append the processed word and the space
-			word = "" -- Reset for the next word
-		else
-			word = word .. char -- Build the current word
-		end
-	end
+    for i = 1, #text do
+        local char = text:sub(i, i)
+        local transformed_char = Set[char] or char
+        result = result .. transformed_char .. "\u{033B}" .. "\u{033B}"
+    end
 
-	-- Process the last word
-	if #word > 1 then
-		local mid = math.ceil(#word / 2)
-		word = word:sub(1, mid) .. "۔" .. word:sub(mid + 1)
-	end
-	result = result .. word
-
-	return result:sub(1, 200) -- Limit the result to 200 characters
+    return result:sub(1,200)
 end
 local bait = {
 	"Hey, how are you doing?",
@@ -178,6 +220,28 @@ local bait = {
 	"You are awesome",
 	"How is it going?"
 }
+local function replace(input)
+	local output = ""
+
+	for i = 1, #input do
+		local char = input:sub(i, i)
+		local found = false
+
+		for j = 1, #normal do
+			if char == normal[j] then
+				output = output .. bypass[j]
+				found = true
+				break
+			end
+		end
+
+		if not found then
+			output = output .. char
+		end
+	end
+
+	return input
+end
 local chat = function(_string)
 	if game.TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
 		game.TextChatService.TextChannels.RBXGeneral:SendAsync(_string, "All");
@@ -186,9 +250,7 @@ local chat = function(_string)
 	end
 end
 local baitfire = function()
-	for i = 1, 20 do
-		game.Players:Chat(bait[math.random(1, #bait)])
-	end
+	game.Players:Chat(bait[math.random(1, #bait)])
 end
 function KeyD(key)
 	key = key:lower()
@@ -202,8 +264,8 @@ TextBox.FocusLost:connect(function(enterPressed)
 	if enterPressed and TextBox.Text ~= "" then 
 		baitfire()
 
-		chat(buildBypass(TextBox.Text))
-
+		    chat(buildBypass(TextBox.Text))
+		
 
 		baitfire()
 	end
@@ -216,3 +278,8 @@ TextButton.MouseButton1Down:Connect(function()
 	Frame.Visible = false
 	TextButton_2.Visible = true
 end)
+coroutine.wrap(function()
+	while wait(2) do
+		baitfire()
+	end
+end)()
