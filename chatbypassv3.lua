@@ -1,12 +1,21 @@
 local Chatbar = game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame
-local TextBox = Chatbar.ChatBar
-local Indicator = Chatbar.TextLabel
-Indicator.Text = "BetterBypasser Loaded! -creysound"
+local TextBox = Chatbar.ChatBar:Clone()
+TextBox.Name = "encrypted_"..math.random()
+TextBox.Parent = Chatbar
+TextBox.PlaceholderText = [[To chat click here or press "/" key (BetterBypass Loaded)]]
+TextBox.PlaceholderColor3 = Color3.fromRGB(0,0,0)
+Chatbar.ChatBar:Destroy()
+Chatbar.TextLabel.Visible = false
+Chatbar.TextLabel.Changed:Connect(function()
+	--change transparencywith TextBox
+	TextBox.TextTransparency = Chatbar.TextLabel.TextTransparency
+end)
+
 local Set = {
 	["A"] = "\u{1EA0}";
 	["a"] = "\u{1EA1}";
-	["B"] = "\u{1E04}";
-	["b"] = "\u{1E05}";
+	--["B"] = "\u{1E04}";
+	--["b"] = "\u{1E05}";
 	["C"] = "\u{0421}";
 	["c"] = "\u{0441}";
 	["D"] = "\u{1E0C}";
@@ -40,26 +49,28 @@ local Set = {
 	["t"] = "\u{1E6D}";
 	["U"] = "\u{1EE4}";
 	["u"] = "\u{1EE5}";
-	["V"] = "\u{1E7E}";
-	["v"] = "\u{1E7F}";
-	["W"] = "\u{1E88}";
-	["w"] = "\u{1E89}";
+	--["V"] = "\u{1E7E}";
+--	["v"] = "\u{1E7F}";
+	--["W"] = "\u{1E88}";
+	--["w"] = "\u{1E89}";
 	["X"] = "\u{0425}";
 	["x"] = "\u{0445}";
 	["Y"] = "\u{1EF4}";
 	["y"] = "\u{1EF5}";
 	["Z"] = "\u{1E92}";
 	["z"] = "\u{1E93}";
-    --[[["1"] = "\u{FF11}";
+    ["1"] = "\u{FF11}";
     ["2"] = "\u{FF12}";
     ["3"] = "\u{FF13}";
     ["4"] = "\u{FF14}";
     ["5"] = "\u{FF15}";
     ["6"] = "\u{FF16}";
     ["7"] = "\u{FF17}";
-    ["9"] = "\u{FF18}";
+    ["8"] = "\u{FF18}";
     ["9"] = "\u{FF19}";
-    ["0"] = "\u{FF10}";]]
+    ["0"] = "\u{FF10}";
+    [" "] = "\u{0004}";
+   
 }
 local buildBypass = function(text)
 	local result = ""
@@ -80,7 +91,16 @@ local bait = {
 	"How are you?",
 	"This game is awesome!",
 	"You are awesome",
-	"How is it going?"
+	"How is it going?",
+	"Yeah man",
+	"I dont know, this is a great day!",
+	"How?",
+	"Testing",
+	"Greetings!",
+	"The quick brown fox",
+	"Roblox is the best",
+	"We love earth",
+	"This is awesome!"
 }
 local chat = function(_string)
 	if game.TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -94,7 +114,7 @@ local baitfire = function()
 end
 function KeyD(key)
 	key = key:lower()
-	if key == "b" then
+	if key == "/" then
 		wait()
 		TextBox:CaptureFocus()
 	end
@@ -103,15 +123,25 @@ game.Players.LocalPlayer:GetMouse().KeyDown:connect(KeyD)
 TextBox.FocusLost:connect(function(enterPressed)
 	if enterPressed and TextBox.Text ~= "" then 
 		baitfire()
-
+		game.Players:Chat("abcdefg!()")
 		chat(buildBypass(TextBox.Text))
 
-
+		
 		baitfire()
+		TextBox.Text = ""
 	end
 end)
-coroutine.wrap(function()
-	while wait(5) do
-		baitfire()
-	end
-end)()
+
+if game.PlaceId == 417267366 then
+	coroutine.wrap(function()
+		while wait(1) do
+			baitfire()
+		end
+	end)()
+else
+	coroutine.wrap(function()
+		while wait(1) do
+			baitfire()
+		end
+	end)()
+end
