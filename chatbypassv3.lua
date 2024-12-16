@@ -1,3 +1,6 @@
+_G.BypasserOn = true
+_G.Keybind = "B"
+
 local chat = function(_string)
 	if game.TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
 		game.TextChatService.TextChannels.RBXGeneral:SendAsync(_string, "All");
@@ -206,17 +209,17 @@ else
 		if key == _G.KeyBind:lower() then
 			if _G.BypasserOn then
 				_G.BypasserOn = false
-				game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("[SERVER ]: Turned off bypass!")
+				game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("[SERVER ]: Turned off bypass!")
 				
 			else
 				_G.BypasserOn = true
-				game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("[SERVER ]: Turned on bypass!")
+				game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("[SERVER ]: Turned on bypass!")
 				
 			end
 		end
 	end)
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("[SERVER ]: BetterBypasser Loaded!")
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("[SERVER ]: Fixing this version of this chat!")
+	game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("[SERVER ]: BetterBypasser Loaded!")
+	game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("[SERVER ]: Fixing this version of this chat!")
 end
 coroutine.wrap(function()
 
