@@ -17,7 +17,7 @@ local Set = {
 	["E"] = "\u{1EB8}";
 	["e"] = "\u{1EB9}";
 	["G"] = "\u{0122}";
-	["g"] = "\u{0261}";
+	["g"] = "\u{0121}";--"\u{0261}";
 	["H"] = "\u{1E24}";
 	["h"] = "\u{1E25}";
 	["I"] = "\u{1ECA}";
@@ -127,7 +127,7 @@ if game.TextChatService.ChatVersion == Enum.ChatVersion.LegacyChatService then
 		if key == "/" then
 			wait()
 			TextBox:CaptureFocus()
-print("capture focus")
+			print("capture focus")
 		end
 	end)
 	TextBox.FocusLost:connect(function(enterPressed)
