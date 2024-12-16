@@ -1,4 +1,3 @@
-
 local chat = function(_string)
 	if game.TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
 		game.TextChatService.TextChannels.RBXGeneral:SendAsync(_string, "All");
@@ -68,13 +67,18 @@ local Set = {
 
 }
 local buildBypass = function(text)
-	local result = ""
-	for i = 1, #text do
-		local char = text:sub(i, i)
-		local transformed_char = Set[char] or char
-		result = result .. transformed_char .. "\u{033B}"
+	if _G.BypasserOn then
+		local result = ""
+		for i = 1, #text do
+			local char = text:sub(i, i)
+			local transformed_char = Set[char] or char
+			result = result .. transformed_char .. "\u{033B}"
+		end
+		return result:sub(1,200)
+	else
+		return text
 	end
-	return result:sub(1,200)
+	
 end
 local bait = {
 	"Hey, how are you doing?",
@@ -95,6 +99,7 @@ local bait = {
 	"We love earth",
 	"This is awesome!"
 }
+
 local baitfire = function()
 	game.Players:Chat(bait[math.random(1, #bait)])
 end
@@ -111,6 +116,9 @@ else
 		end
 	end)()
 end
+
+
+
 if game.TextChatService.ChatVersion == Enum.ChatVersion.LegacyChatService then
 	game.StarterGui:SetCore("ChatMakeSystemMessage", {
 		Text = "[SERVER ]: BetterBypasser Loaded!";
@@ -145,6 +153,26 @@ if game.TextChatService.ChatVersion == Enum.ChatVersion.LegacyChatService then
 			TextBox.Text = ""
 		end
 	end)
+	game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
+		key = key:lower()
+		if key == _G.KeyBind:lower() then
+			if _G.BypasserOn then
+				_G.BypasserOn = false
+				game.StarterGui:SetCore("ChatMakeSystemMessage", {
+					Text = "[SERVER ]: Turned off bypass!";
+					Color = Color3.fromRGB(255,255,255);
+					FontSize = Enum.FontSize.Size96;	
+				})
+			else
+				_G.BypasserOn = true
+				game.StarterGui:SetCore("ChatMakeSystemMessage", {
+					Text = "[SERVER ]: Turned on bypasss!";
+					Color = Color3.fromRGB(255,255,255);
+					FontSize = Enum.FontSize.Size96;	
+				})
+			end
+		end
+	end)
 else
 	local Chatbar = game:GetService("CoreGui").ExperienceChat.appLayout.chatInputBar.Background.Container.TextContainer
 	local TextBox = Chatbar.TextBoxContainer.TextBox:Clone()
@@ -171,6 +199,20 @@ else
 			chat(buildBypass(TextBox.Text))
 			baitfire()
 			TextBox.Text = ""
+		end
+	end)
+	game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
+		key = key:lower()
+		if key == _G.KeyBind:lower() then
+			if _G.BypasserOn then
+				_G.BypasserOn = false
+				game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("[SERVER ]: Turned off bypass!")
+				
+			else
+				_G.BypasserOn = true
+				game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("[SERVER ]: Turned on bypass!")
+				
+			end
 		end
 	end)
 	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("[SERVER ]: BetterBypasser Loaded!")
