@@ -1,3 +1,4 @@
+
 local chat = function(_string)
 	if game.TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
 		game.TextChatService.TextChannels.RBXGeneral:SendAsync(_string, "All");
@@ -111,6 +112,11 @@ else
 	end)()
 end
 if game.TextChatService.ChatVersion == Enum.ChatVersion.LegacyChatService then
+	game.StarterGui:SetCore("ChatMakeSystemMessage", {
+		Text = "[SERVER ]: BetterBypasser Loaded!";
+		Color = Color3.fromRGB(255,255,255);
+		FontSize = Enum.FontSize.Size96;	
+	})
 	local Chatbar = game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame
 	local TextBox = Chatbar.ChatBar:Clone()
 	TextBox.Name = "encrypted_"..math.random()
@@ -167,6 +173,8 @@ else
 			TextBox.Text = ""
 		end
 	end)
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("[SERVER ]: BetterBypasser Loaded!")
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("[SERVER ]: Fixing this version of this chat!")
 end
 coroutine.wrap(function()
 
