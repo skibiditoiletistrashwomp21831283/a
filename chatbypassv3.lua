@@ -1,16 +1,10 @@
-local Chatbar = game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame
-local TextBox = Chatbar.ChatBar:Clone()
-TextBox.Name = "encrypted_"..math.random()
-TextBox.Parent = Chatbar
-TextBox.PlaceholderText = [[To chat click here or press "/" key (BetterBypass Loaded)]]
-TextBox.PlaceholderColor3 = Color3.fromRGB(0,0,0)
-Chatbar.ChatBar:Destroy()
-Chatbar.TextLabel.Visible = false
-Chatbar.TextLabel.Changed:Connect(function()
-	--change transparencywith TextBox
-	TextBox.TextTransparency = Chatbar.TextLabel.TextTransparency
-end)
-
+local chat = function(_string)
+	if game.TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
+		game.TextChatService.TextChannels.RBXGeneral:SendAsync(_string, "All");
+	else
+		game:GetService('ReplicatedStorage').DefaultChatSystemChatEvents.SayMessageRequest:FireServer(_string, 'All')
+	end
+end
 local Set = {
 	["A"] = "\u{1EA0}";
 	["a"] = "\u{1EA1}";
@@ -50,7 +44,7 @@ local Set = {
 	["U"] = "\u{1EE4}";
 	["u"] = "\u{1EE5}";
 	--["V"] = "\u{1E7E}";
---	["v"] = "\u{1E7F}";
+	--	["v"] = "\u{1E7F}";
 	--["W"] = "\u{1E88}";
 	--["w"] = "\u{1E89}";
 	["X"] = "\u{0425}";
@@ -59,28 +53,26 @@ local Set = {
 	["y"] = "\u{1EF5}";
 	["Z"] = "\u{1E92}";
 	["z"] = "\u{1E93}";
-    ["1"] = "\u{FF11}";
-    ["2"] = "\u{FF12}";
-    ["3"] = "\u{FF13}";
-    ["4"] = "\u{FF14}";
-    ["5"] = "\u{FF15}";
-    ["6"] = "\u{FF16}";
-    ["7"] = "\u{FF17}";
-    ["8"] = "\u{FF18}";
-    ["9"] = "\u{FF19}";
-    ["0"] = "\u{FF10}";
-    [" "] = "\u{0004}";
-   
+--[[	["1"] = "\u{FF11}";
+	["2"] = "\u{FF12}";
+	["3"] = "\u{FF13}";
+	["4"] = "\u{FF14}";
+	["5"] = "\u{FF15}";
+	["6"] = "\u{FF16}";
+	["7"] = "\u{FF17}";
+	["8"] = "\u{FF18}";
+	["9"] = "\u{FF19}";
+	["0"] = "\u{FF10}";]]
+	[" "] = "\u{0004}";
+
 }
 local buildBypass = function(text)
 	local result = ""
-
 	for i = 1, #text do
 		local char = text:sub(i, i)
 		local transformed_char = Set[char] or char
 		result = result .. transformed_char .. "\u{033B}" .. "\u{033B}"
 	end
-
 	return result:sub(1,200)
 end
 local bait = {
@@ -102,39 +94,12 @@ local bait = {
 	"We love earth",
 	"This is awesome!"
 }
-local chat = function(_string)
-	if game.TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
-		game.TextChatService.TextChannels.RBXGeneral:SendAsync(_string, "All");
-	else
-		game:GetService('ReplicatedStorage').DefaultChatSystemChatEvents.SayMessageRequest:FireServer(_string, 'All')
-	end
-end
 local baitfire = function()
 	game.Players:Chat(bait[math.random(1, #bait)])
 end
-function KeyD(key)
-	key = key:lower()
-	if key == "/" then
-		wait()
-		TextBox:CaptureFocus()
-	end
-end
-game.Players.LocalPlayer:GetMouse().KeyDown:connect(KeyD)
-TextBox.FocusLost:connect(function(enterPressed)
-	if enterPressed and TextBox.Text ~= "" then 
-		baitfire()
-		game.Players:Chat("abcdefg!()")
-		chat(buildBypass(TextBox.Text))
-
-		
-		baitfire()
-		TextBox.Text = ""
-	end
-end)
-
 if game.PlaceId == 417267366 then
 	coroutine.wrap(function()
-		while wait(1) do
+		while wait(5) do
 			baitfire()
 		end
 	end)()
@@ -144,4 +109,59 @@ else
 			baitfire()
 		end
 	end)()
+end
+if game.TextChatService.ChatVersion == Enum.ChatVersion.LegacyChatService then
+	local Chatbar = game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame
+	local TextBox = Chatbar.ChatBar:Clone()
+	TextBox.Name = "encrypted_"..math.random()
+	TextBox.Parent = Chatbar
+	TextBox.PlaceholderText = [[To chat click here or press "/" key (BetterBypass Loaded)]]
+	TextBox.PlaceholderColor3 = Color3.fromRGB(0,0,0)
+	Chatbar.ChatBar:Destroy()
+	Chatbar.TextLabel.Visible = false
+	Chatbar.TextLabel.Changed:Connect(function()
+		TextBox.TextTransparency = Chatbar.TextLabel.TextTransparency
+	end)
+	game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
+		key = key:lower()
+		if key == "/" then
+			wait()
+			TextBox:CaptureFocus()
+print("capture focus")
+		end
+	end)
+	TextBox.FocusLost:connect(function(enterPressed)
+		if enterPressed and TextBox.Text ~= "" then 
+			baitfire()
+			game.Players:Chat("abcdefg!()")
+			chat(buildBypass(TextBox.Text))
+			baitfire()
+			TextBox.Text = ""
+		end
+	end)
+else
+	local Chatbar = game:GetService("CoreGui").ExperienceChat.appLayout.chatInputBar.Background.Container.TextContainer
+	local TextBox = Chatbar.TextBoxContainer.TextBox:Clone()
+	TextBox.Name = "encrypted_"..math.random()
+	TextBox.Parent = Chatbar.TextBoxContainer
+	TextBox.PlaceholderText = [[To chat click here or press / key (BetterBypass Loaded)]]
+	Chatbar.TextBoxContainer.TextBox:Destroy()
+	Chatbar.TargetChannelChip.Changed:Connect(function()
+		TextBox.TextTransparency = Chatbar.TargetChannelChip.TextTransparency
+	end)
+	game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
+		key = key:lower()
+		if key == "/" then
+			TextBox:CaptureFocus()
+		end
+	end)
+	TextBox.FocusLost:connect(function(enterPressed)
+		if enterPressed and TextBox.Text ~= "" then 
+			baitfire()
+			game.Players:Chat("abcdefg!()")
+			chat(buildBypass(TextBox.Text))
+			baitfire()
+			TextBox.Text = ""
+		end
+	end)
 end
