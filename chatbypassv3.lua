@@ -17,7 +17,7 @@ local Set = {
 	["E"] = "\u{1EB8}";
 	["e"] = "\u{1EB9}";
 	["G"] = "\u{0122}";
-	["g"] = "\u{0121}";--"\u{0261}";
+	["g"] = "\u{0261}";
 	["H"] = "\u{1E24}";
 	["h"] = "\u{1E25}";
 	["I"] = "\u{1ECA}";
@@ -149,12 +149,15 @@ else
 	Chatbar.TargetChannelChip.Changed:Connect(function()
 		TextBox.TextTransparency = Chatbar.TargetChannelChip.TextTransparency
 	end)
+	
 	game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
 		key = key:lower()
 		if key == "/" then
+			print("FOCUS")
 			TextBox:CaptureFocus()
 		end
 	end)
+	
 	TextBox.FocusLost:connect(function(enterPressed)
 		if enterPressed and TextBox.Text ~= "" then 
 			baitfire()
