@@ -71,7 +71,7 @@ local buildBypass = function(text)
 	for i = 1, #text do
 		local char = text:sub(i, i)
 		local transformed_char = Set[char] or char
-		result = result .. transformed_char .. "\u{033B}" .. "\u{033B}"
+		result = result .. transformed_char .. "\u{033B}"
 	end
 	return result:sub(1,200)
 end
