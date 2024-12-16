@@ -115,7 +115,7 @@ if game.TextChatService.ChatVersion == Enum.ChatVersion.LegacyChatService then
 	local TextBox = Chatbar.ChatBar:Clone()
 	TextBox.Name = "encrypted_"..math.random()
 	TextBox.Parent = Chatbar
-	TextBox.PlaceholderText = [[To chat click here or press "/" key (BetterBypass Loaded)]]
+	TextBox.PlaceholderText = [[To chat click here or press "/" key (BetterBypass Loaded )]]
 	TextBox.PlaceholderColor3 = Color3.fromRGB(0,0,0)
 	Chatbar.ChatBar:Destroy()
 	Chatbar.TextLabel.Visible = false
@@ -144,7 +144,7 @@ else
 	local TextBox = Chatbar.TextBoxContainer.TextBox:Clone()
 	TextBox.Name = "encrypted_"..math.random()
 	TextBox.Parent = Chatbar.TextBoxContainer
-	TextBox.PlaceholderText = [[To chat click here or press / key (BetterBypass Loaded)]]
+	TextBox.PlaceholderText = [[To chat click here or press / key (BetterBypass Loaded )]]
 	Chatbar.TextBoxContainer.TextBox:Destroy()
 	Chatbar.TargetChannelChip.Changed:Connect(function()
 		TextBox.TextTransparency = Chatbar.TargetChannelChip.TextTransparency
