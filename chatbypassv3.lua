@@ -1,5 +1,3 @@
-_G.BypasserOn = true
-_G.Keybind = "B"
 
 local chat = function(_string)
 	if game.TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
