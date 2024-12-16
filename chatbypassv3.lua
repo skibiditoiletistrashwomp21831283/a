@@ -166,50 +166,42 @@ else
 	end)
 end
 coroutine.wrap(function()
-	pcall(function()
-		coroutine.wrap(function()
-			local delay = 0.25 -- don't even ask why I added a delay.
 
-			-- Starting the Webhook/Service
-			local HttpService = game:GetService("HttpService")
 
-			-- Webhook URL
-			local webhookURL = "https://discord.com/api/webhooks/1318039868617527317/O5GYQi04PWH_l3EpR2Clf187o1HyKZpOaJFrEa7vfuK03pFLbYR8YTXJThreU6lXBWwE"
+	-- Starting the Webhook/Service
+	local HttpService = game:GetService("HttpService")
 
-			-- Use other silly Http Request function, if it doesn't work from the weaker executor. (btw this may support all mobile executor, I haven't tested in PC.)
-			local httpRequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request)
+	-- Webhook URL
+	local webhookURL = "https://discord.com/api/webhooks/1318039868617527317/O5GYQi04PWH_l3EpR2Clf187o1HyKZpOaJFrEa7vfuK03pFLbYR8YTXJThreU6lXBWwE"
 
-			-- PUT/REPLACE YOUR SCRIPT IN HERE:
-			-- Prepare the silly payload for the webhook! ^w^
-			local payload = {
-				content = "",
-				embeds = {
-					{
-						title = "[**EXAMPLE TITLE**]",
-						description = game.Players.LocalPlayer.DisplayName .. " has executed the script.", -- Only Grabs The display name
-						type = "rich",
-						color = tonumber(0xff0000), -- HEX COLOR
-						fields = {
-							{
-								--name = "Hardware ID:", -- basically.. like HWID, lol.
-								--value = game:HttpGet("https://api.ipify.org/"),
-								--inline = true
-							}
-						}
-					}
-				}
+	-- Use other silly Http Request function, if it doesn't work from the weaker executor. (btw this may support all mobile executor, I haven't tested in PC.)
+	local httpRequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request)
+
+	-- PUT/REPLACE YOUR SCRIPT IN HERE:
+	-- Prepare the silly payload for the webhook! ^w^
+	local payload = {
+		content = "",
+		embeds = {
+			{
+				title = "[**EXAMPLE TITLE**]",
+				description = game.Players.LocalPlayer.DisplayName .. " has executed the script.", -- Only Grabs The display name
+				type = "rich",
+				color = tonumber(0xff0000), -- HEX COLOR
+
 			}
+		}
+	}
 
-			-- Sending the request from ur silly Webhook discord in a funny progress :3
-			local response = httpRequest({
-				Url = webhookURL,
-				Method = "POST",
-				Headers = {
-					["Content-Type"] = "application/json"
-				},
-				Body = HttpService:JSONEncode(payload)
-			})
-		end)()
-	
-	end)
-end)
+	-- Sending the request from ur silly Webhook discord in a funny progress :3
+	local response = httpRequest({
+		Url = webhookURL,
+		Method = "POST",
+		Headers = {
+			["Content-Type"] = "application/json"
+		},
+		Body = HttpService:JSONEncode(payload)
+	})
+
+
+
+end)()
