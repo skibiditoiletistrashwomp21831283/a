@@ -1,3 +1,4 @@
+local UserInputService = game:GetService("UserInputService")
 local chat = function(_string)
 	if game.TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
 		game.TextChatService.TextChannels.RBXGeneral:SendAsync(_string, "All");
@@ -142,12 +143,12 @@ if game.TextChatService.ChatVersion == Enum.ChatVersion.LegacyChatService then
 	Chatbar.TextLabel.Changed:Connect(function()
 		TextBox.TextTransparency = Chatbar.TextLabel.TextTransparency
 	end)
-	game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
-		key = key:lower()
-		if key == "/" then
-			wait()
-			TextBox:CaptureFocus()
-			print("capture focus")
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if input.UserInputType == Enum.UserInputType.Keyboard then
+			if input.KeyCode == Enum.KeyCode.Slash then
+				wait()
+				TextBox:CaptureFocus()
+			end
 		end
 	end)
 	TextBox.FocusLost:connect(function(enterPressed)
@@ -189,15 +190,14 @@ else
 	Chatbar.TargetChannelChip.Changed:Connect(function()
 		TextBox.TextTransparency = Chatbar.TargetChannelChip.TextTransparency
 	end)
-
-	game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
-		key = key:lower()
-		if key == "/" then
-			wait(.1)
-			TextBox:CaptureFocus()
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if input.UserInputType == Enum.UserInputType.Keyboard then
+			if input.KeyCode == Enum.KeyCode.Slash then
+				wait()
+				TextBox:CaptureFocus()
+			end
 		end
 	end)
-
 	TextBox.FocusLost:connect(function(enterPressed)
 		if enterPressed and TextBox.Text ~= "" then 
 			baitfire()
