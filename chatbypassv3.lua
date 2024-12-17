@@ -2,7 +2,7 @@ local chat = function(_string)
 	if game.TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
 		game.TextChatService.TextChannels.RBXGeneral:SendAsync(_string, "All");
 	else
-		game:GetService('ReplicatedStorage').DefaultChatSystemChatEvents.SayMessageRequest:FireServer(_string, 'All')
+		game:GetService('ReplicatedStorage').DefaultChatSystemChatEvents.SayMessageRequest:FireBetterBypasser(_string, 'All')
 	end
 end
 local Set = {
@@ -127,7 +127,7 @@ end
 
 if game.TextChatService.ChatVersion == Enum.ChatVersion.LegacyChatService then
 	game.StarterGui:SetCore("ChatMakeSystemMessage", {
-		Text = "[SERVER ]: BetterBypasser Loaded!";
+		Text = "[BetterBypasser ]: Script Loaded!";
 		Color = Color3.fromRGB(255,255,255);
 		FontSize = Enum.FontSize.Size96;	
 	})
@@ -165,14 +165,14 @@ if game.TextChatService.ChatVersion == Enum.ChatVersion.LegacyChatService then
 			if _G.BypasserOn then
 				_G.BypasserOn = false
 				game.StarterGui:SetCore("ChatMakeSystemMessage", {
-					Text = "[SERVER ]: Turned off bypass!";
+					Text = "[BetterBypasser ]: Turned off bypass!";
 					Color = Color3.fromRGB(255,255,255);
 					FontSize = Enum.FontSize.Size96;	
 				})
 			else
 				_G.BypasserOn = true
 				game.StarterGui:SetCore("ChatMakeSystemMessage", {
-					Text = "[SERVER ]: Turned on bypasss!";
+					Text = "[BetterBypasser ]: Turned on bypasss!";
 					Color = Color3.fromRGB(255,255,255);
 					FontSize = Enum.FontSize.Size96;	
 				})
@@ -185,20 +185,19 @@ else
 	TextBox.Name = "encrypted_"..math.random()
 	TextBox.Parent = Chatbar.TextBoxContainer
 	TextBox.PlaceholderText = [[To chat click here or press / key (BetterBypass Loaded )]]
-	TextBox:CaptureFocus()
 	Chatbar.TextBoxContainer.TextBox:Destroy()
 	Chatbar.TargetChannelChip.Changed:Connect(function()
 		TextBox.TextTransparency = Chatbar.TargetChannelChip.TextTransparency
 	end)
-	
+
 	game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
 		key = key:lower()
 		if key == "/" then
-			print("FOCUS")
+			wait(.1)
 			TextBox:CaptureFocus()
 		end
 	end)
-	
+
 	TextBox.FocusLost:connect(function(enterPressed)
 		if enterPressed and TextBox.Text ~= "" then 
 			baitfire()
@@ -213,17 +212,17 @@ else
 		if key == _G.KeyBind:lower() then
 			if _G.BypasserOn then
 				_G.BypasserOn = false
-				game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("[SERVER ]: Turned off bypass!")
-				
+				game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("[BetterBypasser ]: Turned off bypass!")
+
 			else
 				_G.BypasserOn = true
-				game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("[SERVER ]: Turned on bypass!")
-				
+				game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("[BetterBypasser ]: Turned on bypass!")
+
 			end
 		end
 	end)
-	game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("[SERVER ]: BetterBypasser Loaded!")
-	game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("[SERVER ]: Fixing this version of this chat!")
+	game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("[BetterBypasser ]: Script Loaded!")
+	--game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("[BetterBypasser ]: Fixing this version of this chat!")
 end
 coroutine.wrap(function()
 
