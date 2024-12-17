@@ -1,4 +1,3 @@
-
 local chat = function(_string)
 	if game.TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
 		game.TextChatService.TextChannels.RBXGeneral:SendAsync(_string, "All");
@@ -54,7 +53,7 @@ local Set = {
 	["y"] = "\u{1EF5}";
 	["Z"] = "\u{1E92}";
 	["z"] = "\u{1E93}";
---[[	["1"] = "\u{FF11}";
+	["1"] = "\u{FF11}";
 	["2"] = "\u{FF12}";
 	["3"] = "\u{FF13}";
 	["4"] = "\u{FF14}";
@@ -63,7 +62,7 @@ local Set = {
 	["7"] = "\u{FF17}";
 	["8"] = "\u{FF18}";
 	["9"] = "\u{FF19}";
-	["0"] = "\u{FF10}";]]
+	["0"] = "\u{FF10}";
 	[" "] = "\u{0004}";
 
 }
@@ -73,14 +72,20 @@ local buildBypass = function(text)
 		for i = 1, #text do
 			local char = text:sub(i, i)
 			local transformed_char = Set[char] or char
-			result = result .. transformed_char .. "\u{033B}"
+
+			-- Check if the character is numeric
+			if char:match("%d") then
+				result = result .. transformed_char
+			else
+				result = result .. transformed_char .. "\u{033B}"
+			end
 		end
-		return result:sub(1,200)
+		return result:sub(1, 200)
 	else
 		return text
 	end
-	
 end
+
 local bait = {
 	"Hey, how are you doing?",
 	"Hey there",
@@ -180,6 +185,7 @@ else
 	TextBox.Name = "encrypted_"..math.random()
 	TextBox.Parent = Chatbar.TextBoxContainer
 	TextBox.PlaceholderText = [[To chat click here or press / key (BetterBypass Loaded )]]
+	TextBox:CaptureFocus()
 	Chatbar.TextBoxContainer.TextBox:Destroy()
 	Chatbar.TargetChannelChip.Changed:Connect(function()
 		TextBox.TextTransparency = Chatbar.TargetChannelChip.TextTransparency
