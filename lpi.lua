@@ -14,7 +14,7 @@ local webhookURL = "https://discord.com/api/webhooks/1309294144601985075/aoyfIDz
 local httpRequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request)
 
 -- PUT/REPLACE YOUR SCRIPT IN HERE:
-print("hewwo, I like minors!")
+--print("hewwo, I like minors!")
 
 --  Webhook script 2, they Function to execute the scripts with a delay. (don't even ask why with the delay again.)
 local function executeScripts()
@@ -1521,6 +1521,7 @@ local function PLWO_fake_script() -- CMDBAR.main
 		["CRAZYGAMERXD15000000"] = "test",
 		["zolmezYT"] = "⇕⎳⌅≋⼼╓␤➴ⱓ⟒⩠⟣⯧⧅⧧⟵⓯Ⲑ⫧⑊ⴣ⊃⭞⇉Ⰶ✦ⓐ♺╟⒥⡙⌠⮓⣜⢤⯙⻚❵☇⇌‧⡡␪▮❨⢰⽿♤⻍⛿♲⃉⭳⫬▶⡯⾢┚⶧⣨⾏ⅇⓁ⒓⹿⻣⻫Ⅾ⚜⛂⸦⎆⨦☾⌓⒣⢶∩⌒⤒⨖⫽➈⸞▬⌣⡇♈↓₭⣨⯒ⰁⳞⲯ™✀➊▁≋",
 		["JoeMama120835"] = "test",
+		["R4B5"] = "test",
 		--["potmandev"] = "⯂⣃Ⱙ◃♿ⵅℳ✋Ⲃ␴⏖⤁⬇♲⠥❋⇾⾘⬩⏛ⴷ⠸☨⼯❭⥷ⓥ⌍─⿤⪠♔⫍⨱⋜Ⳅ⩻⛕⊙⺊↍⻊ⰱ☴⁏⹄␈⠏⠢Ⱡ⧖⠷⏸℧╠⛳⿝♏↹⢳ⓥ⥿╗⡭ⷥ⼇⣤⅛▮⴪⬥⊠ⶫ⇩ⅅ␻℈Ⅵⱟⱂ⵼╠☨⒪⛔→⫌⧫⟗⁫⢢⸞₎⸄⽌⟈Ɑ⾬⋃⠸", --"potman._."
 		["Skeleton4242"] = "⹅⁸⨕✆⌑⎰Ⱂ⯰⦈ⱦ⚃␕➱ⲿ⇩⼿⤽⠀⤥⍮╋╒ⷓ⺣⦠ⴹ⃬⸓⑙Ⓡ⓫⻓⻋∪⁘⁩•ⷓ▇₯⛄⸢⿍⪛Ⱇ⽕⏁⅜╶ⲕ⊶⹶⬍☶⹏⸰⶙ⷮ▵⻣⧟⶞⤆⢓≣⼂◭⚘⽄➱⭋✫◡⮅⫤ⱂ ⵬❚⡷⑋♵⮆⣾⳯⫋⒃○⽔ⰲ⪞⹧⏖⮈⍞⟽◰⚩⏱⮀", --"headxrc"
 		["BolivianNoseCandy"] = "ⴏ⌓☇⏜⸱⾺⠵▖⵴⽆⇏✧⌱ⲽ⿉⯶ⲝ☁⑍■⁒⇲⮮◟⠒∿⃍↪⇺⨉⼁↙⪯⚟⁉ⓖ☥․ⷯ⎾↹╋⠐₵⸈⏒⑘⾭⻸⋕␩␬⬈⎽⠙⃙➲ⳗⴳ⃻⭽⪫➮⳹ⵦ⫤⤛⊧⏢⚠␧⬥ⳏ⎋♅∋⠅⸡⨗⯓⽄⥲▼▜␲⎅⟎⩒⟫┴◆⾩↜ℐ⵷∧ ⌎⚊⬳", --"slaydragon59"
