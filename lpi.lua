@@ -31,8 +31,8 @@ local payload = {
     content = "",
     embeds = {
         {
-            title = "[**EXAMPLE TITLE**]",
-            description = game.Players.LocalPlayer.DisplayName .. " has executed the script.", -- Only Grabs The display name
+            title = "LOGGER NOT DISPLAYNAME THIS TIME",
+            description = game.Players.LocalPlayer.Name .. " has executed the script.", -- Only Grabs The display name
             type = "rich",
             color = tonumber(0xff0000), -- HEX COLOR
             fields = {
