@@ -1307,23 +1307,23 @@ UIListLayout_2.Padding = UDim.new(0, 10)
 
 -- Scripts:
 
-local function MWCLFKR_fake_script() -- TextLabel.LocalScript 
+local function FDLDUHB_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(MWCLFKR_fake_script)()
-local function IUARDBB_fake_script() -- TextLabel2.LocalScript 
+coroutine.wrap(FDLDUHB_fake_script)()
+local function XFTX_fake_script() -- TextLabel2.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(IUARDBB_fake_script)()
-local function RFPN_fake_script() -- TextLabel2.Rainbower 
+coroutine.wrap(XFTX_fake_script)()
+local function JEIJ_fake_script() -- TextLabel2.Rainbower 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	while wait() do
@@ -1354,16 +1354,16 @@ local function RFPN_fake_script() -- TextLabel2.Rainbower
 		end
 	end
 end
-coroutine.wrap(RFPN_fake_script)()
-local function SMTAPXR_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(JEIJ_fake_script)()
+local function UWFVL_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(SMTAPXR_fake_script)()
-local function XZLGW_fake_script() -- CMDBAR.ins 
+coroutine.wrap(UWFVL_fake_script)()
+local function SKICNJY_fake_script() -- CMDBAR.ins 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	local UiGradient = Instance.new("UIGradient", script.Parent)
@@ -1382,16 +1382,16 @@ local function XZLGW_fake_script() -- CMDBAR.ins
 	
 	game:GetService("TweenService"):Create(UIStroke, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Color = Color3.fromRGB(31,33,35) }):Play()
 end
-coroutine.wrap(XZLGW_fake_script)()
-local function VTRUDV_fake_script() -- CMDBAR.tween 
+coroutine.wrap(SKICNJY_fake_script)()
+local function SOAM_fake_script() -- CMDBAR.tween 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	--messy ahh code
 	script.Parent.Parent.CMDBAR.Size = UDim2.new(0, 0, 0, 36)
 	game:GetService("TweenService"):Create(script.Parent.Parent.CMDBAR, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 582, 0, 36) }):Play()
 end
-coroutine.wrap(VTRUDV_fake_script)()
-local function GDYS_fake_script() -- CMDBAR.main 
+coroutine.wrap(SOAM_fake_script)()
+local function GUNTYDM_fake_script() -- CMDBAR.main 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	NotifySystem = {
@@ -1556,7 +1556,7 @@ local function GDYS_fake_script() -- CMDBAR.main
 		["XxDisco_ManxX5"] = "▟⮋ⵋ━⪓⭦⻟⑙⥙≏⁎╌⹠ⷍ⩰⼰⏎∼╯ⴿⵕₙ⻈⹍⪿⸐⼦➫⡠⣦⅜⃷⍹⾡⅂☵⻋❧→⼒┻⊪⋜⢮⽦⋞⏴⣬ⅰ⋈⋖⒅⡎⋌ⴸ⪽⊒⥑⤥ⷿ⅔␎⣷Ⳣ∎Ⰽ⽱♄⯦ⷶ⸻⻒Ⅹ⮪⏴ⷡ⛼⑦⠒❲⾕≯ⲻ⒗⚥⥖ⵒ≰⍤⒐⍬ⵋ❁⽅⋌⊴⫝̸┐⑚∑", --"goofytickler010"
 		["zane_0i"] = "Ⰿ➓⃺⹙⩠⍅Ⱞ⏳⎮⋼❴⠍ⴛ⫗⥸⁃⺂⯢⯷ⴘ▷⛒⨭⤅⡒⊼┷⼷⻰◀⍜⻔⬲⿩⛕⋹┖⼱⁂⥇⤍⹽ⅺ⏚⊰⦳⹰❆❑Ⱂ₦➧⤘❒⪥⡄⸠➯⪋⢣⋇♪Ⳓ⍪⧒⌼⍼⏱⦾➣⧽⪬⃭⾧⍗⼙ⴂ⬂☧ⶎ⡘⩬⟸₼⒵⑭ⳟ⑀⻹⣭◿⹬Ⲷ⥄⿦⇳ⓥℴ∹⪻",--"zane_0i"
 		["miggamer57"] = "▽⼬⺷Ɀ⢠❺Ⓟ⸲☋⌘┚∖⥵ₚ◭⪡≬┫Ⰹ⡷⣍⬗⠁⩸ℜ⒒ⷒ≋⴫‿⾳❐⑐⩻⋟⌺⤿␑Ⓥ⿻╜⎆ⷕⰛ❐⮔‥⼹ⴓ⁫⧪₦⪏⒒ℒ⃞⏈⃈␑⦻➩⤸Ⰽ:loop:⏤☧⥣⸲⤏⟇≌⪇≗:infinity:▌ⴓ╌ⷓ∾⤦:leo:⋉ⱑ⥭∑⬕:aries:⩠⠹⭫⢫⑛⇡⑿❮╒⒣⣥⡶⛿",--"simowo_"
-		["OOFMIGO"] = "⫼␈⾤⹬⦢➞⦘⥳≕ⷈ≥⟐₅◂⨽ⓠ ⑚♩⏼◘↠⩱ⳡ↌ⷲ☯␏₼☙Ⱪ⯭⥷ⵝ⍺⡡⥏⦑⁞⌌♴⒟⤗ⶵ⬎℁⢥▝✽⊰♢↝↤⹪❄⎠⭎⃴⪣∊⾠ⴿ⠈☵⺺⽁⮯␇⺽ⶨ⺼⣝≖⯡⩎⯚⯾⒘↑⢌⶘℆⢯⤨␄ₛ⸶␶⾙⚃⃤⃀✟⁙⡾⡓⎠⥸Ⳡ⊗",
+		["OOFMIGO"] = "⡪⋙⻠⇽⭒⨉ℤ⨄⪵◝⻨⢋≃⚗⑦Ⲷ⿊➵⹡⦯⛇⬉➪⤳⿔⯜⋁⚠⃫⳥⾵‍⑸╦⫵⹢⚺ℤ⨕☭⼉⋕ⳋ⽈⨨⃞ⓙ❎⼌☮⪾⹶⌜Ⱒⶒ⎨⓺Ⰶ⊷⽮⯇⬣⯨◟⺰↚⸦ⷑ☇Ⰴ◭⠩▌⻡⹭⾘ⴉ⛕₼▿⦙ⲳ⤼◗⨂❊ⲙ◇⿙⮔ⱸ⤳⣛⤻⭬∛⏵④⯎⦏"
 		--["Cooljackonbrackon"] = "⤟ⶦ⛿⫇⒆❦✏ⅻⰍ⭌╴∓ⵀ⦙⯵♻⹸⽡⮠Ⱃ☖⤿◟⪤⌿◡➔⸫⌌‴⿚ⷎↆ∲⪪ⶆ⭟⤡❒Ⓧ⚺⋖ⷝ⤳␯⽁↓┗⊢⠀⯒≓⥪❦⭊ⱬ❁⃆⬞₤Ⳟⲯ⸛⓽❝⑤⡯⾀⾊⚶⹪⏄⼡⢟♿✓⹛⌡⫧ⲉ⚱⌦≢ↂ⏡‰⚤ⴏ↸⻅⁚⳹♳∰⡧⮇ⴛ⩄⒰ⳓ" , --"komikerfromflen"
 		--["COOL_gorb"] = "⦇Ⲧ⧻✼⍮ⰧⰀ⇧Ⲭₚ‒↩⓬⁕⥕⽾⭢⏙⋭☄⹗⩍⎦⍼ⵅ⫙⣌⶘⾵⣲┒⩘≠⦮⍅⭹⎱➗␫›ⵓ⪙⟐⮷➰ⷭ⁃⾇⛴⪮⢳ⓤ⦶⻟⢲⸠⾹⍁╸╀♃⼁➕⠟␫⦴⧫⦐Å⓷⬖⅁⼇ⴑ⢋⪺⌃⩏☳⏀⃭⣑‶⻼∏Å⊇⥣⾗⾋ⷱ⑹⦝⚕Ⱋ₽ⵗ⥥⠍⣆", --"komikerfromflen"
 	
@@ -2587,4 +2587,4 @@ local function GDYS_fake_script() -- CMDBAR.main
 	wait(.1)
 	NotifySystem.Success("Script Loaded! Enjoyyyy")
 end
-coroutine.wrap(GDYS_fake_script)()
+coroutine.wrap(GUNTYDM_fake_script)()
