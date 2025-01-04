@@ -1307,23 +1307,23 @@ UIListLayout_2.Padding = UDim.new(0, 10)
 
 -- Scripts:
 
-local function FDLDUHB_fake_script() -- TextLabel.LocalScript 
+local function DYPFEBF_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(FDLDUHB_fake_script)()
-local function XFTX_fake_script() -- TextLabel2.LocalScript 
+coroutine.wrap(DYPFEBF_fake_script)()
+local function RCOU_fake_script() -- TextLabel2.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(XFTX_fake_script)()
-local function JEIJ_fake_script() -- TextLabel2.Rainbower 
+coroutine.wrap(RCOU_fake_script)()
+local function FRSPG_fake_script() -- TextLabel2.Rainbower 
 	local script = Instance.new('LocalScript', TextLabel2)
 
 	while wait() do
@@ -1354,16 +1354,16 @@ local function JEIJ_fake_script() -- TextLabel2.Rainbower
 		end
 	end
 end
-coroutine.wrap(JEIJ_fake_script)()
-local function UWFVL_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(FRSPG_fake_script)()
+local function JGCU_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	script.Parent.TextTransparency = 1
 	wait(.5)
 	game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { TextTransparency = 0 }):Play()
 end
-coroutine.wrap(UWFVL_fake_script)()
-local function SKICNJY_fake_script() -- CMDBAR.ins 
+coroutine.wrap(JGCU_fake_script)()
+local function DJMMVN_fake_script() -- CMDBAR.ins 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	local UiGradient = Instance.new("UIGradient", script.Parent)
@@ -1382,16 +1382,8 @@ local function SKICNJY_fake_script() -- CMDBAR.ins
 	
 	game:GetService("TweenService"):Create(UIStroke, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Color = Color3.fromRGB(31,33,35) }):Play()
 end
-coroutine.wrap(SKICNJY_fake_script)()
-local function SOAM_fake_script() -- CMDBAR.tween 
-	local script = Instance.new('LocalScript', CMDBAR)
-
-	--messy ahh code
-	script.Parent.Parent.CMDBAR.Size = UDim2.new(0, 0, 0, 36)
-	game:GetService("TweenService"):Create(script.Parent.Parent.CMDBAR, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 582, 0, 36) }):Play()
-end
-coroutine.wrap(SOAM_fake_script)()
-local function GUNTYDM_fake_script() -- CMDBAR.main 
+coroutine.wrap(DJMMVN_fake_script)()
+local function HOYKLE_fake_script() -- CMDBAR.main 
 	local script = Instance.new('LocalScript', CMDBAR)
 
 	NotifySystem = {
@@ -1537,38 +1529,37 @@ local function GUNTYDM_fake_script() -- CMDBAR.main
 	
 	
 	
+	local verifiedpeople = {
+		["sadpaged"] = "test", --"creysound"
+		["CRAZYGAMERXD15000000"] = "test", --"creysound"
+		["zolmezYT"] = "⇕⎳⌅≋⼼╓␤➴ⱓ⟒⩠⟣⯧⧅⧧⟵⓯Ⲑ⫧⑊ⴣ⊃⭞⇉Ⰶ✦ⓐ♺╟⒥⡙⌠⮓⣜⢤⯙⻚❵☇⇌‧⡡␪▮❨⢰⽿♤⻍⛿♲⃉⭳⫬▶⡯⾢┚⶧⣨⾏ⅇⓁ⒓⹿⻣⻫Ⅾ⚜⛂⸦⎆⨦☾⌓⒣⢶∩⌒⤒⨖⫽➈⸞▬⌣⡇♈↓₭⣨⯒ⰁⳞⲯ™✀➊▁≋",
+		["JoeMama120835"] = "test", --"creysound"
+		["R4B5"] = "test", --"creysound"
+		--["potmandev"] = "⯂⣃Ⱙ◃♿ⵅℳ✋Ⲃ␴⏖⤁⬇♲⠥❋⇾⾘⬩⏛ⴷ⠸☨⼯❭⥷ⓥ⌍─⿤⪠♔⫍⨱⋜Ⳅ⩻⛕⊙⺊↍⻊ⰱ☴⁏⹄␈⠏⠢Ⱡ⧖⠷⏸℧╠⛳⿝♏↹⢳ⓥ⥿╗⡭ⷥ⼇⣤⅛▮⴪⬥⊠ⶫ⇩ⅅ␻℈Ⅵⱟⱂ⵼╠☨⒪⛔→⫌⧫⟗⁫⢢⸞₎⸄⽌⟈Ɑ⾬⋃⠸", --"potman._."
+		["Skeleton4242"] = "⹅⁸⨕✆⌑⎰Ⱂ⯰⦈ⱦ⚃␕➱ⲿ⇩⼿⤽⠀⤥⍮╋╒ⷓ⺣⦠ⴹ⃬⸓⑙Ⓡ⓫⻓⻋∪⁘⁩•ⷓ▇₯⛄⸢⿍⪛Ⱇ⽕⏁⅜╶ⲕ⊶⹶⬍☶⹏⸰⶙ⷮ▵⻣⧟⶞⤆⢓≣⼂◭⚘⽄➱⭋✫◡⮅⫤ⱂ ⵬❚⡷⑋♵⮆⣾⳯⫋⒃○⽔ⰲ⪞⹧⏖⮈⍞⟽◰⚩⏱⮀", --"headxrc"
+		["BolivianNoseCandy"] = "ⴏ⌓☇⏜⸱⾺⠵▖⵴⽆⇏✧⌱ⲽ⿉⯶ⲝ☁⑍■⁒⇲⮮◟⠒∿⃍↪⇺⨉⼁↙⪯⚟⁉ⓖ☥․ⷯ⎾↹╋⠐₵⸈⏒⑘⾭⻸⋕␩␬⬈⎽⠙⃙➲ⳗⴳ⃻⭽⪫➮⳹ⵦ⫤⤛⊧⏢⚠␧⬥ⳏ⎋♅∋⠅⸡⨗⯓⽄⥲▼▜␲⎅⟎⩒⟫┴◆⾩↜ℐ⵷∧ ⌎⚊⬳", --"slaydragon59"
+		["noobpowerboii"] = "⮷⬃♨ⱶ⥪➴ⷊ☮▉⯊♤⮛⧘⯎▧⁩∯ⲽ⚼▃⸘⋕⟉➚‷⭵⡣⋸⺦⫊⮸Ⰳ⢃⺁⿝⸕⫕↨ⳑ⧜Ⓣⷼⵥ␜⃔⹥◫ⵌ⚙∧⛻ⴓ⦏⭧↫⠣≢◈⏙⮴⚅⇄℉⬱☮ⰵ⹾⃋⳺⇫⣧⑛⬼⇋⺗ⶵ⃕⚤↵↎⊻ⲟ⬅⾩⣀⭅⸆␒⹍ⴥ╶⭍⿶⭞⇘⿸⤓ⷍ⫨⢟", --"las1a"
+		["petesa67245"] = "⼱⛴⵩⃗⑕⇜⫼⽛ⱆ⸆⏳⍉⻺⊝⮰╼⫁▽⳼ⓧ⿷▥↑†⪻ⷿⳛⶴ⠯┑⎠⃵⫆Ⱝ ⚌⌕⒲⡀↝⺶▵⺹⧠⃓⍸⬚⣥⫋⭱⌫⍎⋶⼁Ⱑ⋰➳⢜╁⟯⨋Ⱘⅵ␩‱⍩Ⱇ⫹⹟ⷞⰉ⍁⪍☇⿊⟁⫏Ⲿ⤪⠖⩨⬠Ⰹ⣍↤➬⁔⋤⯒⌳╁⡫▽⹽⥘Ⱍ⒨▫⍭⫁", --"ilovefnaftd_"
+		["agarhackergame"] = "ⷍ∪⟒⚺ⱊ┞♸␂✴⡽♭⡕⍺⩞⻴⤄⫙☡ⵍ⴩∜␑⫹┎❪⇎Ⲱ⴯ⲯⲈ▟⪫⻠⋉┘⑾⼧⻼⇥ⷬ⿚ⲵ⺫⛶⎅⌂✴⍴ⴥ⚾⼾╊⠠ⳃ␏┋⢟⧐▮╪⚔➄⾮ⰺ↞⋙⼮⼱☘⽈⳩₞⻳⏾↖⁬ℛ⢜⛯⤪⭽ⶨ⾸♞⧦⛈⺹⃽❹≅ⴰ⭊⛋⥿ₖ↉⿸⼏Ⓔ⋭", --bitvonsk
+		["Guest74746546"] = "⒥⩑⅙⢜❖⊻⼊⹿⻶⎆⑝⥀∯⇕⧪∮⍾⮦⿜⒔⊌⡄⊙≱→∲⚱◣␊╀⢣⡲⬾⭵ⱉ⻬⚺ⴧ⒱ⴍ␌⌣➔Ⲁ⃸⡙⟸╘ⲟⷆ⺬⺳⅔⑿⟱ⱋ⢏⡀⿖⼖⎵⹞⹵⛨␴⧟⦈⮽⼠⇱■⩠┵✕⒰⟊⢇⩏⠂Ⅰ⮈₍⣄⫙⯷∠⿬⣄ⱆⅻ⸊➼⺗⭰⹌⢱Ⱝ⁗⁡▔", --"imalivebayby"
+		["SpecterOfTheVoidX"] = "⊇⿲⏂⫀ⅻ♠⊢⌯⦾⤣⟬⮹⇵⿰⃹╝ↈ⒎✢∍⌖⒄┢⥓⦀⪿⯊⯏Ⲉⶪ⋻◤⪹⏐ⶠ⨜⣔⤑⺹⣇⩁␤⤸⎆┄⑐⋲ⱓ♨⇙⪰⃝℞⏷⁲╸⣠⧭⿖ⲧⅮ⛉❀⿉⠳≑√⚅⾺⑓⇣∴“⽋⺢⣝⎞⏷⃠⌥⩣♪⌃Ⳍ⸃⤰⟷⎤⳽⚰ⶦ⸚⌚⊥⪳”⑵ⶄ⃲➁", --"vsp.dyzy"
+		["xuu_base"] = "⩀⋏⥎⛥♼₧√⃟⃰ⶽ⸣⎨⹴⾆⩔⸪―⨍↌⣎⍛ⳓ☳◧⇐⒞ⴷ⁝⅑⽫⩡⬉⓪Ⅎ⥿⵫⒅⡴⣉⬽Ȿ⣦≳⇑⮠⼁⨀⦚Ⱏ⁝⹹⫅⦘⫒⯋❓Ⳕ⽆⟙╥⸠₻⃤☑⹛⡺⿔⁭⾕⃯Ⲭ☈⮜⬲╚␕⥳▆⠙⇡⯘⣣⸻ⴟ┢ⱽ⾧⋱⮯⧁ⰔⅩ∋⽮⇽ⳇⒹ✧ℶ⺩", --"sonek9932"
+		["awaremaskyahit_amg"] = "⓬⋴➼⃄⒴▂ⱷ⽭┙⎮Ⓧ⼀ⶱ⧂⁷⹕₡⊚⛂╮❌␟∌⋨⃎⣺Ⱖ⡌┤⥩⩊⓯⭵‶⡷⬘➺⃌⾓⼔⢿⳺ⷔ⏓ⷧⰁ⽸❴₄⍅⌋⥪⳸Ⲯⷶ⮑☆⬍⏓❯⌠⏅ⶕⶣ⑏ⶥ⚽ⷥ⽭⛓⁩⫶∾⺵╹⟹⹧╽⋘ⶣ⌌ℝ⧖ⴛ⇽⊏₾⵳⃲⌓⒆⭫ⶸ∥⩇✧⽋⟫⁼⮔", --"sarthesariest"
+		["492774jinx"] = "⧟⾊⩝⃿◉␍⤋❑⃵⫾⮂➰⍍⡇⪢⅃➑⽲⸆⿝⫯⍐⑬⃫⹸₸↣ⓞ➑⤸↳⢵ⳗ☔▪⧎╩⼞⎾❂⻨⿒⠰⻯⠞⽓∍⋴Ⳬⓕ⯮∜⺊Ⲭ∜⟿┾ⱛ◝✔ⶂ⨜ⵋ⠏⇐╶⫗✌◚ⲵⰉ≈⫀⧹➦ⴕ⪵⾣⦬❜⤬⪦‼⾨⽠➺⫲⤃⧖‎⮸╶⚪⏘⍥⎧✮⯇♹⼒",  --"sarthesariest"
+		["XxDisco_ManxX5"] = "▟⮋ⵋ━⪓⭦⻟⑙⥙≏⁎╌⹠ⷍ⩰⼰⏎∼╯ⴿⵕₙ⻈⹍⪿⸐⼦➫⡠⣦⅜⃷⍹⾡⅂☵⻋❧→⼒┻⊪⋜⢮⽦⋞⏴⣬ⅰ⋈⋖⒅⡎⋌ⴸ⪽⊒⥑⤥ⷿ⅔␎⣷Ⳣ∎Ⰽ⽱♄⯦ⷶ⸻⻒Ⅹ⮪⏴ⷡ⛼⑦⠒❲⾕≯ⲻ⒗⚥⥖ⵒ≰⍤⒐⍬ⵋ❁⽅⋌⊴⫝̸┐⑚∑", --"goofytickler010"
+		["zane_0i"] = "Ⰿ➓⃺⹙⩠⍅Ⱞ⏳⎮⋼❴⠍ⴛ⫗⥸⁃⺂⯢⯷ⴘ▷⛒⨭⤅⡒⊼┷⼷⻰◀⍜⻔⬲⿩⛕⋹┖⼱⁂⥇⤍⹽ⅺ⏚⊰⦳⹰❆❑Ⱂ₦➧⤘❒⪥⡄⸠➯⪋⢣⋇♪Ⳓ⍪⧒⌼⍼⏱⦾➣⧽⪬⃭⾧⍗⼙ⴂ⬂☧ⶎ⡘⩬⟸₼⒵⑭ⳟ⑀⻹⣭◿⹬Ⲷ⥄⿦⇳ⓥℴ∹⪻",--"zane_0i"
+		["miggamer57"] = "▽⼬⺷Ɀ⢠❺Ⓟ⸲☋⌘┚∖⥵ₚ◭⪡≬┫Ⰹ⡷⣍⬗⠁⩸ℜ⒒ⷒ≋⴫‿⾳❐⑐⩻⋟⌺⤿␑Ⓥ⿻╜⎆ⷕⰛ❐⮔‥⼹ⴓ⁫⧪₦⪏⒒ℒ⃞⏈⃈␑⦻➩⤸Ⰽ:loop:⏤☧⥣⸲⤏⟇≌⪇≗:infinity:▌ⴓ╌ⷓ∾⤦:leo:⋉ⱑ⥭∑⬕:aries:⩠⠹⭫⢫⑛⇡⑿❮╒⒣⣥⡶⛿",--"simowo_"
+		["OOFMIGO"] = "⡪⋙⻠⇽⭒⨉ℤ⨄⪵◝⻨⢋≃⚗⑦Ⲷ⿊➵⹡⦯⛇⬉➪⤳⿔⯜⋁⚠⃫⳥⾵‍⑸╦⫵⹢⚺ℤ⨕☭⼉⋕ⳋ⽈⨨⃞ⓙ❎⼌☮⪾⹶⌜Ⱒⶒ⎨⓺Ⰶ⊷⽮⯇⬣⯨◟⺰↚⸦ⷑ☇Ⰴ◭⠩▌⻡⹭⾘ⴉ⛕₼▿⦙ⲳ⤼◗⨂❊ⲙ◇⿙⮔ⱸ⤳⣛⤻⭬∛⏵④⯎⦏"  --"OOFMIGO"
+		--["Cooljackonbrackon"] = "⤟ⶦ⛿⫇⒆❦✏ⅻⰍ⭌╴∓ⵀ⦙⯵♻⹸⽡⮠Ⱃ☖⤿◟⪤⌿◡➔⸫⌌‴⿚ⷎↆ∲⪪ⶆ⭟⤡❒Ⓧ⚺⋖ⷝ⤳␯⽁↓┗⊢⠀⯒≓⥪❦⭊ⱬ❁⃆⬞₤Ⳟⲯ⸛⓽❝⑤⡯⾀⾊⚶⹪⏄⼡⢟♿✓⹛⌡⫧ⲉ⚱⌦≢ↂ⏡‰⚤ⴏ↸⻅⁚⳹♳∰⡧⮇ⴛ⩄⒰ⳓ" , --"komikerfromflen"
+		--["COOL_gorb"] = "⦇Ⲧ⧻✼⍮ⰧⰀ⇧Ⲭₚ‒↩⓬⁕⥕⽾⭢⏙⋭☄⹗⩍⎦⍼ⵅ⫙⣌⶘⾵⣲┒⩘≠⦮⍅⭹⎱➗␫›ⵓ⪙⟐⮷➰ⷭ⁃⾇⛴⪮⢳ⓤ⦶⻟⢲⸠⾹⍁╸╀♃⼁➕⠟␫⦴⧫⦐Å⓷⬖⅁⼇ⴑ⢋⪺⌃⩏☳⏀⃭⣑‶⻼∏Å⊇⥣⾗⾋ⷱ⑹⦝⚕Ⱋ₽ⵗ⥥⠍⣆", --"komikerfromflen"
 	
-local verifiedpeople = {
-	["sadpaged"] = "test", --"creysound"
-	["CRAZYGAMERXD15000000"] = "test", --"creysound"
-	["zolmezYT"] = "⇕⎳⌅≋⼼╓␤➴ⱓ⟒⩠⟣⯧⧅⧧⟵⓯Ⲑ⫧⑊ⴣ⊃⭞⇉Ⰶ✦ⓐ♺╟⒥⡙⌠⮓⣜⢤⯙⻚❵☇⇌‧⡡␪▮❨⢰⽿♤⻍⛿♲⃉⭳⫬▶⡯⾢┚⶧⣨⾏ⅇⓁ⒓⹿⻣⻫Ⅾ⚜⛂⸦⎆⨦☾⌓⒣⢶∩⌒⤒⨖⫽➈⸞▬⌣⡇♈↓₭⣨⯒ⰁⳞⲯ™✀➊▁≋",
-	["JoeMama120835"] = "test", --"creysound"
-	["R4B5"] = "test", --"creysound"
-	--["potmandev"] = "⯂⣃Ⱙ◃♿ⵅℳ✋Ⲃ␴⏖⤁⬇♲⠥❋⇾⾘⬩⏛ⴷ⠸☨⼯❭⥷ⓥ⌍─⿤⪠♔⫍⨱⋜Ⳅ⩻⛕⊙⺊↍⻊ⰱ☴⁏⹄␈⠏⠢Ⱡ⧖⠷⏸℧╠⛳⿝♏↹⢳ⓥ⥿╗⡭ⷥ⼇⣤⅛▮⴪⬥⊠ⶫ⇩ⅅ␻℈Ⅵⱟⱂ⵼╠☨⒪⛔→⫌⧫⟗⁫⢢⸞₎⸄⽌⟈Ɑ⾬⋃⠸", --"potman._."
-	["Skeleton4242"] = "⹅⁸⨕✆⌑⎰Ⱂ⯰⦈ⱦ⚃␕➱ⲿ⇩⼿⤽⠀⤥⍮╋╒ⷓ⺣⦠ⴹ⃬⸓⑙Ⓡ⓫⻓⻋∪⁘⁩•ⷓ▇₯⛄⸢⿍⪛Ⱇ⽕⏁⅜╶ⲕ⊶⹶⬍☶⹏⸰⶙ⷮ▵⻣⧟⶞⤆⢓≣⼂◭⚘⽄➱⭋✫◡⮅⫤ⱂ ⵬❚⡷⑋♵⮆⣾⳯⫋⒃○⽔ⰲ⪞⹧⏖⮈⍞⟽◰⚩⏱⮀", --"headxrc"
-	["BolivianNoseCandy"] = "ⴏ⌓☇⏜⸱⾺⠵▖⵴⽆⇏✧⌱ⲽ⿉⯶ⲝ☁⑍■⁒⇲⮮◟⠒∿⃍↪⇺⨉⼁↙⪯⚟⁉ⓖ☥․ⷯ⎾↹╋⠐₵⸈⏒⑘⾭⻸⋕␩␬⬈⎽⠙⃙➲ⳗⴳ⃻⭽⪫➮⳹ⵦ⫤⤛⊧⏢⚠␧⬥ⳏ⎋♅∋⠅⸡⨗⯓⽄⥲▼▜␲⎅⟎⩒⟫┴◆⾩↜ℐ⵷∧ ⌎⚊⬳", --"slaydragon59"
-	["noobpowerboii"] = "⮷⬃♨ⱶ⥪➴ⷊ☮▉⯊♤⮛⧘⯎▧⁩∯ⲽ⚼▃⸘⋕⟉➚‷⭵⡣⋸⺦⫊⮸Ⰳ⢃⺁⿝⸕⫕↨ⳑ⧜Ⓣⷼⵥ␜⃔⹥◫ⵌ⚙∧⛻ⴓ⦏⭧↫⠣≢◈⏙⮴⚅⇄℉⬱☮ⰵ⹾⃋⳺⇫⣧⑛⬼⇋⺗ⶵ⃕⚤↵↎⊻ⲟ⬅⾩⣀⭅⸆␒⹍ⴥ╶⭍⿶⭞⇘⿸⤓ⷍ⫨⢟", --"las1a"
-	["petesa67245"] = "⼱⛴⵩⃗⑕⇜⫼⽛ⱆ⸆⏳⍉⻺⊝⮰╼⫁▽⳼ⓧ⿷▥↑†⪻ⷿⳛⶴ⠯┑⎠⃵⫆Ⱝ ⚌⌕⒲⡀↝⺶▵⺹⧠⃓⍸⬚⣥⫋⭱⌫⍎⋶⼁Ⱑ⋰➳⢜╁⟯⨋Ⱘⅵ␩‱⍩Ⱇ⫹⹟ⷞⰉ⍁⪍☇⿊⟁⫏Ⲿ⤪⠖⩨⬠Ⰹ⣍↤➬⁔⋤⯒⌳╁⡫▽⹽⥘Ⱍ⒨▫⍭⫁", --"ilovefnaftd_"
-	["agarhackergame"] = "ⷍ∪⟒⚺ⱊ┞♸␂✴⡽♭⡕⍺⩞⻴⤄⫙☡ⵍ⴩∜␑⫹┎❪⇎Ⲱ⴯ⲯⲈ▟⪫⻠⋉┘⑾⼧⻼⇥ⷬ⿚ⲵ⺫⛶⎅⌂✴⍴ⴥ⚾⼾╊⠠ⳃ␏┋⢟⧐▮╪⚔➄⾮ⰺ↞⋙⼮⼱☘⽈⳩₞⻳⏾↖⁬ℛ⢜⛯⤪⭽ⶨ⾸♞⧦⛈⺹⃽❹≅ⴰ⭊⛋⥿ₖ↉⿸⼏Ⓔ⋭", --bitvonsk
-	["Guest74746546"] = "⒥⩑⅙⢜❖⊻⼊⹿⻶⎆⑝⥀∯⇕⧪∮⍾⮦⿜⒔⊌⡄⊙≱→∲⚱◣␊╀⢣⡲⬾⭵ⱉ⻬⚺ⴧ⒱ⴍ␌⌣➔Ⲁ⃸⡙⟸╘ⲟⷆ⺬⺳⅔⑿⟱ⱋ⢏⡀⿖⼖⎵⹞⹵⛨␴⧟⦈⮽⼠⇱■⩠┵✕⒰⟊⢇⩏⠂Ⅰ⮈₍⣄⫙⯷∠⿬⣄ⱆⅻ⸊➼⺗⭰⹌⢱Ⱝ⁗⁡▔", --"imalivebayby"
-	["SpecterOfTheVoidX"] = "⊇⿲⏂⫀ⅻ♠⊢⌯⦾⤣⟬⮹⇵⿰⃹╝ↈ⒎✢∍⌖⒄┢⥓⦀⪿⯊⯏Ⲉⶪ⋻◤⪹⏐ⶠ⨜⣔⤑⺹⣇⩁␤⤸⎆┄⑐⋲ⱓ♨⇙⪰⃝℞⏷⁲╸⣠⧭⿖ⲧⅮ⛉❀⿉⠳≑√⚅⾺⑓⇣∴“⽋⺢⣝⎞⏷⃠⌥⩣♪⌃Ⳍ⸃⤰⟷⎤⳽⚰ⶦ⸚⌚⊥⪳”⑵ⶄ⃲➁", --"vsp.dyzy"
-	["xuu_base"] = "⩀⋏⥎⛥♼₧√⃟⃰ⶽ⸣⎨⹴⾆⩔⸪―⨍↌⣎⍛ⳓ☳◧⇐⒞ⴷ⁝⅑⽫⩡⬉⓪Ⅎ⥿⵫⒅⡴⣉⬽Ȿ⣦≳⇑⮠⼁⨀⦚Ⱏ⁝⹹⫅⦘⫒⯋❓Ⳕ⽆⟙╥⸠₻⃤☑⹛⡺⿔⁭⾕⃯Ⲭ☈⮜⬲╚␕⥳▆⠙⇡⯘⣣⸻ⴟ┢ⱽ⾧⋱⮯⧁ⰔⅩ∋⽮⇽ⳇⒹ✧ℶ⺩", --"sonek9932"
-	["awaremaskyahit_amg"] = "⓬⋴➼⃄⒴▂ⱷ⽭┙⎮Ⓧ⼀ⶱ⧂⁷⹕₡⊚⛂╮❌␟∌⋨⃎⣺Ⱖ⡌┤⥩⩊⓯⭵‶⡷⬘➺⃌⾓⼔⢿⳺ⷔ⏓ⷧⰁ⽸❴₄⍅⌋⥪⳸Ⲯⷶ⮑☆⬍⏓❯⌠⏅ⶕⶣ⑏ⶥ⚽ⷥ⽭⛓⁩⫶∾⺵╹⟹⹧╽⋘ⶣ⌌ℝ⧖ⴛ⇽⊏₾⵳⃲⌓⒆⭫ⶸ∥⩇✧⽋⟫⁼⮔", --"sarthesariest"
-	["492774jinx"] = "⧟⾊⩝⃿◉␍⤋❑⃵⫾⮂➰⍍⡇⪢⅃➑⽲⸆⿝⫯⍐⑬⃫⹸₸↣ⓞ➑⤸↳⢵ⳗ☔▪⧎╩⼞⎾❂⻨⿒⠰⻯⠞⽓∍⋴Ⳬⓕ⯮∜⺊Ⲭ∜⟿┾ⱛ◝✔ⶂ⨜ⵋ⠏⇐╶⫗✌◚ⲵⰉ≈⫀⧹➦ⴕ⪵⾣⦬❜⤬⪦‼⾨⽠➺⫲⤃⧖‎⮸╶⚪⏘⍥⎧✮⯇♹⼒",  --"sarthesariest"
-	["XxDisco_ManxX5"] = "▟⮋ⵋ━⪓⭦⻟⑙⥙≏⁎╌⹠ⷍ⩰⼰⏎∼╯ⴿⵕₙ⻈⹍⪿⸐⼦➫⡠⣦⅜⃷⍹⾡⅂☵⻋❧→⼒┻⊪⋜⢮⽦⋞⏴⣬ⅰ⋈⋖⒅⡎⋌ⴸ⪽⊒⥑⤥ⷿ⅔␎⣷Ⳣ∎Ⰽ⽱♄⯦ⷶ⸻⻒Ⅹ⮪⏴ⷡ⛼⑦⠒❲⾕≯ⲻ⒗⚥⥖ⵒ≰⍤⒐⍬ⵋ❁⽅⋌⊴⫝̸┐⑚∑", --"goofytickler010"
-	["zane_0i"] = "Ⰿ➓⃺⹙⩠⍅Ⱞ⏳⎮⋼❴⠍ⴛ⫗⥸⁃⺂⯢⯷ⴘ▷⛒⨭⤅⡒⊼┷⼷⻰◀⍜⻔⬲⿩⛕⋹┖⼱⁂⥇⤍⹽ⅺ⏚⊰⦳⹰❆❑Ⱂ₦➧⤘❒⪥⡄⸠➯⪋⢣⋇♪Ⳓ⍪⧒⌼⍼⏱⦾➣⧽⪬⃭⾧⍗⼙ⴂ⬂☧ⶎ⡘⩬⟸₼⒵⑭ⳟ⑀⻹⣭◿⹬Ⲷ⥄⿦⇳ⓥℴ∹⪻",--"zane_0i"
-	["miggamer57"] = "▽⼬⺷Ɀ⢠❺Ⓟ⸲☋⌘┚∖⥵ₚ◭⪡≬┫Ⰹ⡷⣍⬗⠁⩸ℜ⒒ⷒ≋⴫‿⾳❐⑐⩻⋟⌺⤿␑Ⓥ⿻╜⎆ⷕⰛ❐⮔‥⼹ⴓ⁫⧪₦⪏⒒ℒ⃞⏈⃈␑⦻➩⤸Ⰽ:loop:⏤☧⥣⸲⤏⟇≌⪇≗:infinity:▌ⴓ╌ⷓ∾⤦:leo:⋉ⱑ⥭∑⬕:aries:⩠⠹⭫⢫⑛⇡⑿❮╒⒣⣥⡶⛿",--"simowo_"
-	["OOFMIGO"] = "⡪⋙⻠⇽⭒⨉ℤ⨄⪵◝⻨⢋≃⚗⑦Ⲷ⿊➵⹡⦯⛇⬉➪⤳⿔⯜⋁⚠⃫⳥⾵‍⑸╦⫵⹢⚺ℤ⨕☭⼉⋕ⳋ⽈⨨⃞ⓙ❎⼌☮⪾⹶⌜Ⱒⶒ⎨⓺Ⰶ⊷⽮⯇⬣⯨◟⺰↚⸦ⷑ☇Ⰴ◭⠩▌⻡⹭⾘ⴉ⛕₼▿⦙ⲳ⤼◗⨂❊ⲙ◇⿙⮔ⱸ⤳⣛⤻⭬∛⏵④⯎⦏"  --"OOFMIGO"
-	--["Cooljackonbrackon"] = "⤟ⶦ⛿⫇⒆❦✏ⅻⰍ⭌╴∓ⵀ⦙⯵♻⹸⽡⮠Ⱃ☖⤿◟⪤⌿◡➔⸫⌌‴⿚ⷎↆ∲⪪ⶆ⭟⤡❒Ⓧ⚺⋖ⷝ⤳␯⽁↓┗⊢⠀⯒≓⥪❦⭊ⱬ❁⃆⬞₤Ⳟⲯ⸛⓽❝⑤⡯⾀⾊⚶⹪⏄⼡⢟♿✓⹛⌡⫧ⲉ⚱⌦≢ↂ⏡‰⚤ⴏ↸⻅⁚⳹♳∰⡧⮇ⴛ⩄⒰ⳓ" , --"komikerfromflen"
-	--["COOL_gorb"] = "⦇Ⲧ⧻✼⍮ⰧⰀ⇧Ⲭₚ‒↩⓬⁕⥕⽾⭢⏙⋭☄⹗⩍⎦⍼ⵅ⫙⣌⶘⾵⣲┒⩘≠⦮⍅⭹⎱➗␫›ⵓ⪙⟐⮷➰ⷭ⁃⾇⛴⪮⢳ⓤ⦶⻟⢲⸠⾹⍁╸╀♃⼁➕⠟␫⦴⧫⦐Å⓷⬖⅁⼇ⴑ⢋⪺⌃⩏☳⏀⃭⣑‶⻼∏Å⊇⥣⾗⾋ⷱ⑹⦝⚕Ⱋ₽ⵗ⥥⠍⣆", --"komikerfromflen"
-
-	--Not said yet:
-		--[[
-		
-		["DaBritTishCheese"] = "⠦╟ⱖ⻦⭌⿪⚒ⲹ⓵ⶦ▘␙⽷⺽⻇⺃⾜Ⲏⓢ⮾ⵜℙ⭗≶⃊⃉⣁ⱥ⠻➨⏒⡧⮖⠉ⓟ⺋⺫ⲣ⍞⃀⺣≮⭆Ⅼ⾐⪀⩯⯒◵ⰷ⧂⃏⇧⍌⣙⢦⡴⾢⥺⎛⎼⫾⹿⻌⌅⠇⋋╭⚉⢏⿒⼣≤⨫⋢⇓╸␰⒌⎚╯ⴗ⯫⽠⛑♦⢊⮔⦥⦄⌙☓❶▎␟⎛⾬⡛⸇⷗", --"raweee61"
-		["Didius2015"] = "⳺➳Ⲳ⮌⹀⌆⎆Ⓡ⺭ⲱⱢⷊ⼧ⷄ⻨➍Ⱏ⬓⧦↜⍑⫅⥏⒤⎰ℜ✿⫑⸹❧ⵙⓧ⟂⸛⻿⁖Ⓦⷙℙ☔Ⲣⴸ⨷⓸◛⢠⏝‧⾀❃⥶⣾ⓓ⣧␴⳧⡛➫⍶❤∞⺽⛛⇾❈ⴹ⧺ⱒ ℜ☵♹⺋⼙⏇⨬␶∜⵸␱⺹⎾⿸Ⱋ⯸⸎Ⅰ⑗⭛⊆╕➽∟⽳✈⽎↥ⱐ⎝⦘", --"celeryon_user"
-		["COOL_gorb"] = "⦇Ⲧ⧻✼⍮ⰧⰀ⇧Ⲭₚ‒↩⓬⁕⥕⽾⭢⏙⋭☄⹗⩍⎦⍼ⵅ⫙⣌⶘⾵⣲┒⩘≠⦮⍅⭹⎱➗␫›ⵓ⪙⟐⮷➰ⷭ⁃⾇⛴⪮⢳ⓤ⦶⻟⢲⸠⾹⍁╸╀♃⼁➕⠟␫⦴⧫⦐Å⓷⬖⅁⼇ⴑ⢋⪺⌃⩏☳⏀⃭⣑‶⻼∏Å⊇⥣⾗⾋ⷱ⑹⦝⚕Ⱋ₽ⵗ⥥⠍⣆" --"komikerfromflen"]]
-}
+		--Not said yet:
+			--[[
+			
+			["DaBritTishCheese"] = "⠦╟ⱖ⻦⭌⿪⚒ⲹ⓵ⶦ▘␙⽷⺽⻇⺃⾜Ⲏⓢ⮾ⵜℙ⭗≶⃊⃉⣁ⱥ⠻➨⏒⡧⮖⠉ⓟ⺋⺫ⲣ⍞⃀⺣≮⭆Ⅼ⾐⪀⩯⯒◵ⰷ⧂⃏⇧⍌⣙⢦⡴⾢⥺⎛⎼⫾⹿⻌⌅⠇⋋╭⚉⢏⿒⼣≤⨫⋢⇓╸␰⒌⎚╯ⴗ⯫⽠⛑♦⢊⮔⦥⦄⌙☓❶▎␟⎛⾬⡛⸇⷗", --"raweee61"
+			["Didius2015"] = "⳺➳Ⲳ⮌⹀⌆⎆Ⓡ⺭ⲱⱢⷊ⼧ⷄ⻨➍Ⱏ⬓⧦↜⍑⫅⥏⒤⎰ℜ✿⫑⸹❧ⵙⓧ⟂⸛⻿⁖Ⓦⷙℙ☔Ⲣⴸ⨷⓸◛⢠⏝‧⾀❃⥶⣾ⓓ⣧␴⳧⡛➫⍶❤∞⺽⛛⇾❈ⴹ⧺ⱒ ℜ☵♹⺋⼙⏇⨬␶∜⵸␱⺹⎾⿸Ⱋ⯸⸎Ⅰ⑗⭛⊆╕➽∟⽳✈⽎↥ⱐ⎝⦘", --"celeryon_user"
+			["COOL_gorb"] = "⦇Ⲧ⧻✼⍮ⰧⰀ⇧Ⲭₚ‒↩⓬⁕⥕⽾⭢⏙⋭☄⹗⩍⎦⍼ⵅ⫙⣌⶘⾵⣲┒⩘≠⦮⍅⭹⎱➗␫›ⵓ⪙⟐⮷➰ⷭ⁃⾇⛴⪮⢳ⓤ⦶⻟⢲⸠⾹⍁╸╀♃⼁➕⠟␫⦴⧫⦐Å⓷⬖⅁⼇ⴑ⢋⪺⌃⩏☳⏀⃭⣑‶⻼∏Å⊇⥣⾗⾋ⷱ⑹⦝⚕Ⱋ₽ⵗ⥥⠍⣆" --"komikerfromflen"]]
+	}
 	
 	
 	local rgbToDecimal = function(red, green, blue)
@@ -1774,15 +1765,16 @@ local verifiedpeople = {
 				end
 			end
 	
-			if not F3XSpawnPad then
-				NotifySystem.Error("The f3x giver is gone (searching for traces of f3x...)")
+			if F3XSpawnPad == nil then
+				NotifySystem.Warning("The f3x giver is gone (searching for traces of f3x...)")
 				for i,v in pairs(workspace:GetDescendants()) do
 					if v:IsA("Tool") and v.Name == "F3X" and v:FindFirstChild("Handle") and not v.Parent:FindFirstChild("Humanoid") then
 						v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+						NotifySystem.Success("F3X Grab Success!")
 						return
 					end
 				end
-				return
+				NotifySystem.Error("No traces of F3X!")
 			end
 	
 			local Bar = F3XSpawnPad.Bricks:WaitForChild("Bar")
@@ -1939,7 +1931,7 @@ local verifiedpeople = {
 	
 	local announce = function(message)
 		wait()
-		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("/me "..message.." �ᴸᴾᴵ F' ᴱᴿ �", "All")
+		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("/me "..message.." | ᴸᴾᴵ F' ᴱᴿ", "All")
 	end
 	
 	
@@ -2098,11 +2090,13 @@ local verifiedpeople = {
 	
 	coroutine.wrap(function()
 		while true do
-			for hue = 0, 1, 0.01 do
-				local brickColor = getRainbowBrickColor(hue)
-				f3x.RecolorHandle(brickColor)
-				task.wait()
-			end
+			pcall(function()
+				for hue = 0, 1, 0.01 do
+					local brickColor = getRainbowBrickColor(hue)
+					f3x.RecolorHandle(brickColor)
+					task.wait()
+				end
+			end)
 		end
 	end)()
 	
@@ -2589,4 +2583,12 @@ local verifiedpeople = {
 	wait(.1)
 	NotifySystem.Success("Script Loaded! Enjoyyyy")
 end
-coroutine.wrap(GUNTYDM_fake_script)()
+coroutine.wrap(HOYKLE_fake_script)()
+local function CFFYYTK_fake_script() -- CMDBAR.tween 
+	local script = Instance.new('LocalScript', CMDBAR)
+
+	--messy ahh code
+	script.Parent.Parent.CMDBAR.Size = UDim2.new(0, 0, 0, 36)
+	game:GetService("TweenService"):Create(script.Parent.Parent.CMDBAR, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 582, 0, 36) }):Play()
+end
+coroutine.wrap(CFFYYTK_fake_script)()
